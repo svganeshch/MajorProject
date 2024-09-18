@@ -13,8 +13,9 @@ public class Character : MonoBehaviour
 
     [HideInInspector] public Animator animator;
     [HideInInspector] public CharacterController controller;
-    [HideInInspector] public CharacterMovementManager characterMovementManager;
+    [HideInInspector] public StateMachine characterStateMachine;
     [HideInInspector] public CharacterAnimatorManager characterAnimatorManager;
+    [HideInInspector] public CharacterMovementManager characterMovementManager;
 
     protected virtual void Awake()
     {
@@ -22,10 +23,21 @@ public class Character : MonoBehaviour
         controller = GetComponent<CharacterController>();
         characterMovementManager = GetComponent<CharacterMovementManager>();
         characterAnimatorManager = GetComponent<CharacterAnimatorManager>();
+
+        characterStateMachine = new StateMachine();
+
+    }
+
+    private void FixedUpdate()
+    {
+        characterStateMachine.currentState.PhysicsUpdate();
     }
 
     protected virtual void Update()
     {
-        
+        characterStateMachine.currentState.HandleInput();
+        characterStateMachine.currentState.LogicUpdate();
     }
+
+
 }
