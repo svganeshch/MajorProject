@@ -10,7 +10,9 @@ public class InputManager : MonoBehaviour
     public float verticalInput;
 
     [HideInInspector] PlayerInput playerInput;
-    InputAction moveAction;
+
+    [HideInInspector] public InputAction moveAction;
+    [HideInInspector] public InputAction liteAttackAction;
 
     private void Awake()
     {
@@ -21,6 +23,8 @@ public class InputManager : MonoBehaviour
     {
         moveAction = playerInput.actions["Move"];
         moveAction.performed += i => moveInput = i.ReadValue<Vector2>();
+
+        liteAttackAction = playerInput.actions["LiteAttack"];
     }
 
     private void Update()

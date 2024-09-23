@@ -1,10 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class State
 {
-	public virtual void Enter()
+    protected Character character;
+    protected StateMachine stateMachine;
+
+    public State(Character _character, StateMachine _stateMachine)
+    {
+        character = _character;
+        stateMachine = _stateMachine;
+    }
+
+    public virtual void Enter()
 	{
 		// Debug.Log("Entered state " + character.name + " : " + this);
 	}

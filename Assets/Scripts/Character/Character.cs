@@ -8,14 +8,28 @@ public class Character : MonoBehaviour
     public float moveSpeed = 5f;
 
     [Header("Character Animation Smoothing Controls")]
+    public float animationFadeTime = 0.2f;
     public float speedDampTime = 0.1f;
     public float rotationDampTime = 15f;
+
+    [Header("Flags")]
+    public bool isAttacking = false;
+    public bool canCombo = false;
+    public bool canMove = true;
+    public bool canRotate = true;
+    public bool applyRootMotion = false;
 
     [HideInInspector] public Animator animator;
     [HideInInspector] public CharacterController controller;
     [HideInInspector] public StateMachine characterStateMachine;
     [HideInInspector] public CharacterAnimatorManager characterAnimatorManager;
     [HideInInspector] public CharacterMovementManager characterMovementManager;
+
+    // Character States
+    [HideInInspector] public State liteAttackState;
+    [HideInInspector] public State heavyAttackState;
+
+    protected virtual void InitializeStates() { }
 
     protected virtual void Awake()
     {
@@ -25,10 +39,14 @@ public class Character : MonoBehaviour
         characterAnimatorManager = GetComponent<CharacterAnimatorManager>();
 
         characterStateMachine = new StateMachine();
-
     }
 
-    private void FixedUpdate()
+    protected virtual void Start()
+    {
+        InitializeStates();
+    }
+
+    protected virtual void FixedUpdate()
     {
         characterStateMachine.currentState.PhysicsUpdate();
     }
@@ -38,6 +56,4 @@ public class Character : MonoBehaviour
         characterStateMachine.currentState.HandleInput();
         characterStateMachine.currentState.LogicUpdate();
     }
-
-
 }
