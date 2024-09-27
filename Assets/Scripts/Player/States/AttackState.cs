@@ -8,14 +8,9 @@ public class AttackState : State
 
     protected bool liteAttack;
 
+    bool isCombo;
     bool dodge;
     bool block;
-
-    bool input_que_active = false;
-    float default_que_input_timer = 0.35f;
-    float que_input_timer;
-
-    bool attack_que = false;
 
     public AttackState(Character _character, StateMachine _stateMachine, bool liteAttack) : base(_character, _stateMachine)
     {
@@ -27,35 +22,9 @@ public class AttackState : State
     {
         base.Enter();
 
+        isCombo = false;
         dodge = false;
         block = false;
-    }
-
-    public override void HandleInput()
-    {
-        base.HandleInput();
-
-        //if (player.dodgeAction.WasPressedThisFrame())
-        //{
-        //    dodge = true;
-        //}
-
-        //if (player.blockAction.WasPressedThisFrame())
-        //{
-        //    block = true;
-        //}
-
-        if (player.inputManager.liteAttackAction.WasPressedThisFrame())
-        {
-            if (!attack_que)
-            {
-                QueInput(ref attack_que);
-                return;
-            }
-            liteAttack = true;
-        }
-
-        HandleQuedInputs();
     }
 
     public override void LogicUpdate()
@@ -81,84 +50,29 @@ public class AttackState : State
         //    }
         //}
 
+        if (player.canCombo)
+        {
+            player.canCombo = false;
+            isCombo = true;
+            
+        }
+
         if (liteAttack)
-        {
-            liteAttack = false;
-
-            if (player.canCombo)
-            {
-                player.canCombo = false;
-                player.playerAnimatorManager.PlayLiteAttackAction(true);
-            }
-            else
-            {
-                if (!player.isAttacking)
-                {
-                    player.playerAnimatorManager.PlayLiteAttackAction(false);
-                }
-            }
-        }
+            player.playerAnimatorManager.PlayLiteAttackAction(isCombo);
         else
-        {
-            if (player.canCombo)
-            {
-                player.canCombo = false;
-                player.playerAnimatorManager.PlayHeavyAttackAction(true);
-            }
-            else
-            {
-                if (!player.isAttacking)
-                {
-                    player.playerAnimatorManager.PlayHeavyAttackAction(false);
-                }
-            }
-        }
-    }
+            player.playerAnimatorManager.PlayHeavyAttackAction(isCombo);
 
-    private void QueInput(ref bool quedInput)
-    {
-        ResetQueFlags();
+        isCombo = false;
 
-        quedInput = true;
-        que_input_timer = default_que_input_timer;
-        input_que_active = true;
-    }
+        Debug.Log("attack triggered");
 
-    private void ProcessQuedInputs()
-    {
-        if (attack_que) liteAttack = true;
-    }
-
-    private void HandleQuedInputs()
-    {
-        if (input_que_active)
-        {
-            if (que_input_timer > 0)
-            {
-                que_input_timer -= Time.deltaTime;
-                ProcessQuedInputs();
-            }
-            else
-            {
-                ResetQueFlags();
-            }
-        }
-    }
-
-    private void ResetQueFlags()
-    {
-        attack_que = false;
-
-        input_que_active = false;
-        que_input_timer = 0;
+        stateMachine.ChangeState(player.idleState);
     }
 
     public override void Exit()
     {
         base.Exit();
 
-        liteAttack = false;
-
-        ResetQueFlags();
+        //liteAttack = false;
     }
 }

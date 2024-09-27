@@ -37,6 +37,7 @@ public class CharacterAnimatorManager : MonoBehaviour
 
     protected virtual void PlayCharacterActionAnimation(
         int animationClipHash,
+        bool isPerformingAction,
         bool canRotate = false,
         bool canMove = false,
         bool applyRootMotion = true)
@@ -45,6 +46,7 @@ public class CharacterAnimatorManager : MonoBehaviour
 
         character.animator.CrossFade(animationClipHash, character.animationFadeTime);
 
+        character.performingAction = isPerformingAction;
         character.applyRootMotion = applyRootMotion;
         character.canRotate = canRotate;
         character.canMove = canMove;

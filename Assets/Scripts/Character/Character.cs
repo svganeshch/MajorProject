@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
     public float rotationDampTime = 15f;
 
     [Header("Flags")]
+    public bool performingAction = false;
     public bool isAttacking = false;
     public bool canCombo = false;
     public bool canMove = true;
@@ -26,6 +27,7 @@ public class Character : MonoBehaviour
     [HideInInspector] public CharacterMovementManager characterMovementManager;
 
     // Character States
+    [HideInInspector] public State idleState;
     [HideInInspector] public State liteAttackState;
     [HideInInspector] public State heavyAttackState;
 
@@ -56,4 +58,6 @@ public class Character : MonoBehaviour
         characterStateMachine.currentState.HandleInput();
         characterStateMachine.currentState.LogicUpdate();
     }
+
+    protected virtual void OnGUI() { }
 }

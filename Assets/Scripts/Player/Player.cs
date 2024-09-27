@@ -19,7 +19,18 @@ public class Player : Character
     {
         base.InitializeStates();
 
+        idleState = new IdleState(this, characterStateMachine);
         liteAttackState = new AttackState(this, characterStateMachine, true);
         heavyAttackState = new AttackState(this, characterStateMachine, false);
+
+        characterStateMachine.Initialize(idleState);
+    }
+
+    protected override void OnGUI()
+    {
+        base.OnGUI();
+
+        GUI.color = Color.red;
+        GUI.Label(new Rect(0, 0, 200, 20), this.GetType().Name + " : " + characterStateMachine.currentState.ToString());
     }
 }
