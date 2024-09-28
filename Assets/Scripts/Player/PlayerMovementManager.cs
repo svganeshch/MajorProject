@@ -31,15 +31,21 @@ public class PlayerMovementManager : CharacterMovementManager
         horizontalInput = player.inputManager.horizontalInput;
         verticalInput = player.inputManager.verticalInput;
 
+        HandleGroundedMovement();
+        HandlePlayerAnimation();
+        HandleRotation();
+    }
+
+    private void HandleGroundedMovement()
+    {
+        if (!player.canMove) return;
+
         moveDirection = Vector3.forward * verticalInput;
         moveDirection += Vector3.right * horizontalInput;
         moveDirection.Normalize();
         moveDirection.y = 0;
 
         player.controller.Move(player.moveSpeed * Time.deltaTime * moveDirection);
-
-        HandlePlayerAnimation();
-        HandleRotation();
     }
 
     private void HandlePlayerAnimation()
@@ -60,6 +66,8 @@ public class PlayerMovementManager : CharacterMovementManager
 
     protected virtual void HandleRotation()
     {
+        if (!player.canRotate) return;
+
         targetRotationDirection = Vector3.forward * verticalInput;
         targetRotationDirection += Vector3.right * horizontalInput;
         targetRotationDirection.y = 0f;
