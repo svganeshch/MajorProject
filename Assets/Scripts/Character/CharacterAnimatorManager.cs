@@ -24,7 +24,7 @@ public class CharacterAnimatorManager : MonoBehaviour
         set => character.animator.SetBool(isGroundedHash, value);
     }
 
-    private void Awake()
+    protected virtual void Awake()
     {
         character = GetComponent<Character>();
     }
@@ -61,7 +61,7 @@ public class CharacterAnimatorManager : MonoBehaviour
             if (previousActionHash == liteAttack1Hash)
                 nextAttackHash = liteAttack2Hash;
             else if (previousActionHash == liteAttack2Hash)
-                nextAttackHash = liteAttack3Hash;
+                nextAttackHash = liteAttack1Hash;
         }
 
         character.isAttacking = true;
