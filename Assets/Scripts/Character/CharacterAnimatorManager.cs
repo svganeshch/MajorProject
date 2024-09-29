@@ -37,7 +37,7 @@ public class CharacterAnimatorManager : MonoBehaviour
 
     protected virtual void PlayCharacterActionAnimation(
         int animationClipHash,
-        bool isPerformingAction,
+        bool isPerformingAction = true,
         bool canRotate = false,
         bool canMove = false,
         bool applyRootMotion = true)
@@ -64,8 +64,7 @@ public class CharacterAnimatorManager : MonoBehaviour
                 nextAttackHash = liteAttack1Hash;
         }
 
-        character.isAttacking = true;
-        PlayCharacterActionAnimation(nextAttackHash, canRotate);
+        PlayCharacterActionAnimation(nextAttackHash, true, canRotate);
     }
 
     public void PlayHeavyAttackAction(bool canCombo, bool canRotate = false)
@@ -80,7 +79,6 @@ public class CharacterAnimatorManager : MonoBehaviour
                 nextAttackHash = heavyAttack2Hash;
         }
 
-        character.isAttacking = true;
-        PlayCharacterActionAnimation(nextAttackHash, canRotate);
+        PlayCharacterActionAnimation(nextAttackHash, true, canRotate);
     }
 }

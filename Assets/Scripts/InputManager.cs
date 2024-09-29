@@ -56,8 +56,6 @@ public class InputManager : MonoBehaviour
 
     private void HandleAttackInput()
     {
-        if (player.performingAction) return;
-
         if (liteAttackInput)
         {
             liteAttackInput = false;
@@ -70,9 +68,12 @@ public class InputManager : MonoBehaviour
     {
         ResetQueFlags();
 
-        quedInput = true;
-        que_input_timer = default_que_input_timer;
-        input_que_active = true;
+        if (player.performingAction)
+        {
+            quedInput = true;
+            que_input_timer = default_que_input_timer;
+            input_que_active = true;
+        }
     }
 
     private void ProcessQuedInputs()

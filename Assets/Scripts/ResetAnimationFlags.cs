@@ -14,8 +14,8 @@ public class ResetAnimationFlags : StateMachineBehaviour
             character = animator.GetComponent<Character>();
         }
 
+        character.performingAction = false;
         character.applyRootMotion = false;
-        character.isAttacking = false;
         character.canRotate = true;
         character.canMove = true;
     }

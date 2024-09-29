@@ -14,7 +14,6 @@ public class Character : MonoBehaviour
 
     [Header("Flags")]
     public bool performingAction = false;
-    public bool isAttacking = false;
     public bool canCombo = false;
     public bool canMove = true;
     public bool canRotate = true;

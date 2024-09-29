@@ -50,11 +50,10 @@ public class AttackState : State
         //    }
         //}
 
-        if (player.canCombo)
+        if (player.canCombo && player.performingAction)
         {
             player.canCombo = false;
             isCombo = true;
-            
         }
 
         if (liteAttack)
