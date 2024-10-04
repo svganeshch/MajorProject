@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : Character
 {
     [HideInInspector] public PlayerAnimatorManager playerAnimatorManager;
+    [HideInInspector] public PlayerMovementManager playerMovementManager;
     [HideInInspector] public InputManager inputManager;
 
     protected override void Awake()
@@ -12,6 +13,7 @@ public class Player : Character
         base.Awake();
 
         playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
+        playerMovementManager = GetComponent<PlayerMovementManager>();
         inputManager = GetComponent<InputManager>();
     }
 
@@ -22,6 +24,7 @@ public class Player : Character
         idleState = new IdleState(this, characterStateMachine);
         liteAttackState = new AttackState(this, characterStateMachine, true);
         heavyAttackState = new AttackState(this, characterStateMachine, false);
+        jumpState = new JumpState(this, characterStateMachine);
 
         characterStateMachine.Initialize(idleState);
     }

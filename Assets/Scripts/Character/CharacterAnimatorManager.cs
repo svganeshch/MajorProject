@@ -10,6 +10,7 @@ public class CharacterAnimatorManager : MonoBehaviour
     private int previousActionHash;
 
     private static readonly int isGroundedHash = Animator.StringToHash("isGrounded");
+    private static readonly int inAirTimeHash = Animator.StringToHash("inAirTime");
 
     private static readonly int liteAttack1Hash = Animator.StringToHash("lite_attack1");
     private static readonly int liteAttack2Hash = Animator.StringToHash("lite_attack2");
@@ -22,6 +23,12 @@ public class CharacterAnimatorManager : MonoBehaviour
     {
         get => character.animator.GetBool(isGroundedHash);
         set => character.animator.SetBool(isGroundedHash, value);
+    }
+
+    public float InAirTime
+    {
+        get => character.animator.GetFloat(inAirTimeHash);
+        set => character.animator.SetFloat(inAirTimeHash, value);
     }
 
     protected virtual void Awake()

@@ -41,19 +41,19 @@ public class CharacterMovementManager : MonoBehaviour
                 yVelocity.y = groundedYVelocity;
             }
         }
-        //else
-        //{
-        //    if (character.characterStateMachine.currentState != character.jumpState && !fallingVelocitySet)
-        //    {
-        //        fallingVelocitySet = true;
-        //        yVelocity.y = fallStartYVelocity;
-        //    }
+        else
+        {
+            if (character.characterStateMachine.currentState != character.jumpState && !fallingVelocitySet)
+            {
+                fallingVelocitySet = true;
+                yVelocity.y = fallStartYVelocity;
+            }
 
-        //    inAirTime += Time.deltaTime;
-        //    character.characterAnimatorManager.InAirTime = inAirTime;
+            inAirTime += Time.deltaTime;
+            character.characterAnimatorManager.InAirTime = inAirTime;
 
-        //    yVelocity.y += gravityForce * Time.deltaTime;
-        //}
+            yVelocity.y += gravityForce * Time.deltaTime;
+        }
 
         character.controller.Move(yVelocity * Time.deltaTime);
     }

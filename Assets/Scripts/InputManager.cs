@@ -16,8 +16,10 @@ public class InputManager : MonoBehaviour
 
     [HideInInspector] public InputAction moveAction;
     [HideInInspector] public InputAction liteAttackAction;
+    [HideInInspector] public InputAction jumpAction;
 
     [HideInInspector] public bool liteAttackInput = false;
+    [HideInInspector] public bool jumpInput = false;
 
     bool input_que_active = false;
     float default_que_input_timer = 0.35f;
@@ -38,6 +40,9 @@ public class InputManager : MonoBehaviour
 
         liteAttackAction = playerInput.actions["LiteAttack"];
         liteAttackAction.performed += i => liteAttackInput = true;
+
+        jumpAction = playerInput.actions["Jump"];
+        jumpAction.performed += i => jumpInput = true;
     }
 
     private void Update()
@@ -52,6 +57,7 @@ public class InputManager : MonoBehaviour
     private void HandleInputActions()
     {
         HandleAttackInput();
+        HandleJumpInput();
     }
 
     private void HandleAttackInput()
@@ -61,6 +67,16 @@ public class InputManager : MonoBehaviour
             liteAttackInput = false;
 
             player.characterStateMachine.ChangeState(player.liteAttackState);
+        }
+    }
+
+    private void HandleJumpInput()
+    {
+        if (jumpInput)
+        {
+            jumpInput = false;
+
+            player.characterStateMachine.ChangeState(player.jumpState);
         }
     }
 

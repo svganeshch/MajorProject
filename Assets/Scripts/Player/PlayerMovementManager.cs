@@ -10,7 +10,7 @@ public class PlayerMovementManager : CharacterMovementManager
 
     float horizontalInput;
     float verticalInput;
-    float moveAmount;
+    [HideInInspector] public float moveAmount;
     Vector3 moveDirection;
 
     protected Vector3 targetRotationDirection;

@@ -7,6 +7,8 @@ public class PlayerAnimatorManager : CharacterAnimatorManager
     Player player;
     Transform playerTransform;
 
+    private static readonly int jumpHash = Animator.StringToHash("jump");
+
     protected override void Awake()
     {
         base.Awake();
@@ -26,6 +28,11 @@ public class PlayerAnimatorManager : CharacterAnimatorManager
         }
     }
 
+    public void PlayJumpAction()
+    {
+        PlayCharacterActionAnimation(jumpHash, true, false, false, false);
+    }
+
     public void EnableCombo()
     {
         player.canCombo = true;
@@ -34,5 +41,10 @@ public class PlayerAnimatorManager : CharacterAnimatorManager
     public void DisableCombo()
     {
         player.canCombo = false;
+    }
+
+    public void ApplyJumpVelocity()
+    {
+        player.characterMovementManager.yVelocity.y = Mathf.Sqrt(player.jumpHeight * -2 * player.characterMovementManager.gravityForce);
     }
 }

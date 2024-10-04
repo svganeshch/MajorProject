@@ -6,6 +6,9 @@ public class Character : MonoBehaviour
 {
     [Header("Character Movement Controls")]
     public float moveSpeed = 5f;
+    public float jumpHeight = 5f;
+    public float jumpForwardVelocity = 5f;
+    public float freeFallControlVelocity = 2f;
 
     [Header("Character Animation Smoothing Controls")]
     public float animationFadeTime = 0.2f;
@@ -29,6 +32,7 @@ public class Character : MonoBehaviour
     [HideInInspector] public State idleState;
     [HideInInspector] public State liteAttackState;
     [HideInInspector] public State heavyAttackState;
+    [HideInInspector] public State jumpState;
 
     protected virtual void InitializeStates() { }
 
