@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
 
-public class CharacterMovementManager : MonoBehaviour
+public abstract class CharacterMovementManager : MonoBehaviour
 {
     [HideInInspector] public Character character;
 
@@ -21,10 +21,23 @@ public class CharacterMovementManager : MonoBehaviour
         character = GetComponent<Character>();
     }
 
+    protected virtual void Start()
+    {
+        
+    }
+
     protected virtual void Update()
     {
+        HandleGroundedMovement();
+        HandleCharacterAnimation();
+        HandleCharacterRotation();
         HandleGroundCheck();
     }
+
+    protected abstract void HandleGroundedMovement();
+    protected abstract void HandleCharacterAnimation();
+
+    protected abstract void HandleCharacterRotation();
 
     protected virtual void HandleGroundCheck()
     {

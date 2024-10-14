@@ -1,68 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
-public class PlayerMovementManager : CharacterMovementManager
+public class EnemyMovementManager : CharacterMovementManager
 {
-    Player player;
+    public Transform dest;
 
     float horizontalInput;
     float verticalInput;
-    [HideInInspector] public float moveAmount;
-    Vector3 moveDirection;
+    float moveAmount;
 
     protected Vector3 targetRotationDirection;
     protected Quaternion targetRotation;
     protected Quaternion finalRotation;
 
+    Enemy enemy;
+
     protected override void Awake()
     {
         base.Awake();
 
-        player = GetComponent<Player>();
+        enemy = GetComponent<Enemy>();
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+
+        //enemy.navMeshAgent.updatePosition = false;
+        //enemy.navMeshAgent.updateRotation = false;
     }
 
     protected override void Update()
     {
         base.Update();
 
-        horizontalInput = player.inputManager.horizontalInput;
-        verticalInput = player.inputManager.verticalInput;
+        enemy.navMeshAgent.SetDestination(dest.position);
     }
 
     protected override void HandleGroundedMovement()
     {
-        if (!player.canMove) return;
+        if (!enemy.canMove) return;
 
-        moveDirection = Vector3.forward * verticalInput;
-        moveDirection += Vector3.right * horizontalInput;
-        moveDirection.Normalize();
-        moveDirection.y = 0;
+        enemy.controller.Move(enemy.moveSpeed * Time.deltaTime * enemy.navMeshAgent.desiredVelocity.normalized);
 
-        player.controller.Move(player.moveSpeed * Time.deltaTime * moveDirection);
+        enemy.navMeshAgent.nextPosition = enemy.transform.position;
+        enemy.navMeshAgent.velocity = enemy.controller.velocity;
     }
 
     protected override void HandleCharacterAnimation()
     {
+        horizontalInput = enemy.controller.velocity.x;
+        verticalInput = enemy.controller.velocity.z;
+
         moveAmount = Mathf.Clamp01(Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput));
 
-        if (moveAmount <= 0.5 && moveAmount > 0)
-        {
-            moveAmount = 0.5f;
-        }
-        else if (moveAmount > 0.5f && moveAmount <= 1)
-        {
-            moveAmount = 1;
-        }
-
-        player.characterAnimatorManager.SetAnimatorParameters(0, moveAmount);
+        enemy.characterAnimatorManager.SetAnimatorParameters(0, moveAmount);
     }
 
     protected override void HandleCharacterRotation()
     {
-        if (!player.canRotate) return;
+        if (!enemy.canRotate) return;
 
         targetRotationDirection = Vector3.forward * verticalInput;
         targetRotationDirection += Vector3.right * horizontalInput;
