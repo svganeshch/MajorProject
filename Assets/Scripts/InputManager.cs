@@ -17,9 +17,13 @@ public class InputManager : MonoBehaviour
     [HideInInspector] public InputAction moveAction;
     [HideInInspector] public InputAction liteAttackAction;
     [HideInInspector] public InputAction jumpAction;
+    [HideInInspector] public InputAction forwardDashAction;
+    [HideInInspector] public InputAction backDashAction;
 
     [HideInInspector] public bool liteAttackInput = false;
     [HideInInspector] public bool jumpInput = false;
+    [HideInInspector] public bool forwardDashInput = false;
+    [HideInInspector] public bool backDashInput = false;
 
     bool input_que_active = false;
     float default_que_input_timer = 0.35f;
@@ -43,6 +47,12 @@ public class InputManager : MonoBehaviour
 
         jumpAction = playerInput.actions["Jump"];
         jumpAction.performed += i => jumpInput = true;
+
+        forwardDashAction = playerInput.actions["ForwardDash"];
+        forwardDashAction.performed += i => forwardDashInput = true;
+
+        backDashAction = playerInput.actions["BackDash"];
+        backDashAction.performed += i => backDashInput = true;
     }
 
     private void Update()
@@ -57,6 +67,7 @@ public class InputManager : MonoBehaviour
     private void HandleInputActions()
     {
         HandleAttackInput();
+        HandleDashInput();
         HandleJumpInput();
     }
 
@@ -67,6 +78,22 @@ public class InputManager : MonoBehaviour
             liteAttackInput = false;
 
             player.characterStateMachine.ChangeState(player.liteAttackState);
+        }
+    }
+
+    private void HandleDashInput()
+    {
+        if (forwardDashInput)
+        {
+            forwardDashInput = false;
+
+            player.playerAnimatorManager.PlayForwardDash();
+        }
+        else if (backDashInput)
+        {
+            backDashInput = false;
+
+            player.playerAnimatorManager.PlayBackwardDash();
         }
     }
 

@@ -19,6 +19,9 @@ public class CharacterAnimatorManager : MonoBehaviour
     private static readonly int heavyAttack1Hash = Animator.StringToHash("heavy_attack1");
     private static readonly int heavyAttack2Hash = Animator.StringToHash("heavy_attack2");
 
+    private static readonly int forwardDash = Animator.StringToHash("Forward_Dash");
+    private static readonly int backwardDash = Animator.StringToHash("Backward_Dash");
+
     public bool IsGrounded
     {
         get => character.animator.GetBool(isGroundedHash);
@@ -87,5 +90,15 @@ public class CharacterAnimatorManager : MonoBehaviour
         }
 
         PlayCharacterActionAnimation(nextAttackHash, true, canRotate);
+    }
+
+    public void PlayForwardDash()
+    {
+        PlayCharacterActionAnimation(forwardDash, true);
+    }
+
+    public void PlayBackwardDash()
+    {
+        PlayCharacterActionAnimation(backwardDash, true);
     }
 }
