@@ -56,10 +56,7 @@ public class AttackState : State
             isCombo = true;
         }
 
-        if (liteAttack)
-            player.playerAnimatorManager.PlayLiteAttackAction(isCombo);
-        else
-            player.playerAnimatorManager.PlayHeavyAttackAction(isCombo);
+        player.playerAnimatorManager.PlayAttackAction(this, isCombo);
 
         isCombo = false;
 

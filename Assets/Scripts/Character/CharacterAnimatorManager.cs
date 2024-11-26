@@ -12,12 +12,18 @@ public class CharacterAnimatorManager : MonoBehaviour
     private static readonly int isGroundedHash = Animator.StringToHash("isGrounded");
     private static readonly int inAirTimeHash = Animator.StringToHash("inAirTime");
 
-    private static readonly int liteAttack1Hash = Animator.StringToHash("lite_attack1");
-    private static readonly int liteAttack2Hash = Animator.StringToHash("lite_attack2");
-    private static readonly int liteAttack3Hash = Animator.StringToHash("lite_attack3");
+    private int[] LiteAttack =
+    {
+        Animator.StringToHash("lite_attack1"),
+        Animator.StringToHash("lite_attack2"),
+        Animator.StringToHash("lite_attack3")
+    };
 
-    private static readonly int heavyAttack1Hash = Animator.StringToHash("heavy_attack1");
-    private static readonly int heavyAttack2Hash = Animator.StringToHash("heavy_attack2");
+    private int[] HeavyAttack =
+    {
+        Animator.StringToHash("heavy_attack1"),
+        Animator.StringToHash("heavy_attack2")
+    };
 
     private static readonly int forwardDash = Animator.StringToHash("Forward_Dash");
     private static readonly int backwardDash = Animator.StringToHash("Backward_Dash");
@@ -62,31 +68,27 @@ public class CharacterAnimatorManager : MonoBehaviour
         character.canMove = canMove;
     }
 
-    public void PlayLiteAttackAction(bool canCombo, bool canRotate = false)
+    public void PlayAttackAction(State attackState, bool canCombo, bool canRotate = false)
     {
-        int nextAttackHash = liteAttack1Hash;
+        int[] attackHashes = new int[LiteAttack.Length];
 
-        if (canCombo)
+        if (attackState == character.liteAttackState)
         {
-            if (previousActionHash == liteAttack1Hash)
-                nextAttackHash = liteAttack2Hash;
-            else if (previousActionHash == liteAttack2Hash)
-                nextAttackHash = liteAttack1Hash;
+            attackHashes = LiteAttack;
+        }
+        else if (attackState == character.heavyAttackState)
+        {
+            attackHashes = HeavyAttack;
         }
 
-        PlayCharacterActionAnimation(nextAttackHash, true, canRotate);
-    }
-
-    public void PlayHeavyAttackAction(bool canCombo, bool canRotate = false)
-    {
-        int nextAttackHash = heavyAttack1Hash;
+        int nextAttackHash = attackHashes[0];
 
         if (canCombo)
         {
-            if (previousActionHash == heavyAttack1Hash)
-                nextAttackHash = heavyAttack2Hash;
-            else if (previousActionHash == heavyAttack1Hash)
-                nextAttackHash = heavyAttack2Hash;
+            if (previousActionHash == attackHashes[0])
+                nextAttackHash = attackHashes[1];
+            else if (previousActionHash == attackHashes[1])
+                nextAttackHash = attackHashes[0];
         }
 
         PlayCharacterActionAnimation(nextAttackHash, true, canRotate);
