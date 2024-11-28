@@ -1,17 +1,15 @@
-using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
 {
-    public CinemachineVirtualCamera vCamera;
+    public CinemachineCamera vCamera;
     public GameObject camFollow;
 
     private void Awake()
     {
         //camFollow = FindObjectOfType<PlayerFollowCam>();
-        vCamera = GetComponentInChildren<CinemachineVirtualCamera>();
+        vCamera = GetComponentInChildren<CinemachineCamera>();
         vCamera.enabled = false;
     }
 
@@ -40,7 +38,7 @@ public class CameraSwitch : MonoBehaviour
         }
     }
 
-    public void OnCameraSwitch(CinemachineVirtualCamera camera)
+    public void OnCameraSwitch(CinemachineCamera camera)
     {
         camera.Follow = camFollow.transform;
         camera.LookAt = camFollow.transform;

@@ -33,13 +33,25 @@ public class PlayerAnimatorManager : CharacterAnimatorManager
         PlayCharacterActionAnimation(jumpHash, true, false, false, false);
     }
 
-    public void PlayEffect()
+    public void PlayEffect(string effect)
     {
+        if (effect == "dash")
+        {
+            FXManager.Instance.forwardDashEffect.Play();
+            return;
+        }
+
         FXManager.Instance.weaponSlashEffect.Play();
     }
 
-    public void StopEffect()
+    public void StopEffect(string effect)
     {
+        if (effect == "dash")
+        {
+            FXManager.Instance.forwardDashEffect.Stop();
+            return;
+        }
+
         FXManager.Instance.weaponSlashEffect.Stop();
     }
 
