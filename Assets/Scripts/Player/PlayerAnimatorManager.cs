@@ -33,6 +33,16 @@ public class PlayerAnimatorManager : CharacterAnimatorManager
         PlayCharacterActionAnimation(jumpHash, true, false, false, false);
     }
 
+    public void PlayEffect()
+    {
+        FXManager.Instance.weaponSlashEffect.Play();
+    }
+
+    public void StopEffect()
+    {
+        FXManager.Instance.weaponSlashEffect.Stop();
+    }
+
     public void EnableCombo()
     {
         player.canCombo = true;
