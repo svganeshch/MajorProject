@@ -11,12 +11,6 @@ public class ResetJumpState : StateMachineBehaviour
             character = animator.GetComponent<Character>();
         }
 
-        if (character.characterStateMachine.currentState != null)
-        {
-            if (character.characterStateMachine.currentState == character.jumpState)
-            {
-                character.characterStateMachine.ChangeState(character.idleState);
-            }
-        }
+        character.isJumping = false;
     }
 }

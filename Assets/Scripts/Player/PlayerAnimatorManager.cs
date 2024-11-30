@@ -52,9 +52,4 @@ public class PlayerAnimatorManager : CharacterAnimatorManager
     {
         player.canCombo = false;
     }
-
-    public void ApplyJumpVelocity()
-    {
-        player.characterMovementManager.yVelocity.y = Mathf.Sqrt(player.jumpHeight * -2 * player.characterMovementManager.gravityForce);
-    }
 }

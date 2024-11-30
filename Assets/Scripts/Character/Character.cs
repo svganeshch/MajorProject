@@ -6,11 +6,8 @@ public class Character : MonoBehaviour
 {
     [Header("Character Movement Controls")]
     public float moveSpeed = 5f;
-    public float jumpHeight = 5f;
-    public float jumpForwardVelocity = 5f;
-    public float freeFallControlVelocity = 2f;
 
-    [Header("Character Animation Smoothing Controls")]
+    [Header("Character Smoothing Controls")]
     public float animationFadeTime = 0.2f;
     public float speedDampTime = 0.1f;
     public float rotationDampTime = 15f;
@@ -21,6 +18,8 @@ public class Character : MonoBehaviour
     public bool canMove = true;
     public bool canRotate = true;
     public bool applyRootMotion = false;
+    public bool isJumping = false;
+    public bool isGrounded = true;
 
     [HideInInspector] public Animator animator;
     [HideInInspector] public CharacterController controller;
@@ -32,7 +31,6 @@ public class Character : MonoBehaviour
     [HideInInspector] public State idleState;
     [HideInInspector] public State liteAttackState;
     [HideInInspector] public State heavyAttackState;
-    [HideInInspector] public State jumpState;
 
     protected virtual void InitializeStates() { }
 

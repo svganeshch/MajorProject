@@ -7,13 +7,12 @@ public abstract class CharacterMovementManager : MonoBehaviour
 {
     [HideInInspector] public Character character;
 
-    public bool isGrounded;
-    [HideInInspector] public Vector3 yVelocity;
-    [HideInInspector] public float gravityForce = -40;
+    protected Vector3 yVelocity;
+    protected float gravityForce = -40;
     protected float groundCheckSphereRadius = 0.3f;
     protected float groundedYVelocity = -20;
     protected float fallStartYVelocity = -5;
-    [HideInInspector] public float inAirTime = 0;
+    protected float inAirTime = 0;
     protected bool fallingVelocitySet = false;
 
     protected virtual void Awake()
@@ -41,11 +40,11 @@ public abstract class CharacterMovementManager : MonoBehaviour
 
     protected virtual void HandleGroundCheck()
     {
-        isGrounded = Physics.CheckSphere(character.transform.position, groundCheckSphereRadius, LayerMaskManager.instance.groundLayer);
+        character.isGrounded = Physics.CheckSphere(character.transform.position, groundCheckSphereRadius, LayerMaskManager.instance.groundLayer);
 
-        character.characterAnimatorManager.IsGrounded = isGrounded;
+        character.characterAnimatorManager.IsGrounded = character.isGrounded;
 
-        if (isGrounded)
+        if (character.isGrounded)
         {
             if (yVelocity.y < 0f)
             {
@@ -56,7 +55,7 @@ public abstract class CharacterMovementManager : MonoBehaviour
         }
         else
         {
-            if (character.characterStateMachine.currentState != character.jumpState && !fallingVelocitySet)
+            if (!character.isJumping && !fallingVelocitySet)
             {
                 fallingVelocitySet = true;
                 yVelocity.y = fallStartYVelocity;

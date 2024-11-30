@@ -83,17 +83,12 @@ public class InputManager : MonoBehaviour
 
     private void HandleDashInput()
     {
-        if (forwardDashInput)
+        if (forwardDashInput || backDashInput)
         {
             forwardDashInput = false;
-
-            player.playerAnimatorManager.PlayForwardDash();
-        }
-        else if (backDashInput)
-        {
             backDashInput = false;
 
-            player.playerAnimatorManager.PlayBackwardDash();
+            player.playerMovementManager.PerformDash();
         }
     }
 
@@ -103,7 +98,7 @@ public class InputManager : MonoBehaviour
         {
             jumpInput = false;
 
-            player.characterStateMachine.ChangeState(player.jumpState);
+            player.playerMovementManager.PerformJump();
         }
     }
 

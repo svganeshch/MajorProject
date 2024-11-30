@@ -8,6 +8,11 @@ public class Player : Character
     [HideInInspector] public PlayerMovementManager playerMovementManager;
     [HideInInspector] public InputManager inputManager;
 
+    [Header("Jump Controls")]
+    public float jumpHeight = 5f;
+    public float jumpForwardVelocity = 5f;
+    public float freeFallControlVelocity = 2f;
+
     protected override void Awake()
     {
         base.Awake();
@@ -24,7 +29,6 @@ public class Player : Character
         idleState = new IdleState(this, characterStateMachine);
         liteAttackState = new AttackState(this, characterStateMachine, true);
         heavyAttackState = new AttackState(this, characterStateMachine, false);
-        jumpState = new JumpState(this, characterStateMachine);
 
         characterStateMachine.Initialize(idleState);
     }
