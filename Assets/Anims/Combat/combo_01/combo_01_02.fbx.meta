@@ -74,14 +74,14 @@ ModelImporter:
         messageOptions: 0
       - time: 0.2043302
         functionName: PlayEffect
-        data: 
+        data: sword
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
       - time: 0.30987826
         functionName: StopEffect
-        data: 
+        data: sword
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0

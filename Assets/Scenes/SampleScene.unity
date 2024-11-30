@@ -1499,6 +1499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeb7bb19d2a57e8448bb0fb29fbfd2e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentParticleEffects: []
+  currentVisualEffects: []
   weaponSlashEffect: {fileID: 2023871094}
   forwardDashEffect: {fileID: 6601120596871767587}
 --- !u!4 &774022533 stripped

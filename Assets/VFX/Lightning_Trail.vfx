@@ -209,15 +209,12 @@ MonoBehaviour:
     - model: {fileID: 114350483966675776}
       id: 0
       isStickyNote: 0
-    - model: {fileID: 0}
-      id: 0
-      isStickyNote: 0
   stickyNoteInfos: []
   categories: []
   uiBounds:
     serializedVersion: 2
     x: -1341
-    y: 0
+    y: -0
     width: 3877
     height: 2951
 --- !u!114 &114350483966675075
@@ -9163,7 +9160,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 5
     m_Space: -1
   m_Property:
     name: frequency
@@ -11364,9 +11361,7 @@ MonoBehaviour:
   - link: []
   - link: []
   m_OutputFlowSlot:
-  - link:
-    - context: {fileID: 114350483966675716}
-      slotIndex: 0
+  - link: []
   loopDuration: 0
   loopCount: 0
   delayBeforeLoop: 0
@@ -11545,9 +11540,7 @@ MonoBehaviour:
   m_Label: Initialize Particles
   m_Data: {fileID: 114350483966675730}
   m_InputFlowSlot:
-  - link:
-    - context: {fileID: 114350483966675709}
-      slotIndex: 0
+  - link: []
   m_OutputFlowSlot:
   - link:
     - context: {fileID: 114350483966675764}
@@ -11887,7 +11880,7 @@ MonoBehaviour:
   particlePerStripCount: 32
   needsComputeBounds: 0
   boundsMode: 1
-  m_Space: 1
+  m_Space: 0
 --- !u!114 &114350483966675764
 MonoBehaviour:
   m_ObjectHideFlags: 0

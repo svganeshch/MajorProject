@@ -18,5 +18,7 @@ public class ResetAnimationFlags : StateMachineBehaviour
         character.applyRootMotion = false;
         character.canRotate = true;
         character.canMove = true;
+
+        FXManager.Instance.StopAllEffects();
     }
 }

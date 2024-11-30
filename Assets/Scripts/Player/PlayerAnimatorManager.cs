@@ -35,24 +35,12 @@ public class PlayerAnimatorManager : CharacterAnimatorManager
 
     public void PlayEffect(string effect)
     {
-        if (effect == "dash")
-        {
-            FXManager.Instance.forwardDashEffect.Play();
-            return;
-        }
-
-        FXManager.Instance.weaponSlashEffect.Play();
+        FXManager.Instance.PlayEffect(effect);
     }
 
     public void StopEffect(string effect)
     {
-        if (effect == "dash")
-        {
-            FXManager.Instance.forwardDashEffect.Stop();
-            return;
-        }
-
-        FXManager.Instance.weaponSlashEffect.Stop();
+        FXManager.Instance.StopEffect(effect);
     }
 
     public void EnableCombo()
