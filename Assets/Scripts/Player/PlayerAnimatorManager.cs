@@ -35,12 +35,22 @@ public class PlayerAnimatorManager : CharacterAnimatorManager
 
     public void PlayEffect(string effect)
     {
-        FXManager.Instance.PlayEffect(effect);
+        WorldCharacterEffectsManager.Instance.PlayEffect(effect);
     }
 
     public void StopEffect(string effect)
     {
-        FXManager.Instance.StopEffect(effect);
+        WorldCharacterEffectsManager.Instance.StopEffect(effect);
+    }
+
+    public void EnableDamageCollider()
+    {
+        player.playerEquipmentManager.rightWeaponManager.swordDamageCollider.EnableDamageCollider();
+    }
+
+    public void DisableDamageCollider()
+    {
+        player.playerEquipmentManager.rightWeaponManager.swordDamageCollider.DisableDamageCollider();
     }
 
     public void EnableCombo()

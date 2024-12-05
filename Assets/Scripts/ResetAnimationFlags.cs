@@ -20,6 +20,6 @@ public class ResetAnimationFlags : StateMachineBehaviour
         character.canMove = true;
         character.isJumping = false;
 
-        FXManager.Instance.StopAllEffects();
+        WorldCharacterEffectsManager.Instance.StopAllEffects();
     }
 }

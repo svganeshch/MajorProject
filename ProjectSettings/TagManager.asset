@@ -12,14 +12,14 @@ TagManager:
   - Water
   - UI
   - Character
+  - Damagable Character
   - 
   - 
   - 
   - 
   - 
   - 
-  - 
-  - 
+  - DamageCollider
   - Ground
   - 
   - 

@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    [Header("Character Stats")]
+    public int health = 100;
+
     [Header("Character Movement Controls")]
     public float moveSpeed = 5f;
 
@@ -13,6 +17,7 @@ public class Character : MonoBehaviour
     public float rotationDampTime = 15f;
 
     [Header("Flags")]
+    public bool isDead = false;
     public bool performingAction = false;
     public bool canCombo = false;
     public bool canMove = true;
@@ -26,6 +31,7 @@ public class Character : MonoBehaviour
     [HideInInspector] public StateMachine characterStateMachine;
     [HideInInspector] public CharacterAnimatorManager characterAnimatorManager;
     [HideInInspector] public CharacterMovementManager characterMovementManager;
+    [HideInInspector] public CharacterEffectsManager characterEffectsManager;
 
     // Character States
     [HideInInspector] public State idleState;
@@ -40,6 +46,7 @@ public class Character : MonoBehaviour
         controller = GetComponent<CharacterController>();
         characterMovementManager = GetComponent<CharacterMovementManager>();
         characterAnimatorManager = GetComponent<CharacterAnimatorManager>();
+        characterEffectsManager = GetComponent<CharacterEffectsManager>();
 
         characterStateMachine = new StateMachine();
     }
@@ -47,6 +54,7 @@ public class Character : MonoBehaviour
     protected virtual void Start()
     {
         InitializeStates();
+        IgnoreOwnColliders();
     }
 
     protected virtual void FixedUpdate()
@@ -58,6 +66,27 @@ public class Character : MonoBehaviour
     {
         characterStateMachine.currentState.HandleInput();
         characterStateMachine.currentState.LogicUpdate();
+    }
+
+    private void IgnoreOwnColliders()
+    {
+        Collider characterControllerCollider = GetComponent<Collider>();
+        Collider[] damagableCharacterColliders = GetComponentsInChildren<Collider>();
+        List<Collider> ignoreColliders = new List<Collider>();
+
+        foreach (var collider in damagableCharacterColliders)
+        {
+            ignoreColliders.Add(collider);
+        }
+        ignoreColliders.Add(characterControllerCollider);
+
+        foreach (var collider in ignoreColliders)
+        {
+            foreach (var otherCollider in ignoreColliders)
+            {
+                Physics.IgnoreCollision(collider, otherCollider, true);
+            }
+        }
     }
 
     protected virtual void OnGUI() { }

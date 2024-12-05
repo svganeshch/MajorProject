@@ -2,16 +2,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 
-public class FXManager : MonoBehaviour
+public class WorldCharacterEffectsManager : MonoBehaviour
 {
-    public static FXManager Instance;
+    public static WorldCharacterEffectsManager Instance;
+
+    public HitDamageEffect hitDamageEffect;
+    public ParticleSystem weaponSlashEffect;
+
+    public VisualEffect forwardDashEffect;
 
     public List<ParticleSystem> currentParticleEffects = new List<ParticleSystem>();
     public List<VisualEffect> currentVisualEffects = new List<VisualEffect>();
 
-    public ParticleSystem weaponSlashEffect;
-
-    public VisualEffect forwardDashEffect;
+    [SerializeField] List<InstantCharacterEffect> instantEffects;
 
     private void Awake()
     {
