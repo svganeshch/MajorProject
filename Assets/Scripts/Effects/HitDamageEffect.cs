@@ -25,6 +25,7 @@ public class HitDamageEffect : InstantCharacterEffect
 
         if (character.isDead) return;
 
+        PlayHitAnimation(character);
         CalculateHitDamage(character);
     }
 
@@ -37,6 +38,11 @@ public class HitDamageEffect : InstantCharacterEffect
             finalDamageDealt = 1;
         }
 
-        character.health -= finalDamageDealt;
+        character.characterHealthManager.TakeDamage(finalDamageDealt);
+    }
+
+    private void PlayHitAnimation(Character character)
+    {
+        character.characterAnimatorManager.PlayHitAnimation();
     }
 }

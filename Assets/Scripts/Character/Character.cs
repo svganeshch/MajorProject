@@ -32,6 +32,7 @@ public class Character : MonoBehaviour
     [HideInInspector] public CharacterAnimatorManager characterAnimatorManager;
     [HideInInspector] public CharacterMovementManager characterMovementManager;
     [HideInInspector] public CharacterEffectsManager characterEffectsManager;
+    [HideInInspector] public CharacterHealthManager characterHealthManager;
 
     // Character States
     [HideInInspector] public State idleState;
@@ -47,6 +48,7 @@ public class Character : MonoBehaviour
         characterMovementManager = GetComponent<CharacterMovementManager>();
         characterAnimatorManager = GetComponent<CharacterAnimatorManager>();
         characterEffectsManager = GetComponent<CharacterEffectsManager>();
+        characterHealthManager = GetComponent<CharacterHealthManager>();
 
         characterStateMachine = new StateMachine();
     }

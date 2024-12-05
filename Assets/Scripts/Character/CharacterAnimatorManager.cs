@@ -28,6 +28,7 @@ public class CharacterAnimatorManager : MonoBehaviour
     private static readonly int forwardDash = Animator.StringToHash("Forward_Dash");
     private static readonly int backwardDash = Animator.StringToHash("Backward_Dash");
 
+    private static readonly int hitHash = Animator.StringToHash("Hit_B");
     private static readonly int deathHash = Animator.StringToHash("Death");
 
     public bool IsGrounded
@@ -104,6 +105,11 @@ public class CharacterAnimatorManager : MonoBehaviour
     public void PlayBackwardDash()
     {
         PlayCharacterActionAnimation(backwardDash, true);
+    }
+
+    public void PlayHitAnimation()
+    {
+        PlayCharacterActionAnimation(hitHash, true);
     }
 
     public void PlayDeathAction()
