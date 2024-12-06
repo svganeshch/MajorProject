@@ -26,7 +26,7 @@ public class CharacterHealthManager : MonoBehaviour
             character.characterMovementManager.enabled = false;
             character.characterAnimatorManager.PlayDeathAction();
 
-            Destroy(character.gameObject, 5);
+            Destroy(character.gameObject, 5f);
         }
     }
 }

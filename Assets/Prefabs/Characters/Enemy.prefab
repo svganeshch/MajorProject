@@ -208,6 +208,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 4353679281268926780}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bb80929ce3c67441ac867144b9cfed6,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 7276440545266385635}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
@@ -256,6 +260,7 @@ MonoBehaviour:
   characterAnimatorManager: {fileID: 0}
   characterMovementManager: {fileID: 0}
   characterEffectsManager: {fileID: 0}
+  characterHealthManager: {fileID: 0}
   navMeshAgent: {fileID: 0}
   enemyAnimatorManager: {fileID: 0}
   enemyMovementManager: {fileID: 0}
@@ -295,6 +300,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0cbcf29ac4b460458b93033267a2049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4353679281268926780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553258501138499961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b82abf4440b144ca287711c09d9005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!143 &7276440545266385635
