@@ -24,6 +24,7 @@ public class Character : MonoBehaviour
     public bool canRotate = true;
     public bool applyRootMotion = false;
     public bool isJumping = false;
+    public bool isVaulting = false;
     public bool isGrounded = true;
 
     [HideInInspector] public Animator animator;

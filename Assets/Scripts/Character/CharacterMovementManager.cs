@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -67,6 +68,7 @@ public abstract class CharacterMovementManager : MonoBehaviour
             yVelocity.y += gravityForce * Time.deltaTime;
         }
 
+        if (character.isVaulting) return;
         character.controller.Move(yVelocity * Time.deltaTime);
     }
 }

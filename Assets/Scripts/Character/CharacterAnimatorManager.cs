@@ -30,6 +30,8 @@ public class CharacterAnimatorManager : MonoBehaviour
 
     private static readonly int hitHash = Animator.StringToHash("Hit_B");
     private static readonly int deathHash = Animator.StringToHash("Death");
+    
+    private static readonly int vaultHash = Animator.StringToHash("Vault");
 
     public bool IsGrounded
     {
@@ -63,7 +65,7 @@ public class CharacterAnimatorManager : MonoBehaviour
     {
         previousActionHash = animationClipHash;
 
-        character.animator.CrossFade(animationClipHash, character.animationFadeTime);
+        character.animator.CrossFadeInFixedTime(animationClipHash, character.animationFadeTime);
 
         character.performingAction = isPerformingAction;
         character.applyRootMotion = applyRootMotion;
@@ -115,5 +117,10 @@ public class CharacterAnimatorManager : MonoBehaviour
     public void PlayDeathAction()
     {
         PlayCharacterActionAnimation(deathHash, true);
+    }
+
+    public void PlayVaultAction()
+    {
+        PlayCharacterActionAnimation(vaultHash, true);
     }
 }

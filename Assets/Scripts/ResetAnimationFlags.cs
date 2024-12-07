@@ -19,6 +19,7 @@ public class ResetAnimationFlags : StateMachineBehaviour
         character.canRotate = true;
         character.canMove = true;
         character.isJumping = false;
+        character.isVaulting = false;
 
         WorldCharacterEffectsManager.Instance.StopAllEffects();
     }

@@ -20,4 +20,5 @@ public class LayerMaskManager : MonoBehaviour
 
     public LayerMask characterLayer;
     public LayerMask groundLayer;
+    public LayerMask vaultObstacleLayer;
 }

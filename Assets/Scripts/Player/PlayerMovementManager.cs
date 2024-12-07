@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class PlayerMovementManager : CharacterMovementManager
 {
@@ -18,7 +14,7 @@ public class PlayerMovementManager : CharacterMovementManager
     protected Quaternion finalRotation;
 
     Vector3 jumpDirection;
-
+    
     protected override void Awake()
     {
         base.Awake();
@@ -30,9 +26,6 @@ public class PlayerMovementManager : CharacterMovementManager
     {
         base.Update();
 
-        horizontalInput = player.inputManager.horizontalInput;
-        verticalInput = player.inputManager.verticalInput;
-
         HandleJumpMovement();
         HandleFreeFallMovement();
     }
@@ -40,12 +33,15 @@ public class PlayerMovementManager : CharacterMovementManager
     protected override void HandleGroundedMovement()
     {
         if (!player.canMove) return;
-
+        
+        horizontalInput = player.inputManager.horizontalInput;
+        verticalInput = player.inputManager.verticalInput;
+        
         moveDirection = Vector3.forward * verticalInput;
         moveDirection += Vector3.right * horizontalInput;
         moveDirection.Normalize();
         moveDirection.y = 0;
-
+        
         player.controller.Move(player.moveSpeed * Time.deltaTime * moveDirection);
     }
 
