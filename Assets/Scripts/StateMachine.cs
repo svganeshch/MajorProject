@@ -11,10 +11,10 @@ public class StateMachine
 
     public void ChangeState(State newState, bool repeat = false)
     {
-        if (!repeat)
+        /*if (!repeat)
         {
             if (newState == currentState) return;
-        }
+        }*/
 
         previousState = currentState;
         currentState.Exit();

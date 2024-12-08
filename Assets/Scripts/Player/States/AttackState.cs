@@ -25,6 +25,14 @@ public class AttackState : State
         isCombo = false;
         dodge = false;
         block = false;
+        
+        if (player.performingAction)
+        {
+            if (!player.canCombo) stateMachine.ChangeState(player.idleState);
+            
+            player.canCombo = false;
+            isCombo = true;
+        }
     }
 
     public override void LogicUpdate()
@@ -49,14 +57,8 @@ public class AttackState : State
         //        stateMachine.ChangeState(player.blockState);
         //    }
         //}
-
-        if (player.canCombo && player.performingAction)
-        {
-            player.canCombo = false;
-            isCombo = true;
-        }
-
-        player.playerAnimatorManager.PlayAttackAction(this, isCombo);
+        
+        player.playerAnimatorManager.PlayAttackAction(this, isCombo, true);
 
         isCombo = false;
 

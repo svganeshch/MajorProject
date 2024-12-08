@@ -46,11 +46,13 @@ public class PlayerAnimatorManager : CharacterAnimatorManager
     public void EnableDamageCollider()
     {
         player.playerEquipmentManager.rightWeaponManager.swordDamageCollider.EnableDamageCollider();
+        WorldCharacterEffectsManager.Instance.PlayEffect("sword");
     }
 
     public void DisableDamageCollider()
     {
         player.playerEquipmentManager.rightWeaponManager.swordDamageCollider.DisableDamageCollider();
+        WorldCharacterEffectsManager.Instance.StopEffect("sword");
     }
 
     public void EnableCombo()

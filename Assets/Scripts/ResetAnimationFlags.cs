@@ -21,6 +21,6 @@ public class ResetAnimationFlags : StateMachineBehaviour
         character.isJumping = false;
         character.isVaulting = false;
 
-        WorldCharacterEffectsManager.Instance.StopAllEffects();
+        WorldCharacterEffectsManager.Instance.StopAllActiveEffects();
     }
 }

@@ -32,10 +32,10 @@ public class PlayerMovementManager : CharacterMovementManager
 
     protected override void HandleGroundedMovement()
     {
-        if (!player.canMove) return;
-        
         horizontalInput = player.inputManager.horizontalInput;
         verticalInput = player.inputManager.verticalInput;
+        
+        if (!player.canMove) return;
         
         moveDirection = Vector3.forward * verticalInput;
         moveDirection += Vector3.right * horizontalInput;

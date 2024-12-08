@@ -65,7 +65,7 @@ public class CharacterAnimatorManager : MonoBehaviour
     {
         previousActionHash = animationClipHash;
 
-        character.animator.CrossFadeInFixedTime(animationClipHash, character.animationFadeTime);
+        character.animator.CrossFade(animationClipHash, character.animationFadeTime);
 
         character.performingAction = isPerformingAction;
         character.applyRootMotion = applyRootMotion;

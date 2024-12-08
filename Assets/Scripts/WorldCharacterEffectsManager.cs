@@ -70,10 +70,8 @@ public class WorldCharacterEffectsManager : MonoBehaviour
         }
     }
 
-    public void StopAllEffects()
+    public void StopAllActiveEffects()
     {
-        if (currentParticleEffects.Count <= 0 && currentVisualEffects.Count <= 0) return;
-
         foreach (var effect in currentParticleEffects)
         {
             effect.Stop();
