@@ -17,8 +17,12 @@ public class PlayerParkourManager : CharacterParkourManager
 {
     Player player;
     
-    [Header("Vault Settings")]
-    public VaultAction vaultAction;
+    [SerializeField] private ParkourAction currentParkourAction;
+    
+    [Header("Parkour Actions")]
+    public ParkourAction[] parkourActions;
+    
+    [Header("Parkour Settings")]
     private RaycastHit forwardHitData;
     private RaycastHit heightHitData;
     
@@ -33,64 +37,68 @@ public class PlayerParkourManager : CharacterParkourManager
         player = GetComponent<Player>();
     }
     
-    public bool IsVaultObject()
+    public bool IsParkourObstacle()
     {
         var forwardOrigin = player.transform.position + forwardRayOffset;
 
-        bool vaultObstacleDetected = Physics.Raycast(forwardOrigin, player.transform.forward, out forwardHitData,
-            forwardRayLength, LayerMaskManager.instance.vaultObstacleLayer);
+        bool parkourObstacleDetected = Physics.Raycast(forwardOrigin, player.transform.forward, out forwardHitData,
+            forwardRayLength, LayerMaskManager.instance.parkourObstacleLayer);
         
         Debug.DrawRay(forwardOrigin, player.transform.forward * forwardRayLength,
-            vaultObstacleDetected ? Color.green : Color.red);
+            parkourObstacleDetected ? Color.green : Color.red);
 
         bool obstacleHeightDetected = false;
 
-        if (vaultObstacleDetected)
+        if (parkourObstacleDetected)
         {
             var heightOrigin = forwardHitData.point + Vector3.up * heightRayLength;
             
             obstacleHeightDetected = Physics.Raycast(heightOrigin, Vector3.down, out heightHitData,
-                heightRayLength, LayerMaskManager.instance.vaultObstacleLayer);
+                heightRayLength, LayerMaskManager.instance.parkourObstacleLayer);
             
             Debug.DrawRay(heightOrigin, Vector3.down * heightRayLength,
                 obstacleHeightDetected ? Color.green : Color.red);
         }
 
-        if (vaultObstacleDetected && obstacleHeightDetected)
+        if (!parkourObstacleDetected || !obstacleHeightDetected) return false;
+
+        foreach (var parkourAction in parkourActions)
         {
-            return vaultAction.CanVault(forwardHitData, heightHitData, player.transform);
+            if (!parkourAction.CanParkourObstacle(forwardHitData, heightHitData, player.transform)) continue;
+            currentParkourAction = parkourAction;
+            return true;
         }
         
         return false;
     }
 
-    public void PerformVaultActionCoroutine()
+    public void PerformParkourActionCoroutine()
     {
         if (player.performingAction) return;
         
-        StartCoroutine(PerformVaultAction());
+        StartCoroutine(PerformParkourAction());
     }
     
-    private IEnumerator PerformVaultAction()
+    private IEnumerator PerformParkourAction()
     {
-        player.isVaulting = true;
+        player.performingParkour = true;
         player.playerAnimatorManager.SetAnimatorParameters(0, 0);
         
         MatchTargetParameters matchTargetParameters = null;
 
-        if (vaultAction.EnableTargetMatching)
+        if (currentParkourAction.EnableTargetMatching)
         {
             matchTargetParameters = new MatchTargetParameters()
             {
-                matchPos = vaultAction.MatchPos,
-                matchBodyPart = vaultAction.MatchBodyPart,
-                matchPosWeight = vaultAction.MatchPosWeight,
-                matchStartTime = vaultAction.MatchStartTime,
-                matchTargetTime = vaultAction.MatchTargetTime
+                matchPos = currentParkourAction.MatchPos,
+                matchBodyPart = currentParkourAction.MatchBodyPart,
+                matchPosWeight = currentParkourAction.MatchPosWeight,
+                matchStartTime = currentParkourAction.MatchStartTime,
+                matchTargetTime = currentParkourAction.MatchEndTime
             };
         }
         
-        player.playerAnimatorManager.PlayVaultAction();
+        player.playerAnimatorManager.PlayParkourAction(currentParkourAction.ParkourActionAnimation);
 
         yield return null;
         
@@ -103,10 +111,10 @@ public class PlayerParkourManager : CharacterParkourManager
             timeElapsed += Time.deltaTime;
             float normalizedTime = timeElapsed / animState.length;
 
-            if (vaultAction.RotateTowardsObstacle && normalizedTime > rotateStartTime)
+            if (currentParkourAction.RotateTowardsObstacle && normalizedTime > rotateStartTime)
             {
                 player.transform.rotation = Quaternion.Slerp(player.transform.rotation, 
-                    vaultAction.TargetRotation, player.rotationDampTime * Time.deltaTime);
+                    currentParkourAction.TargetRotation, player.rotationDampTime * Time.deltaTime);
             }
 
             if (matchTargetParameters != null)

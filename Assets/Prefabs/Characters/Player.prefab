@@ -925,12 +925,12 @@ MonoBehaviour:
   rotationDampTime: 15
   isDead: 0
   performingAction: 0
+  performingParkour: 0
   canCombo: 0
   canMove: 1
   canRotate: 1
   applyRootMotion: 0
   isJumping: 0
-  isVaulting: 0
   isGrounded: 1
   animator: {fileID: 0}
   controller: {fileID: 0}
@@ -1029,7 +1029,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2228f89577d64c64da7528c3a42534cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vaultAction: {fileID: 11400000, guid: 4a75efb9f19f04446a6a2887eebc67e4, type: 2}
+  currentParkourAction: {fileID: 0}
+  parkourActions:
+  - {fileID: 11400000, guid: cde07e3cdc37bd24a9042b6b865283f4, type: 2}
+  - {fileID: 11400000, guid: 4a75efb9f19f04446a6a2887eebc67e4, type: 2}
   forwardRayOffset: {x: 0, y: 0.25, z: 0}
   forwardRayLength: 1
   heightRayLength: 2

@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813ecf4ad38c49d28a903367c8a48589, type: 3}
   m_Name: VaultAction
   m_EditorClassIdentifier: 
-  minHeight: 0.8
-  maxHeight: 1.25
+  parkourActionAnimation: 0
+  minHeight: 0.5
+  maxHeight: 1.2
   rotateTowardsObstacle: 1
   enableTargetMatching: 0
   matchBodyPart: 5
   matchPosWeight: {x: 0, y: 1, z: 1}
   matchStartTime: 0.2
-  matchTargetTime: 0.3
+  matchEndTime: 0.6

@@ -98,9 +98,9 @@ public class InputManager : MonoBehaviour
         {
             jumpInput = false;
             
-            if (player.playerParkourManager.IsVaultObject())
+            if (player.playerParkourManager.IsParkourObstacle())
             {
-                player.playerParkourManager.PerformVaultActionCoroutine();
+                player.playerParkourManager.PerformParkourActionCoroutine();
                 return;
             }
 

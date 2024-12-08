@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class LayerMaskManager : MonoBehaviour
 {
@@ -20,5 +21,5 @@ public class LayerMaskManager : MonoBehaviour
 
     public LayerMask characterLayer;
     public LayerMask groundLayer;
-    public LayerMask vaultObstacleLayer;
+    public LayerMask parkourObstacleLayer;
 }

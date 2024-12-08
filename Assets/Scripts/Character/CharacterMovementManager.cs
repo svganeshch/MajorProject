@@ -68,7 +68,7 @@ public abstract class CharacterMovementManager : MonoBehaviour
             yVelocity.y += gravityForce * Time.deltaTime;
         }
 
-        if (character.isVaulting) return;
+        if (character.performingParkour) return;
         character.controller.Move(yVelocity * Time.deltaTime);
     }
 }

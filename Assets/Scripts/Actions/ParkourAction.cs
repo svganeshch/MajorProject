@@ -1,10 +1,15 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Actions
 {
-    [CreateAssetMenu(fileName = "VaultAction", menuName = "Actions / VaultAction")]
-    public class VaultAction : ScriptableObject
+    [CreateAssetMenu(fileName = "ParkourAction", menuName = "Actions / ParkourAction")]
+    public class ParkourAction : ScriptableObject
     {
+        [FormerlySerializedAs("parkourAction")]
+        [Header("Parkour Action")]
+        [SerializeField] private ParkourActionAnimation parkourActionAnimation;
+        
         [Header("Height Information")]
         [SerializeField] private float minHeight;
         [SerializeField] private float maxHeight;
@@ -18,8 +23,9 @@ namespace Actions
         [SerializeField] private Vector3 matchPosWeight = new Vector3(0, 1.0f, 1.0f);
 
         [SerializeField] private float matchStartTime;
-        [SerializeField] private float matchTargetTime;
+        [SerializeField] private float matchEndTime;
 
+        public ParkourActionAnimation ParkourActionAnimation => parkourActionAnimation;
         public Quaternion TargetRotation { get; private set; }
         public Vector3 MatchPos { get; private set; }
         public bool RotateTowardsObstacle => rotateTowardsObstacle;
@@ -32,13 +38,13 @@ namespace Actions
             set => matchStartTime = value;
         }
 
-        public float MatchTargetTime
+        public float MatchEndTime
         {
-            get => matchTargetTime;
-            set => matchTargetTime = value;
+            get => matchEndTime;
+            set => matchEndTime = value;
         }
 
-        public bool CanVault(RaycastHit forwardHitData, RaycastHit heightHitData, Transform playerTransform)
+        public bool CanParkourObstacle(RaycastHit forwardHitData, RaycastHit heightHitData, Transform playerTransform)
         {
             var height = heightHitData.point.y - playerTransform.position.y;
             if (height < minHeight || height > maxHeight) return false;

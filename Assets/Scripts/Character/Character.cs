@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Character : MonoBehaviour
 {
@@ -19,12 +20,12 @@ public class Character : MonoBehaviour
     [Header("Flags")]
     public bool isDead = false;
     public bool performingAction = false;
+    public bool performingParkour = false;
     public bool canCombo = false;
     public bool canMove = true;
     public bool canRotate = true;
     public bool applyRootMotion = false;
     public bool isJumping = false;
-    public bool isVaulting = false;
     public bool isGrounded = true;
 
     [HideInInspector] public Animator animator;

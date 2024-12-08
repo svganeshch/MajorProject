@@ -31,6 +31,7 @@ public class CharacterAnimatorManager : MonoBehaviour
     private static readonly int hitHash = Animator.StringToHash("Hit_B");
     private static readonly int deathHash = Animator.StringToHash("Death");
     
+    private static readonly int climbHash = Animator.StringToHash("Climb");
     private static readonly int vaultHash = Animator.StringToHash("Vault");
 
     public bool IsGrounded
@@ -119,8 +120,15 @@ public class CharacterAnimatorManager : MonoBehaviour
         PlayCharacterActionAnimation(deathHash, true);
     }
 
-    public void PlayVaultAction()
+    public void PlayParkourAction(ParkourActionAnimation parkourActionAnimation)
     {
-        PlayCharacterActionAnimation(vaultHash, true);
+        var parkourActionHash = parkourActionAnimation switch
+        {
+            ParkourActionAnimation.Vault => vaultHash,
+            ParkourActionAnimation.Climb => climbHash,
+            _ => 0
+        };
+
+        PlayCharacterActionAnimation(parkourActionHash, true);
     }
 }
