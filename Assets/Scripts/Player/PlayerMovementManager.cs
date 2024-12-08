@@ -64,7 +64,7 @@ public class PlayerMovementManager : CharacterMovementManager
     protected override void HandleCharacterRotation()
     {
         if (!player.canRotate) return;
-
+        
         targetRotationDirection = Vector3.forward * verticalInput;
         targetRotationDirection += Vector3.right * horizontalInput;
         targetRotationDirection.y = 0f;
@@ -76,7 +76,7 @@ public class PlayerMovementManager : CharacterMovementManager
         }
 
         targetRotation = Quaternion.LookRotation(targetRotationDirection);
-
+        
         finalRotation = Quaternion.Slerp(player.transform.rotation, targetRotation, player.rotationDampTime * Time.deltaTime);
         player.transform.rotation = finalRotation;
     }

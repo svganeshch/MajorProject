@@ -103,17 +103,15 @@ public class PlayerParkourManager : CharacterParkourManager
         yield return null;
         
         var animState = player.animator.GetNextAnimatorStateInfo(1);
-        float rotateStartTime = (matchTargetParameters != null) ? matchTargetParameters.matchStartTime : 0;
-        
         float timeElapsed = 0;
+        
         while (timeElapsed <= animState.length)
         {
             timeElapsed += Time.deltaTime;
-            float normalizedTime = timeElapsed / animState.length;
 
-            if (currentParkourAction.RotateTowardsObstacle && normalizedTime > rotateStartTime)
+            if (currentParkourAction.RotateTowardsObstacle)
             {
-                player.transform.rotation = Quaternion.Slerp(player.transform.rotation, 
+                player.transform.rotation = Quaternion.RotateTowards(player.transform.rotation, 
                     currentParkourAction.TargetRotation, player.rotationDampTime * Time.deltaTime);
             }
 
