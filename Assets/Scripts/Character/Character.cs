@@ -10,7 +10,9 @@ public class Character : MonoBehaviour
     public int health = 100;
 
     [Header("Character Movement Controls")]
-    public float moveSpeed = 5f;
+    public float walkingSpeed = 5f;
+    public float runningSpeed = 7.5f;
+    public float sprintingSpeed = 10f;
 
     [Header("Character Smoothing Controls")]
     public float animationFadeTime = 0.2f;
@@ -27,6 +29,7 @@ public class Character : MonoBehaviour
     public bool applyRootMotion = false;
     public bool isJumping = false;
     public bool isGrounded = true;
+    public bool isSprinting = false;
 
     [HideInInspector] public Animator animator;
     [HideInInspector] public CharacterController controller;

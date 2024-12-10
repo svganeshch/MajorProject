@@ -125,17 +125,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5800848
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.7430692
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
@@ -582,25 +582,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  moveSpeed: 1.52
+  walkingSpeed: 2.5
+  runningSpeed: 4
+  sprintingSpeed: 6
   animationFadeTime: 0.2
   speedDampTime: 0.1
   rotationDampTime: 15
   isDead: 0
   performingAction: 0
+  performingParkour: 0
   canCombo: 0
   canMove: 1
   canRotate: 1
   applyRootMotion: 0
   isJumping: 0
-  isVaulting: 0
   isGrounded: 1
+  isSprinting: 0
   animator: {fileID: 0}
   controller: {fileID: 0}
   characterAnimatorManager: {fileID: 0}
   characterMovementManager: {fileID: 0}
   characterEffectsManager: {fileID: 0}
   characterHealthManager: {fileID: 0}
+  CharacterInventoryManager: {fileID: 0}
   navMeshAgent: {fileID: 0}
   enemyAnimatorManager: {fileID: 0}
   enemyMovementManager: {fileID: 0}

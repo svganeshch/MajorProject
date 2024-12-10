@@ -41,8 +41,22 @@ public class PlayerMovementManager : CharacterMovementManager
         moveDirection += Vector3.right * horizontalInput;
         moveDirection.Normalize();
         moveDirection.y = 0;
-        
-        player.controller.Move(player.moveSpeed * Time.deltaTime * moveDirection);
+
+        if (player.isSprinting)
+        {
+            player.controller.Move(player.sprintingSpeed * Time.deltaTime * moveDirection);
+        }
+        else
+        {
+            if (moveAmount > 0.5f)
+            {
+                player.controller.Move(player.runningSpeed * Time.deltaTime * moveDirection);
+            }
+            else if (moveAmount <= 0.5f)
+            {
+                player.controller.Move(player.walkingSpeed * Time.deltaTime * moveDirection);
+            }
+        }
     }
 
     protected override void HandleCharacterAnimation()
@@ -79,6 +93,16 @@ public class PlayerMovementManager : CharacterMovementManager
         
         finalRotation = Quaternion.Slerp(player.transform.rotation, targetRotation, player.rotationDampTime * Time.deltaTime);
         player.transform.rotation = finalRotation;
+    }
+
+    public void HandleSprinting()
+    {
+        if (player.performingAction)
+        {
+            player.isSprinting = false;
+        }
+
+        player.isSprinting = moveAmount > 0.5f;
     }
 
     public void PerformDash()
@@ -120,13 +144,20 @@ public class PlayerMovementManager : CharacterMovementManager
         jumpDirection += Vector3.right * horizontalInput;
         jumpDirection.y = 0f;
 
-        if (moveAmount > 0.5f)
+        if (jumpDirection != Vector3.zero)
         {
-            jumpDirection *= 0.5f;
-        }
-        else if (moveAmount <= 0.5f)
-        {
-            jumpDirection *= 0.25f;
+            if (player.isSprinting)
+            {
+                jumpDirection *= 1;
+            }
+            else if (moveAmount > 0.5f)
+            {
+                jumpDirection *= 0.5f;
+            }
+            else if (moveAmount <= 0.5f)
+            {
+                jumpDirection *= 0.25f;
+            }
         }
     }
 

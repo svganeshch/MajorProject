@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class InputManager : MonoBehaviour
 {
@@ -17,13 +18,13 @@ public class InputManager : MonoBehaviour
     [HideInInspector] public InputAction moveAction;
     [HideInInspector] public InputAction liteAttackAction;
     [HideInInspector] public InputAction jumpAction;
-    [HideInInspector] public InputAction forwardDashAction;
-    [HideInInspector] public InputAction backDashAction;
+    [HideInInspector] public InputAction dashAction;
+    [HideInInspector] public InputAction sprintAction;
 
     [HideInInspector] public bool liteAttackInput = false;
     [HideInInspector] public bool jumpInput = false;
-    [HideInInspector] public bool forwardDashInput = false;
-    [HideInInspector] public bool backDashInput = false;
+    [HideInInspector] public bool dashInput = false;
+    [HideInInspector] public bool sprintInput = false;
 
     bool input_que_active = false;
     float default_que_input_timer = 0.35f;
@@ -48,11 +49,12 @@ public class InputManager : MonoBehaviour
         jumpAction = playerInput.actions["Jump"];
         jumpAction.performed += i => jumpInput = true;
 
-        forwardDashAction = playerInput.actions["ForwardDash"];
-        forwardDashAction.performed += i => forwardDashInput = true;
-
-        backDashAction = playerInput.actions["BackDash"];
-        backDashAction.performed += i => backDashInput = true;
+        dashAction = playerInput.actions["Dash"];
+        dashAction.performed += i => dashInput = true;
+        
+        sprintAction = playerInput.actions["Sprint"];
+        sprintAction.performed += i => sprintInput = true;
+        sprintAction.canceled += i => sprintInput = false;
     }
 
     private void Update()
@@ -69,6 +71,7 @@ public class InputManager : MonoBehaviour
         HandleAttackInput();
         HandleDashInput();
         HandleJumpInput();
+        HandleSprintInput();
     }
 
     private void HandleAttackInput()
@@ -85,10 +88,9 @@ public class InputManager : MonoBehaviour
 
     private void HandleDashInput()
     {
-        if (forwardDashInput || backDashInput)
+        if (dashInput)
         {
-            forwardDashInput = false;
-            backDashInput = false;
+            dashInput = false;
 
             player.playerMovementManager.PerformDash();
         }
@@ -107,6 +109,18 @@ public class InputManager : MonoBehaviour
             }
 
             player.playerMovementManager.PerformJump();
+        }
+    }
+
+    private void HandleSprintInput()
+    {
+        if (sprintInput)
+        {
+            player.playerMovementManager.HandleSprinting();
+        }
+        else
+        {
+            player.isSprinting = false;
         }
     }
 

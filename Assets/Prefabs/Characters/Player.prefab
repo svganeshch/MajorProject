@@ -423,7 +423,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
@@ -850,30 +850,34 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
       insertIndex: 3
-      addedObject: {fileID: 1650513742607229303}
+      addedObject: {fileID: 7135524739179397195}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
       insertIndex: 4
-      addedObject: {fileID: 7305196543976269866}
+      addedObject: {fileID: 1650513742607229303}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
       insertIndex: 5
-      addedObject: {fileID: 5214486216904293442}
+      addedObject: {fileID: 7305196543976269866}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
       insertIndex: 6
-      addedObject: {fileID: 5194213040729221600}
+      addedObject: {fileID: 5214486216904293442}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
       insertIndex: 7
-      addedObject: {fileID: 3550025545644114260}
+      addedObject: {fileID: 5194213040729221600}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
       insertIndex: 8
-      addedObject: {fileID: 1407722139338438952}
+      addedObject: {fileID: 3550025545644114260}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
       insertIndex: 9
+      addedObject: {fileID: 1407722139338438952}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eee9886f79a9104084c3a1cfb4109f5,
+        type: 3}
+      insertIndex: 10
       addedObject: {fileID: 4696172397047089102}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
@@ -919,7 +923,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  moveSpeed: 2.5
+  walkingSpeed: 2.5
+  runningSpeed: 4
+  sprintingSpeed: 6
   animationFadeTime: 0.2
   speedDampTime: 0.1
   rotationDampTime: 15
@@ -932,13 +938,16 @@ MonoBehaviour:
   applyRootMotion: 0
   isJumping: 0
   isGrounded: 1
+  isSprinting: 0
   animator: {fileID: 0}
   controller: {fileID: 0}
   characterAnimatorManager: {fileID: 0}
   characterMovementManager: {fileID: 0}
   characterEffectsManager: {fileID: 0}
   characterHealthManager: {fileID: 0}
+  CharacterInventoryManager: {fileID: 0}
   playerAnimatorManager: {fileID: 0}
+  playerCombatManager: {fileID: 0}
   playerMovementManager: {fileID: 0}
   playerEquipmentManager: {fileID: 0}
   playerInventoryManager: {fileID: 0}
@@ -959,6 +968,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42147ff883776a4faea68276f594ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7135524739179397195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6090817535826626199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb245d9b77ac47af8563008bd18f3157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeapon: {fileID: 0}
 --- !u!114 &1650513742607229303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,28 +1112,28 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  forwardDashAction:
+  dashAction:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 077a2ad8-0180-485f-8cbb-db50b9bf0ff0
+    m_Id: 2c018038-2d5a-41e9-a705-9c9b8e3ae5d4
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
-  backDashAction:
+  sprintAction:
     m_Name: 
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 5c584069-616b-4b76-80e7-621741ecdae7
+    m_Id: b837bc88-f105-4859-9b93-92597e0e4ca1
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
   liteAttackInput: 0
   jumpInput: 0
-  forwardDashInput: 0
-  backDashInput: 0
+  dashInput: 0
+  sprintInput: 0
 --- !u!143 &3514907040517203796
 CharacterController:
   m_ObjectHideFlags: 0

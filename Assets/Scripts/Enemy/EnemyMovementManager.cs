@@ -42,7 +42,7 @@ public class EnemyMovementManager : CharacterMovementManager
     {
         if (!enemy.canMove) return;
 
-        enemy.controller.Move(enemy.moveSpeed * Time.deltaTime * enemy.navMeshAgent.desiredVelocity.normalized);
+        enemy.controller.Move(enemy.walkingSpeed * Time.deltaTime * enemy.navMeshAgent.desiredVelocity.normalized);
 
         enemy.navMeshAgent.nextPosition = enemy.transform.position;
         enemy.navMeshAgent.velocity = enemy.controller.velocity;

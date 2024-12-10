@@ -9,6 +9,9 @@ public class CharacterAnimatorManager : MonoBehaviour
 
     private int previousActionHash;
 
+    private static readonly int speedX = Animator.StringToHash("speedX");
+    private static readonly int speedY = Animator.StringToHash("speedY");
+    
     private static readonly int isGroundedHash = Animator.StringToHash("isGrounded");
     private static readonly int inAirTimeHash = Animator.StringToHash("inAirTime");
 
@@ -53,8 +56,16 @@ public class CharacterAnimatorManager : MonoBehaviour
 
     public void SetAnimatorParameters(float horizontalInput, float verticalInput)
     {
-        character.animator.SetFloat("speedX", horizontalInput, character.speedDampTime, Time.deltaTime);
-        character.animator.SetFloat("speedY", verticalInput, character.speedDampTime, Time.deltaTime);
+        float horizontal = horizontalInput;
+        float vertical = verticalInput;
+
+        if (character.isSprinting)
+        {
+            vertical = 2;
+        }
+        
+        character.animator.SetFloat(speedX, horizontal, character.speedDampTime, Time.deltaTime);
+        character.animator.SetFloat(speedY, vertical, character.speedDampTime, Time.deltaTime);
     }
 
     protected virtual void PlayCharacterActionAnimation(
