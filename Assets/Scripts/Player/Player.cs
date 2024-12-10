@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : Character
 {
     [HideInInspector] public PlayerAnimatorManager playerAnimatorManager;
+    [HideInInspector] public PlayerCombatManager playerCombatManager;
     [HideInInspector] public PlayerMovementManager playerMovementManager;
     [HideInInspector] public PlayerEquipmentManager playerEquipmentManager;
     [HideInInspector] public PlayerInventoryManager playerInventoryManager;
@@ -21,29 +22,11 @@ public class Player : Character
         base.Awake();
 
         playerAnimatorManager = GetComponent<PlayerAnimatorManager>();
+        playerCombatManager = GetComponent<PlayerCombatManager>();
         playerMovementManager = GetComponent<PlayerMovementManager>();
         playerEquipmentManager = GetComponent<PlayerEquipmentManager>();
         playerInventoryManager = GetComponent<PlayerInventoryManager>();
         playerParkourManager = GetComponent<PlayerParkourManager>();
         inputManager = GetComponent<InputManager>();
-    }
-
-    protected override void InitializeStates()
-    {
-        base.InitializeStates();
-
-        idleState = new IdleState(this, characterStateMachine);
-        liteAttackState = new AttackState(this, characterStateMachine, true);
-        heavyAttackState = new AttackState(this, characterStateMachine, false);
-
-        characterStateMachine.Initialize(idleState);
-    }
-
-    protected override void OnGUI()
-    {
-        base.OnGUI();
-
-        GUI.color = Color.red;
-        GUI.Label(new Rect(0, 0, 200, 20), this.GetType().Name + " : " + characterStateMachine.currentState.ToString());
     }
 }

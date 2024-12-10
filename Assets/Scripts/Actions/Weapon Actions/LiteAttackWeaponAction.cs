@@ -1,0 +1,22 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "LiteAttackAction", menuName = "Actions / Weapon Actions / Lite Attack Action")]
+public class LiteAttackWeaponAction : WeaponItemAction
+{
+    public override void AttemptToPerformAction(Character characterPerformingAction, WeaponItem weaponPerformingAction)
+    {
+        base.AttemptToPerformAction(characterPerformingAction, weaponPerformingAction);
+        
+        // check for stamina and return
+        
+        if (!characterPerformingAction.isGrounded) return;
+        
+        PerformLiteAttack(characterPerformingAction, weaponPerformingAction);
+    }
+
+    private void PerformLiteAttack(Character characterPerformingAction, WeaponItem weaponPerformingAction)
+    {
+        if (characterPerformingAction.performingAction && !characterPerformingAction.canCombo) return;
+        characterPerformingAction.characterAnimatorManager.PlayAttackAction(this, characterPerformingAction.canCombo);
+    }
+}

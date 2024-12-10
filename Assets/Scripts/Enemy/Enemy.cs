@@ -20,13 +20,26 @@ public class Enemy : Character
         enemyMovementManager = GetComponent<EnemyMovementManager>();
     }
 
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
+        
+        characterStateMachine.currentState.PhysicsUpdate();
+    }
+
+    protected override void Update()
+    {
+        base.Update();
+        
+        characterStateMachine.currentState.HandleInput();
+        characterStateMachine.currentState.LogicUpdate();
+    }
+
     protected override void InitializeStates()
     {
         base.InitializeStates();
 
         idleState = new IdleState(this, characterStateMachine);
-        liteAttackState = new AttackState(this, characterStateMachine, true);
-        heavyAttackState = new AttackState(this, characterStateMachine, false);
 
         characterStateMachine.Initialize(idleState);
     }

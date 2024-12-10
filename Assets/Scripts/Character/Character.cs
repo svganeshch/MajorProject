@@ -35,6 +35,7 @@ public class Character : MonoBehaviour
     [HideInInspector] public CharacterMovementManager characterMovementManager;
     [HideInInspector] public CharacterEffectsManager characterEffectsManager;
     [HideInInspector] public CharacterHealthManager characterHealthManager;
+    [HideInInspector] public CharacterInventoryManager CharacterInventoryManager;
 
     // Character States
     [HideInInspector] public State idleState;
@@ -51,6 +52,7 @@ public class Character : MonoBehaviour
         characterAnimatorManager = GetComponent<CharacterAnimatorManager>();
         characterEffectsManager = GetComponent<CharacterEffectsManager>();
         characterHealthManager = GetComponent<CharacterHealthManager>();
+        CharacterInventoryManager = GetComponent<CharacterInventoryManager>();
 
         characterStateMachine = new StateMachine();
     }
@@ -63,13 +65,12 @@ public class Character : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
-        characterStateMachine.currentState.PhysicsUpdate();
+        
     }
 
     protected virtual void Update()
     {
-        characterStateMachine.currentState.HandleInput();
-        characterStateMachine.currentState.LogicUpdate();
+        
     }
 
     private void IgnoreOwnColliders()

@@ -77,7 +77,9 @@ public class InputManager : MonoBehaviour
         {
             liteAttackInput = false;
 
-            player.characterStateMachine.ChangeState(player.liteAttackState);
+            player.playerCombatManager.PerformWeaponBasedAction(
+                player.playerInventoryManager.currentRightHandWeapon.liteAttackAction,
+                player.playerInventoryManager.currentRightHandWeapon);
         }
     }
 

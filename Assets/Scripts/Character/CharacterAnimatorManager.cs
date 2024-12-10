@@ -74,15 +74,15 @@ public class CharacterAnimatorManager : MonoBehaviour
         character.canMove = canMove;
     }
 
-    public void PlayAttackAction(State attackState, bool canCombo, bool canRotate = false)
+    public void PlayAttackAction(WeaponItemAction weaponAction, bool canCombo, bool canRotate = false)
     {
         int[] attackHashes = new int[LiteAttack.Length];
 
-        if (attackState == character.liteAttackState)
+        if (weaponAction == character.CharacterInventoryManager.currentRightHandWeapon.liteAttackAction)
         {
             attackHashes = LiteAttack;
         }
-        else if (attackState == character.heavyAttackState)
+        else if (weaponAction == character.CharacterInventoryManager.currentRightHandWeapon.heavyAttackAction)
         {
             attackHashes = HeavyAttack;
         }

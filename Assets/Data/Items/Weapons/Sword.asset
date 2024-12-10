@@ -17,5 +17,8 @@ MonoBehaviour:
     type: 3}
   physicalDamage: 50
   lightingDamage: 10
+  liteAttackAction: {fileID: 11400000, guid: 63e84d9b82582b94eb33b4d2759e03db, type: 2}
+  heavyAttackAction: {fileID: 0}
   slashSfx: {fileID: 0}
   blockSfx: {fileID: 0}
+  slashVfx: {fileID: 0}

@@ -12,6 +12,10 @@ public class WeaponItem : ScriptableObject
     public int physicalDamage = 0;
     public int lightingDamage = 0;
 
+    [Header("Actions")]
+    public WeaponItemAction liteAttackAction;
+    public WeaponItemAction heavyAttackAction;
+
     [Header("Weapon SFX")]
     public AudioClip slashSfx;
     public AudioClip blockSfx;

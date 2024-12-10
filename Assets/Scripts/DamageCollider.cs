@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class DamageCollider : MonoBehaviour
 {
-    Collider damageCollider;
+    protected Collider damageCollider;
     protected List<Character> damagedCharacters = new List<Character>();
 
     public Character characterCausingDamage;
     public int physicalDamage = 0;
     public int lightingDamage = 0;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         damageCollider = GetComponent<Collider>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         Character damageTarget = other.GetComponentInParent<Character>();
 
@@ -26,7 +26,7 @@ public class DamageCollider : MonoBehaviour
         }
     }
 
-    private void DamageTarget(Character damageCharacter)
+    protected void DamageTarget(Character damageCharacter)
     {
         if (damagedCharacters.Contains(damageCharacter)) return;
 
