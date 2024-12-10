@@ -5,12 +5,12 @@ using UnityEngine.TextCore.Text;
 
 public class State
 {
-    protected Character character;
+    protected Enemy enemyCharacter;
     protected StateMachine stateMachine;
 
     public State(Character _character, StateMachine _stateMachine)
     {
-        character = _character;
+        enemyCharacter = _character as Enemy;
         stateMachine = _stateMachine;
     }
 

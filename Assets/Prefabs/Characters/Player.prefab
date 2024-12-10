@@ -164,6 +164,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1413404773357763769}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7459441959902608763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2502505948557586022}
+  m_Layer: 6
+  m_Name: lockOnTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2502505948557586022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7459441959902608763}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.35, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6903242985620298797}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5418595721622481238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -423,7 +454,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
@@ -830,6 +861,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 176062232607028287}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4eee9886f79a9104084c3a1cfb4109f5,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2502505948557586022}
     - targetCorrespondingSourceObject: {fileID: 5465940246521907071, guid: 4eee9886f79a9104084c3a1cfb4109f5,
         type: 3}
       insertIndex: -1
@@ -942,6 +977,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   controller: {fileID: 0}
   characterAnimatorManager: {fileID: 0}
+  characterCombatManager: {fileID: 0}
   characterMovementManager: {fileID: 0}
   characterEffectsManager: {fileID: 0}
   characterHealthManager: {fileID: 0}
@@ -980,6 +1016,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb245d9b77ac47af8563008bd18f3157, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTarget: {fileID: 0}
+  lockOnTransform: {fileID: 2502505948557586022}
   currentWeapon: {fileID: 0}
 --- !u!114 &1650513742607229303
 MonoBehaviour:

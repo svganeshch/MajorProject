@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,9 +18,12 @@ public class LayerMaskManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+        obstacleLayer = groundLayer | parkourObstacleLayer;
     }
 
     public LayerMask characterLayer;
     public LayerMask groundLayer;
     public LayerMask parkourObstacleLayer;
+    public LayerMask obstacleLayer;
 }

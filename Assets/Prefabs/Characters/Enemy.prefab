@@ -55,6 +55,37 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!1 &3318330552750125015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2524233682091118555}
+  m_Layer: 6
+  m_Name: lockOnTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2524233682091118555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3318330552750125015}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.35, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3781823943985533891}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8470696665342635922
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,12 +156,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.25
+      value: 5.728
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
@@ -140,7 +171,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
@@ -150,7 +181,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
@@ -165,7 +196,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
@@ -527,11 +558,19 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3628311182213809529}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4bb80929ce3c67441ac867144b9cfed6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2524233682091118555}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 425139601836719948}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bb80929ce3c67441ac867144b9cfed6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3021678854271426476}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4bb80929ce3c67441ac867144b9cfed6,
         type: 3}
       insertIndex: -1
@@ -601,13 +640,32 @@ MonoBehaviour:
   animator: {fileID: 0}
   controller: {fileID: 0}
   characterAnimatorManager: {fileID: 0}
+  characterCombatManager: {fileID: 0}
   characterMovementManager: {fileID: 0}
   characterEffectsManager: {fileID: 0}
   characterHealthManager: {fileID: 0}
   CharacterInventoryManager: {fileID: 0}
   navMeshAgent: {fileID: 0}
   enemyAnimatorManager: {fileID: 0}
+  enemyCombatManager: {fileID: 0}
   enemyMovementManager: {fileID: 0}
+--- !u!114 &3021678854271426476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553258501138499961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c51801b08547cd93e0b680a297c10c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTarget: {fileID: 0}
+  lockOnTransform: {fileID: 2524233682091118555}
+  detectionRadius: 10
+  minimumDetectionAngle: -35
+  maximumDetectionAngle: 35
 --- !u!114 &4513631175240992333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,7 +679,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
-  dest: {fileID: 0}
 --- !u!114 &702377166564098539
 MonoBehaviour:
   m_ObjectHideFlags: 0

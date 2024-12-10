@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyMovementManager : CharacterMovementManager
 {
-    public Transform dest;
-
     float horizontalInput;
     float verticalInput;
     float moveAmount;
@@ -35,7 +33,12 @@ public class EnemyMovementManager : CharacterMovementManager
     {
         base.Update();
 
-        enemy.navMeshAgent.SetDestination(dest.position);
+        
+    }
+
+    public void UpdateNavTarget(Vector3 targetPosition)
+    {
+        enemy.navMeshAgent.SetDestination(targetPosition);
     }
 
     protected override void HandleGroundedMovement()

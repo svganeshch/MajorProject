@@ -33,36 +33,27 @@ public class Character : MonoBehaviour
 
     [HideInInspector] public Animator animator;
     [HideInInspector] public CharacterController controller;
-    [HideInInspector] public StateMachine characterStateMachine;
     [HideInInspector] public CharacterAnimatorManager characterAnimatorManager;
+    [HideInInspector] public CharacterCombatManager characterCombatManager;
     [HideInInspector] public CharacterMovementManager characterMovementManager;
     [HideInInspector] public CharacterEffectsManager characterEffectsManager;
     [HideInInspector] public CharacterHealthManager characterHealthManager;
     [HideInInspector] public CharacterInventoryManager CharacterInventoryManager;
-
-    // Character States
-    [HideInInspector] public State idleState;
-    [HideInInspector] public State liteAttackState;
-    [HideInInspector] public State heavyAttackState;
-
-    protected virtual void InitializeStates() { }
 
     protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         characterMovementManager = GetComponent<CharacterMovementManager>();
+        characterCombatManager = GetComponent<CharacterCombatManager>();
         characterAnimatorManager = GetComponent<CharacterAnimatorManager>();
         characterEffectsManager = GetComponent<CharacterEffectsManager>();
         characterHealthManager = GetComponent<CharacterHealthManager>();
         CharacterInventoryManager = GetComponent<CharacterInventoryManager>();
-
-        characterStateMachine = new StateMachine();
     }
 
     protected virtual void Start()
     {
-        InitializeStates();
         IgnoreOwnColliders();
     }
 

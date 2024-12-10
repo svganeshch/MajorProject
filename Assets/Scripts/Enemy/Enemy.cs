@@ -8,7 +8,12 @@ public class Enemy : Character
     [HideInInspector] public NavMeshAgent navMeshAgent;
 
     [HideInInspector] public EnemyAnimatorManager enemyAnimatorManager;
+    [HideInInspector] public EnemyCombatManager enemyCombatManager;
     [HideInInspector] public EnemyMovementManager enemyMovementManager;
+    
+    // Enemy AI States
+    private StateMachine enemyStateMachine;
+    [HideInInspector] private State idleState;
 
     protected override void Awake()
     {
@@ -17,31 +22,42 @@ public class Enemy : Character
         navMeshAgent = GetComponentInChildren<NavMeshAgent>();
 
         enemyAnimatorManager = GetComponent<EnemyAnimatorManager>();
+        enemyCombatManager = GetComponent<EnemyCombatManager>();
         enemyMovementManager = GetComponent<EnemyMovementManager>();
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+        
+        InitializeStates();
     }
 
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
         
-        characterStateMachine.currentState.PhysicsUpdate();
+        enemyStateMachine.currentState.PhysicsUpdate();
     }
 
     protected override void Update()
     {
         base.Update();
         
-        characterStateMachine.currentState.HandleInput();
-        characterStateMachine.currentState.LogicUpdate();
+        enemyStateMachine.currentState.HandleInput();
+        enemyStateMachine.currentState.LogicUpdate();
     }
 
-    protected override void InitializeStates()
+    private void InitializeStates()
     {
-        base.InitializeStates();
+        // Statemachine
+        enemyStateMachine = new StateMachine();
+        
+        // States
+        idleState = new IdleState(this, enemyStateMachine);
 
-        idleState = new IdleState(this, characterStateMachine);
-
-        characterStateMachine.Initialize(idleState);
+        // Initial State
+        enemyStateMachine.Initialize(idleState);
     }
 
     protected override void OnGUI()
@@ -49,6 +65,6 @@ public class Enemy : Character
         base.OnGUI();
 
         GUI.color = Color.red;
-        GUI.Label(new Rect(0, 50, 200, 20), this.GetType().Name + " : " + characterStateMachine.currentState.ToString());
+        GUI.Label(new Rect(0, 50, 200, 20), this.GetType().Name + " : " + enemyStateMachine.currentState.ToString());
     }
 }
