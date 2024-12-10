@@ -72,14 +72,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.36896944
+      - time: 0.5030477
         functionName: EnableCombo
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.51193976
+      - time: 0.8657573
         functionName: DisableCombo
         data: 
         objectReferenceParameter: {instanceID: 0}

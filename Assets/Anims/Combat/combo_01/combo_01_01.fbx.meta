@@ -65,13 +65,6 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.30120483
-        functionName: EnableCombo
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
       - time: 0.320298
         functionName: DisableDamageCollider
         data: 
@@ -79,7 +72,14 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.6037484
+      - time: 0.45390505
+        functionName: EnableCombo
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.7489997
         functionName: DisableCombo
         data: 
         objectReferenceParameter: {instanceID: 0}

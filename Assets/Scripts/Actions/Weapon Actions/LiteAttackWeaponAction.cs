@@ -16,7 +16,14 @@ public class LiteAttackWeaponAction : WeaponItemAction
 
     private void PerformLiteAttack(Character characterPerformingAction, WeaponItem weaponPerformingAction)
     {
-        if (characterPerformingAction.performingAction && !characterPerformingAction.canCombo) return;
-        characterPerformingAction.characterAnimatorManager.PlayAttackAction(this, characterPerformingAction.canCombo);
+        if (characterPerformingAction.performingAction && characterPerformingAction.canCombo)
+        {
+            characterPerformingAction.canCombo = false;
+            characterPerformingAction.characterAnimatorManager.PlayAttackAction(this, true);
+        }
+        else if (!characterPerformingAction.performingAction)
+        {
+            characterPerformingAction.characterAnimatorManager.PlayAttackAction(this, false);
+        }
     }
 }
