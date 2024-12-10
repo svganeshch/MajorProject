@@ -4,14 +4,6 @@ using UnityEngine;
 
 public class EnemyMovementManager : CharacterMovementManager
 {
-    float horizontalInput;
-    float verticalInput;
-    float moveAmount;
-
-    protected Vector3 targetRotationDirection;
-    protected Quaternion targetRotation;
-    protected Quaternion finalRotation;
-
     Enemy enemy;
 
     protected override void Awake()
@@ -21,32 +13,34 @@ public class EnemyMovementManager : CharacterMovementManager
         enemy = GetComponent<Enemy>();
     }
 
-    protected override void Start()
+    protected override void GetMovementInputs()
     {
-        base.Start();
-
-        //enemy.navMeshAgent.updatePosition = false;
-        //enemy.navMeshAgent.updateRotation = false;
-    }
-
-    protected override void Update()
-    {
-        base.Update();
-
-        
-    }
-
-    public void UpdateNavTarget(Vector3 targetPosition)
-    {
-        enemy.navMeshAgent.SetDestination(targetPosition);
+        horizontalInput = enemy.controller.velocity.x;
+        verticalInput = enemy.controller.velocity.z;
     }
 
     protected override void HandleGroundedMovement()
     {
-        if (!enemy.canMove) return;
+        if (!character.canMove) return;
+        
+        moveDirection = enemy.navMeshAgent.desiredVelocity.normalized;
 
-        enemy.controller.Move(enemy.walkingSpeed * Time.deltaTime * enemy.navMeshAgent.desiredVelocity.normalized);
-
+        if (character.isSprinting)
+        {
+            character.controller.Move(character.sprintingSpeed * Time.deltaTime * moveDirection);
+        }
+        else
+        {
+            if (moveAmount > 0.5f)
+            {
+                character.controller.Move(character.runningSpeed * Time.deltaTime * moveDirection);
+            }
+            else if (moveAmount <= 0.5f)
+            {
+                character.controller.Move(character.walkingSpeed * Time.deltaTime * moveDirection);
+            }
+        }
+        
         enemy.navMeshAgent.nextPosition = enemy.transform.position;
         enemy.navMeshAgent.velocity = enemy.controller.velocity;
     }
@@ -56,28 +50,6 @@ public class EnemyMovementManager : CharacterMovementManager
         horizontalInput = enemy.controller.velocity.x;
         verticalInput = enemy.controller.velocity.z;
 
-        moveAmount = Mathf.Clamp01(Mathf.Abs(verticalInput) + Mathf.Abs(horizontalInput));
-
-        enemy.characterAnimatorManager.SetAnimatorParameters(0, moveAmount);
-    }
-
-    protected override void HandleCharacterRotation()
-    {
-        if (!enemy.canRotate) return;
-
-        targetRotationDirection = Vector3.forward * verticalInput;
-        targetRotationDirection += Vector3.right * horizontalInput;
-        targetRotationDirection.y = 0f;
-        targetRotationDirection.Normalize();
-
-        if (targetRotationDirection == Vector3.zero)
-        {
-            targetRotationDirection = character.transform.forward;
-        }
-
-        targetRotation = Quaternion.LookRotation(targetRotationDirection);
-
-        finalRotation = Quaternion.Slerp(character.transform.rotation, targetRotation, character.rotationDampTime * Time.deltaTime);
-        character.transform.rotation = finalRotation;
+        base.HandleCharacterAnimation();
     }
 }

@@ -13,7 +13,8 @@ public class Enemy : Character
     
     // Enemy AI States
     private StateMachine enemyStateMachine;
-    [HideInInspector] private State idleState;
+    [HideInInspector] public State idleState;
+    [HideInInspector] public State pursueState;
 
     protected override void Awake()
     {
@@ -55,6 +56,7 @@ public class Enemy : Character
         
         // States
         idleState = new IdleState(this, enemyStateMachine);
+        pursueState = new PursueState(this, enemyStateMachine);
 
         // Initial State
         enemyStateMachine.Initialize(idleState);

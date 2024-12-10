@@ -14,7 +14,7 @@ public class IdleState : State
 
         if (enemyCharacter.characterCombatManager.currentTarget != null)
         {
-            enemyCharacter.enemyMovementManager.UpdateNavTarget(enemyCharacter.characterCombatManager.currentTarget.transform.position);
+            stateMachine.ChangeState(enemyCharacter.pursueState);
         }
         else
         {
