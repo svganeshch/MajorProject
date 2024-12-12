@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7084a5c8d0a585479727fabb6cc6ac0, type: 3}
-  m_Name: Sword
+  m_Name: Enemy Sword
   m_EditorClassIdentifier: 
   overrideController: {fileID: 0}
   weaponModel: {fileID: 1395127381445192785, guid: 2a0734c844aa82449a7940d4fe2b0bd8,
     type: 3}
   physicalDamage: 50
-  lightingDamage: 10
-  liteAttackAction: {fileID: 11400000, guid: 63e84d9b82582b94eb33b4d2759e03db, type: 2}
+  lightingDamage: 0
+  liteAttackAction: {fileID: 11400000, guid: 947a6aeeeb6aa2840a2d404d66d977a5, type: 2}
   heavyAttackAction: {fileID: 0}
   slashSfx: {fileID: 0}
   blockSfx: {fileID: 0}
-  slashVfx: {fileID: 198761303573775654, guid: 9189622b87dd4624fb6b2a6a701761b9, type: 3}
+  slashVfx: {fileID: 198815321472276864, guid: aafbc35be9eacc140b05eb81ef829ee5, type: 3}

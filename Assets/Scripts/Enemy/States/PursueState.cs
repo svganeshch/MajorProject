@@ -1,3 +1,5 @@
+using UnityEngine.AI;
+
 public class PursueState : State
 {
     public PursueState(Character _character, StateMachine _stateMachine) : base(_character, _stateMachine)
@@ -15,6 +17,13 @@ public class PursueState : State
             stateMachine.ChangeState(enemyCharacter.idleState);
         }
         
-        enemyCharacter.navMeshAgent.SetDestination(enemyCharacter.characterCombatManager.currentTarget.transform.position);
+        if (enemyCharacter.enemyCombatManager.distanceToTarget <= enemyCharacter.navMeshAgent.stoppingDistance)
+        {
+            stateMachine.ChangeState(enemyCharacter.combatState);
+        }
+        
+        enemyCharacter.enemyMovementManager.RotateTowardsAgent(enemyCharacter);
+
+        enemyCharacter.SetNavMeshAgentDestination();
     }
 }

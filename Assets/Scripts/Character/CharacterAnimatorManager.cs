@@ -12,6 +12,7 @@ public class CharacterAnimatorManager : MonoBehaviour
     private static readonly int speedX = Animator.StringToHash("speedX");
     private static readonly int speedY = Animator.StringToHash("speedY");
     
+    private static readonly int isMovingHash = Animator.StringToHash("isMoving");
     private static readonly int isGroundedHash = Animator.StringToHash("isGrounded");
     private static readonly int inAirTimeHash = Animator.StringToHash("inAirTime");
 
@@ -36,6 +37,13 @@ public class CharacterAnimatorManager : MonoBehaviour
     
     private static readonly int climbHash = Animator.StringToHash("Climb");
     private static readonly int vaultHash = Animator.StringToHash("Vault");
+
+    public bool IsMoving
+    {
+        get => character.animator.GetBool(isMovingHash);
+
+        set => character.animator.SetBool(isMovingHash, value);
+    }
 
     public bool IsGrounded
     {
@@ -68,7 +76,7 @@ public class CharacterAnimatorManager : MonoBehaviour
         character.animator.SetFloat(speedY, vertical, character.speedDampTime, Time.deltaTime);
     }
 
-    protected virtual void PlayCharacterActionAnimation(
+    public virtual void PlayCharacterActionAnimation(
         int animationClipHash,
         bool isPerformingAction = true,
         bool canRotate = false,
@@ -141,5 +149,42 @@ public class CharacterAnimatorManager : MonoBehaviour
         };
 
         PlayCharacterActionAnimation(parkourActionHash, true);
+    }
+    
+    // Animation Events
+    public void PlayEffect(string effect)
+    {
+        WorldCharacterEffectsManager.Instance.PlayEffect(effect);
+    }
+
+    public void StopEffect(string effect)
+    {
+        WorldCharacterEffectsManager.Instance.StopEffect(effect);
+    }
+
+    public virtual void EnableCanRotate() {}
+
+    public virtual void DisableCanRotate() {}
+
+    public void EnableDamageCollider()
+    {
+        character.characterEquipmentManager.rightWeaponManager.swordDamageCollider.EnableDamageCollider();
+        WorldCharacterEffectsManager.Instance.PlayWeaponSlashEffect(character.CharacterInventoryManager.currentRightHandWeapon.slashVfx, true);
+    }
+
+    public void DisableDamageCollider()
+    {
+        character.characterEquipmentManager.rightWeaponManager.swordDamageCollider.DisableDamageCollider();
+        WorldCharacterEffectsManager.Instance.PlayWeaponSlashEffect(character.CharacterInventoryManager.currentRightHandWeapon.slashVfx, false);
+    }
+
+    public void EnableCombo()
+    {
+        character.canCombo = true;
+    }
+
+    public void DisableCombo()
+    {
+        character.canCombo = false;
     }
 }

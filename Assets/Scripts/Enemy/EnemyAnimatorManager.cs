@@ -17,12 +17,26 @@ public class EnemyAnimatorManager : CharacterAnimatorManager
 
     private void OnAnimatorMove()
     {
-        if (enemy.applyRootMotion)
-        {
-            Vector3 velocity = enemy.animator.deltaPosition;
+        if (!enemy.isGrounded) return;
 
-            enemy.controller.Move(velocity);
-            enemyTransform.rotation *= enemy.animator.deltaRotation;
-        }
+        Vector3 velocity = enemy.animator.deltaPosition;
+
+        enemy.controller.Move(velocity);
+        enemyTransform.rotation *= enemy.animator.deltaRotation;
+    }
+    
+    // Animation Events
+    public override void EnableCanRotate()
+    {
+        base.EnableCanRotate();
+        
+        enemy.canRotate = true;
+    }
+
+    public override void DisableCanRotate()
+    {
+        base.DisableCanRotate();
+        
+        enemy.canRotate = false;
     }
 }

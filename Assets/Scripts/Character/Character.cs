@@ -35,21 +35,23 @@ public class Character : MonoBehaviour
     [HideInInspector] public CharacterController controller;
     [HideInInspector] public CharacterAnimatorManager characterAnimatorManager;
     [HideInInspector] public CharacterCombatManager characterCombatManager;
-    [HideInInspector] public CharacterMovementManager characterMovementManager;
     [HideInInspector] public CharacterEffectsManager characterEffectsManager;
+    [HideInInspector] public CharacterEquipmentManager characterEquipmentManager;
     [HideInInspector] public CharacterHealthManager characterHealthManager;
     [HideInInspector] public CharacterInventoryManager CharacterInventoryManager;
+    [HideInInspector] public CharacterMovementManager characterMovementManager;
 
     protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
-        characterMovementManager = GetComponent<CharacterMovementManager>();
-        characterCombatManager = GetComponent<CharacterCombatManager>();
         characterAnimatorManager = GetComponent<CharacterAnimatorManager>();
+        characterCombatManager = GetComponent<CharacterCombatManager>();
         characterEffectsManager = GetComponent<CharacterEffectsManager>();
+        characterEquipmentManager = GetComponent<CharacterEquipmentManager>();
         characterHealthManager = GetComponent<CharacterHealthManager>();
         CharacterInventoryManager = GetComponent<CharacterInventoryManager>();
+        characterMovementManager = GetComponent<CharacterMovementManager>();
     }
 
     protected virtual void Start()

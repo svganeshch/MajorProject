@@ -28,6 +28,20 @@ public class WorldCharacterEffectsManager : MonoBehaviour
         }
     }
 
+    public void PlayWeaponSlashEffect(ParticleSystem slashEffect, bool play)
+    {
+        if (play)
+        {
+            slashEffect.Play(true);
+            currentParticleEffects.Add(slashEffect);
+        }
+        else
+        {
+            slashEffect.Stop(true);
+            currentParticleEffects.Remove(slashEffect);
+        }
+    }
+
     public void PlayEffect(string effect)
     {
         switch (effect)

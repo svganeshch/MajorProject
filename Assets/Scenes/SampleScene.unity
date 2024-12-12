@@ -4427,7 +4427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitDamageEffect: {fileID: 11400000, guid: 01a5005e5c5d7c040a30c336cc891edb, type: 2}
-  weaponSlashEffect: {fileID: 2023871094}
+  weaponSlashEffect: {fileID: 0}
   forwardDashEffect: {fileID: 6601120596871767587}
   currentParticleEffects: []
   currentVisualEffects: []
@@ -11556,12 +11556,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!198 &2023871094 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5328019367907094742, guid: 660388a1734a9ac4e9c5a7d936fce89c,
-    type: 3}
-  m_PrefabInstance: {fileID: 5381659469540121016}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2031570844
 GameObject:
   m_ObjectHideFlags: 0

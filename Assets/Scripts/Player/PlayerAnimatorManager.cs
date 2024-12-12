@@ -32,36 +32,4 @@ public class PlayerAnimatorManager : CharacterAnimatorManager
     {
         PlayCharacterActionAnimation(jumpHash, true, false, false, false);
     }
-
-    public void PlayEffect(string effect)
-    {
-        WorldCharacterEffectsManager.Instance.PlayEffect(effect);
-    }
-
-    public void StopEffect(string effect)
-    {
-        WorldCharacterEffectsManager.Instance.StopEffect(effect);
-    }
-
-    public void EnableDamageCollider()
-    {
-        player.playerEquipmentManager.rightWeaponManager.swordDamageCollider.EnableDamageCollider();
-        WorldCharacterEffectsManager.Instance.PlayEffect("sword");
-    }
-
-    public void DisableDamageCollider()
-    {
-        player.playerEquipmentManager.rightWeaponManager.swordDamageCollider.DisableDamageCollider();
-        WorldCharacterEffectsManager.Instance.StopEffect("sword");
-    }
-
-    public void EnableCombo()
-    {
-        player.canCombo = true;
-    }
-
-    public void DisableCombo()
-    {
-        player.canCombo = false;
-    }
 }

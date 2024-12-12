@@ -3,18 +3,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "LiteAttackAction", menuName = "Actions / Weapon Actions / Lite Attack Action")]
 public class LiteAttackWeaponAction : WeaponItemAction
 {
-    public override void AttemptToPerformAction(Character characterPerformingAction, WeaponItem weaponPerformingAction)
+    public override void AttemptToPerformAction(Character characterPerformingAction)
     {
-        base.AttemptToPerformAction(characterPerformingAction, weaponPerformingAction);
+        base.AttemptToPerformAction(characterPerformingAction);
         
         // check for stamina and return
         
         if (!characterPerformingAction.isGrounded) return;
         
-        PerformLiteAttack(characterPerformingAction, weaponPerformingAction);
+        PerformLiteAttack(characterPerformingAction);
     }
 
-    private void PerformLiteAttack(Character characterPerformingAction, WeaponItem weaponPerformingAction)
+    private void PerformLiteAttack(Character characterPerformingAction)
     {
         if (characterPerformingAction.performingAction && characterPerformingAction.canCombo)
         {
