@@ -21,6 +21,6 @@ public class ResetAnimationFlags : StateMachineBehaviour
         character.isJumping = false;
         character.performingParkour = false;
 
-        WorldCharacterEffectsManager.Instance.StopAllActiveEffects();
+        //WorldCharacterEffectsManager.Instance.StopAllActiveEffects();
     }
 }

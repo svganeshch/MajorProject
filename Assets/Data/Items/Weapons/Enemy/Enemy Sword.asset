@@ -21,4 +21,4 @@ MonoBehaviour:
   heavyAttackAction: {fileID: 0}
   slashSfx: {fileID: 0}
   blockSfx: {fileID: 0}
-  slashVfx: {fileID: 198815321472276864, guid: aafbc35be9eacc140b05eb81ef829ee5, type: 3}
+  slashVfx: {fileID: 33866264968057073, guid: beaf86e8eb287f24cb38bd9acc57a501, type: 3}
