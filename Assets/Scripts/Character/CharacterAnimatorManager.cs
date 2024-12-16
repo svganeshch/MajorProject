@@ -15,6 +15,7 @@ public class CharacterAnimatorManager : MonoBehaviour
     private static readonly int isMovingHash = Animator.StringToHash("isMoving");
     private static readonly int isGroundedHash = Animator.StringToHash("isGrounded");
     private static readonly int inAirTimeHash = Animator.StringToHash("inAirTime");
+    private static readonly int chainDashDoneHash = Animator.StringToHash("chainDashDone");
 
     private int[] LiteAttack =
     {
@@ -37,6 +38,8 @@ public class CharacterAnimatorManager : MonoBehaviour
     
     private static readonly int climbHash = Animator.StringToHash("Climb");
     private static readonly int vaultHash = Animator.StringToHash("Vault");
+    
+    private static readonly int DashFwdBeginHash = Animator.StringToHash("Dash_Fwd_Begin");
 
     public bool IsMoving
     {
@@ -55,6 +58,12 @@ public class CharacterAnimatorManager : MonoBehaviour
     {
         get => character.animator.GetFloat(inAirTimeHash);
         set => character.animator.SetFloat(inAirTimeHash, value);
+    }
+
+    public bool ChainDashDone
+    {
+        get => character.animator.GetBool(chainDashDoneHash);
+        set => character.animator.SetBool(chainDashDoneHash, value);
     }
 
     protected virtual void Awake()
@@ -127,6 +136,11 @@ public class CharacterAnimatorManager : MonoBehaviour
     public void PlayBackwardDash()
     {
         PlayCharacterActionAnimation(backwardDash, true);
+    }
+
+    public void PlayDashFwdBegin()
+    {
+        PlayCharacterActionAnimation(DashFwdBeginHash, false);
     }
 
     public void PlayHitAnimation()

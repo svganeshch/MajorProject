@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 215817502371244669}
   - component: {fileID: 55256018052993140}
   - component: {fileID: 5237417087316850173}
+  - component: {fileID: 4556019022563280054}
   - component: {fileID: 2633029145050005787}
   - component: {fileID: 2968882062455022919}
   - component: {fileID: 9215658182178206388}
@@ -154,6 +155,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   lockOnTransform: {fileID: 1729064513400470363}
+  playerChainAttackController: {fileID: 0}
+--- !u!114 &4556019022563280054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031679782782730652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39cc0f633e6d4037a7311123d8adc0f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chainAttackTime: 10
+  chainAttackSpeed: 30
+  stoppingDistance: 0.75
+  attackSpeedMultiplier: 0.2
+  attackRadius: 10
+  potentialTargets: []
 --- !u!114 &2633029145050005787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,10 +323,20 @@ MonoBehaviour:
     m_Interactions: 
     m_SingletonActionBindings: []
     m_Flags: 0
+  chainAttackAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 00fdb4a6-3201-4b5b-9eea-2b94de92cc3b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   liteAttackInput: 0
   jumpInput: 0
   dashInput: 0
   sprintInput: 0
+  chainAttackInput: 0
 --- !u!95 &6690240015069118456
 Animator:
   serializedVersion: 7

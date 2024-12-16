@@ -20,11 +20,13 @@ public class InputManager : MonoBehaviour
     [HideInInspector] public InputAction jumpAction;
     [HideInInspector] public InputAction dashAction;
     [HideInInspector] public InputAction sprintAction;
+    [HideInInspector] public InputAction chainAttackAction;
 
     [HideInInspector] public bool liteAttackInput = false;
     [HideInInspector] public bool jumpInput = false;
     [HideInInspector] public bool dashInput = false;
     [HideInInspector] public bool sprintInput = false;
+    [HideInInspector] public bool chainAttackInput = false;
 
     bool input_que_active = false;
     float default_que_input_timer = 0.35f;
@@ -55,6 +57,9 @@ public class InputManager : MonoBehaviour
         sprintAction = playerInput.actions["Sprint"];
         sprintAction.performed += i => sprintInput = true;
         sprintAction.canceled += i => sprintInput = false;
+
+        chainAttackAction = playerInput.actions["ChainAttack"];
+        chainAttackAction.performed += i => chainAttackInput = true; 
     }
 
     private void Update()
@@ -69,6 +74,7 @@ public class InputManager : MonoBehaviour
     private void HandleInputActions()
     {
         HandleAttackInput();
+        HandleChainAttackInput();
         HandleDashInput();
         HandleJumpInput();
         HandleSprintInput();
@@ -82,6 +88,16 @@ public class InputManager : MonoBehaviour
 
             player.playerCombatManager.PerformWeaponBasedAction(
                 player.playerInventoryManager.currentRightHandWeapon.liteAttackAction);
+        }
+    }
+
+    private void HandleChainAttackInput()
+    {
+        if (chainAttackInput)
+        {
+            chainAttackInput = false;
+            
+            player.playerCombatManager.playerChainAttackController.PerformChainAttack();
         }
     }
 

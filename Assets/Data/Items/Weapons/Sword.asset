@@ -16,7 +16,7 @@ MonoBehaviour:
   weaponModel: {fileID: 1395127381445192785, guid: 2a0734c844aa82449a7940d4fe2b0bd8,
     type: 3}
   physicalDamage: 50
-  lightingDamage: 10
+  lightingDamage: 100
   liteAttackAction: {fileID: 11400000, guid: 63e84d9b82582b94eb33b4d2759e03db, type: 2}
   heavyAttackAction: {fileID: 0}
   slashSfx: {fileID: 0}
