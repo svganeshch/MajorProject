@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerMovementManager : CharacterMovementManager
 {
+    Transform mainCamTransform;
     Player player;
     
     [Header("Movement Settings")]
@@ -20,8 +21,9 @@ public class PlayerMovementManager : CharacterMovementManager
     protected override void Awake()
     {
         base.Awake();
-
+        
         player = GetComponent<Player>();
+        mainCamTransform = Camera.main.transform;
     }
 
     protected override void Update()
@@ -45,8 +47,8 @@ public class PlayerMovementManager : CharacterMovementManager
         
         if (!player.canMove) return;
         
-        moveDirection = Vector3.forward * verticalInput;
-        moveDirection += Vector3.right * horizontalInput;
+        moveDirection = mainCamTransform.forward * verticalInput;
+        moveDirection += mainCamTransform.right * horizontalInput;
         moveDirection.Normalize();
         moveDirection.y = 0;
 
@@ -96,8 +98,8 @@ public class PlayerMovementManager : CharacterMovementManager
     {
         if (!player.canRotate) return;
         
-        targetRotationDirection = Vector3.forward * verticalInput;
-        targetRotationDirection += Vector3.right * horizontalInput;
+        targetRotationDirection = mainCamTransform.forward * verticalInput;
+        targetRotationDirection += mainCamTransform.right * horizontalInput;
         targetRotationDirection.y = 0f;
         targetRotationDirection.Normalize();
 
@@ -130,8 +132,8 @@ public class PlayerMovementManager : CharacterMovementManager
 
         if (moveAmount > 0)
         {
-            dashDirection = Vector3.forward * verticalInput;
-            dashDirection += Vector3.right * horizontalInput;
+            dashDirection = mainCamTransform.forward * verticalInput;
+            dashDirection += mainCamTransform.right * horizontalInput;
             dashDirection.y = 0f;
             dashDirection.Normalize();
 
@@ -157,8 +159,8 @@ public class PlayerMovementManager : CharacterMovementManager
         player.playerAnimatorManager.PlayJumpAction();
         player.isJumping = true;
 
-        jumpDirection = Vector3.forward * verticalInput;
-        jumpDirection += Vector3.right * horizontalInput;
+        jumpDirection = mainCamTransform.forward * verticalInput;
+        jumpDirection += mainCamTransform.right * horizontalInput;
         jumpDirection.y = 0f;
 
         if (jumpDirection != Vector3.zero)
@@ -192,8 +194,8 @@ public class PlayerMovementManager : CharacterMovementManager
         {
             Vector3 freeFallDirection = Vector3.zero;
 
-            freeFallDirection = Vector3.forward * verticalInput;
-            freeFallDirection += Vector3.right * horizontalInput;
+            freeFallDirection = mainCamTransform.forward * verticalInput;
+            freeFallDirection += mainCamTransform.right * horizontalInput;
             freeFallDirection.y = 0f;
 
             player.controller.Move(freeFallDirection * player.freeFallControlVelocity * Time.deltaTime);
