@@ -205,5 +205,7 @@ public class PlayerMovementManager : CharacterMovementManager
     public void ApplyJumpVelocity()
     {
         yVelocity.y = Mathf.Sqrt(player.jumpHeight * -2 * gravityForce);
+        
+        player.playerSoundFXManager.PlayJumpSound();
     }
 }

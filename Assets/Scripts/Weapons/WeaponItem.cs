@@ -17,7 +17,7 @@ public class WeaponItem : ScriptableObject
     public WeaponItemAction heavyAttackAction;
 
     [Header("Weapon SFX")]
-    public AudioClip slashSfx;
+    public AudioClip[] slashSfx;
     public AudioClip blockSfx;
 
     [Header("Weapon VFX")]

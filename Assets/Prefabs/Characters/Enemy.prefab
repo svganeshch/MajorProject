@@ -102,7 +102,9 @@ GameObject:
   - component: {fileID: 1095299331630110404}
   - component: {fileID: 5310358951574122426}
   - component: {fileID: 8655156237662556362}
+  - component: {fileID: 7585173503067864801}
   - component: {fileID: 5856583053533868239}
+  - component: {fileID: 3993637648402056083}
   - component: {fileID: 2919382995877279676}
   - component: {fileID: 1319094756714212210}
   m_Layer: 6
@@ -169,6 +171,7 @@ MonoBehaviour:
   characterHealthManager: {fileID: 0}
   CharacterInventoryManager: {fileID: 0}
   characterMovementManager: {fileID: 0}
+  characterSoundFXManager: {fileID: 0}
   navMeshAgent: {fileID: 0}
   enemyAnimatorManager: {fileID: 0}
   enemyCombatManager: {fileID: 0}
@@ -280,6 +283,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b82abf4440b144ca287711c09d9005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7585173503067864801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543695975219230509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93195fb2be9ff05499330cc311bb8d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackGrunts:
+  - {fileID: 8300000, guid: 5ca8e3f914c9f3b4da35a822876c4ce6, type: 3}
+  - {fileID: 8300000, guid: 432c60c966d3fc54288f23505aed4384, type: 3}
+  - {fileID: 8300000, guid: f63fc814b9bb2944ea0e6e6c08d9fedf, type: 3}
+  - {fileID: 8300000, guid: f768c7a3d65242842a24f715d5a10b99, type: 3}
+  - {fileID: 8300000, guid: 6404206ffb2349b489377b1c20d839a1, type: 3}
+  - {fileID: 8300000, guid: 9e94ea0638a814a42a710c27efdd2cb6, type: 3}
+  - {fileID: 8300000, guid: 80a952b994c9e234a9209c09781eeab2, type: 3}
+  - {fileID: 8300000, guid: ac98020db0f91c041b32f9a6b975d41a, type: 3}
+  - {fileID: 8300000, guid: 146386cb83a3c7a43996fa0eeac01e8a, type: 3}
+  - {fileID: 8300000, guid: 4f789ec151533d94eae4e9def2edbfa8, type: 3}
+  damageGrunts:
+  - {fileID: 8300000, guid: dedd8b369ffd0c84ab72ae2ce292313f, type: 3}
+  - {fileID: 8300000, guid: e49225a440c8ced4984c10d40dc0b0b1, type: 3}
+  - {fileID: 8300000, guid: cab9a1a3a0fecdf4c9de6a8bc5e2e1f5, type: 3}
+  - {fileID: 8300000, guid: 39a1c9a2d04ec7349b257fbf97329414, type: 3}
+  - {fileID: 8300000, guid: e6f7ac60b1c1e254485d6fd481cce687, type: 3}
+  - {fileID: 8300000, guid: bc9a799f6b8910440a477dda7ed12e34, type: 3}
+  - {fileID: 8300000, guid: 1e38631e6690a1946953926c6ec2dd0a, type: 3}
+  - {fileID: 8300000, guid: 6437ea0c765c0ee44ab12abd3029487e, type: 3}
+  - {fileID: 8300000, guid: 41de92acf8fe2cc4db55e503c1b4d3f4, type: 3}
+  - {fileID: 8300000, guid: 710f856385667c44d9ab1652d7e2b53c, type: 3}
+  - {fileID: 8300000, guid: 97269400cc6b6cf47a1cff95d240c330, type: 3}
+  - {fileID: 8300000, guid: a76d8081b37cff1468d2dedc38140b58, type: 3}
+  - {fileID: 8300000, guid: 3e44f87a2554edb459a632a085a9e71d, type: 3}
 --- !u!95 &5856583053533868239
 Animator:
   serializedVersion: 7
@@ -302,6 +342,103 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &3993637648402056083
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543695975219230509}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!143 &2919382995877279676
 CharacterController:
   m_ObjectHideFlags: 0
@@ -500,22 +637,22 @@ PrefabInstance:
     - target: {fileID: 5985867425818147020, guid: 1f9116bc56e22a34cbe33a290adc3996,
         type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Value.x
-      value: 0.00000005771274
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5985867425818147020, guid: 1f9116bc56e22a34cbe33a290adc3996,
         type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Value.z
-      value: -0.0000003058613
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5985867425818147020, guid: 1f9116bc56e22a34cbe33a290adc3996,
         type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.x
-      value: 1.0000001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5985867425818147020, guid: 1f9116bc56e22a34cbe33a290adc3996,
         type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[2].m_Value.z
-      value: 1.0000001
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

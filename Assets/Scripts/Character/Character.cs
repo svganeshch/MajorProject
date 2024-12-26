@@ -40,6 +40,7 @@ public class Character : MonoBehaviour
     [HideInInspector] public CharacterHealthManager characterHealthManager;
     [HideInInspector] public CharacterInventoryManager CharacterInventoryManager;
     [HideInInspector] public CharacterMovementManager characterMovementManager;
+    [HideInInspector] public CharacterSoundFXManager characterSoundFXManager;
 
     protected virtual void Awake()
     {
@@ -52,6 +53,7 @@ public class Character : MonoBehaviour
         characterHealthManager = GetComponent<CharacterHealthManager>();
         CharacterInventoryManager = GetComponent<CharacterInventoryManager>();
         characterMovementManager = GetComponent<CharacterMovementManager>();
+        characterSoundFXManager = GetComponent<CharacterSoundFXManager>();
     }
 
     protected virtual void Start()

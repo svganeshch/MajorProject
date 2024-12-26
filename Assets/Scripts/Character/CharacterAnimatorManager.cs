@@ -36,9 +36,6 @@ public class CharacterAnimatorManager : MonoBehaviour
     private static readonly int hitHash = Animator.StringToHash("Hit_B");
     private static readonly int deathHash = Animator.StringToHash("Death");
     
-    private static readonly int climbHash = Animator.StringToHash("Climb");
-    private static readonly int vaultHash = Animator.StringToHash("Vault");
-    
     private static readonly int DashFwdBeginHash = Animator.StringToHash("Dash_Fwd_Begin");
 
     public bool IsMoving
@@ -152,18 +149,6 @@ public class CharacterAnimatorManager : MonoBehaviour
     {
         PlayCharacterActionAnimation(deathHash, true);
     }
-
-    public void PlayParkourAction(ParkourActionAnimation parkourActionAnimation)
-    {
-        var parkourActionHash = parkourActionAnimation switch
-        {
-            ParkourActionAnimation.Vault => vaultHash,
-            ParkourActionAnimation.Climb => climbHash,
-            _ => 0
-        };
-
-        PlayCharacterActionAnimation(parkourActionHash, true);
-    }
     
     // Animation Events
     public void PlayEffect(string effect)
@@ -183,7 +168,13 @@ public class CharacterAnimatorManager : MonoBehaviour
     public void EnableDamageCollider()
     {
         character.characterEquipmentManager.rightWeaponManager.swordDamageCollider.EnableDamageCollider();
+        
+        // VFX
         WorldCharacterEffectsManager.Instance.PlayWeaponSlashEffect(character.CharacterInventoryManager.currentRightHandWeapon.slashVfx, true);
+        
+        // SFX
+        character.characterSoundFXManager.PlaySoundFX(WorldSoundFXManager.instance.ChooseRandomSFXFromArray(character.CharacterInventoryManager.currentRightHandWeapon.slashSfx));
+        character.characterSoundFXManager.PlayAttackGrunt();
     }
 
     public void DisableDamageCollider()

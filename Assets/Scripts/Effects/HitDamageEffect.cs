@@ -26,6 +26,7 @@ public class HitDamageEffect : InstantCharacterEffect
         if (character.isDead) return;
 
         PlayHitAnimation(character);
+        PlayDamageSFX(character);
         CalculateHitDamage(character);
     }
 
@@ -44,5 +45,14 @@ public class HitDamageEffect : InstantCharacterEffect
     private void PlayHitAnimation(Character character)
     {
         character.characterAnimatorManager.PlayHitAnimation();
+    }
+
+    private void PlayDamageSFX(Character character)
+    {
+        AudioClip damageSFX =
+            WorldSoundFXManager.instance.ChooseRandomSFXFromArray(WorldSoundFXManager.instance.physicalDamageSFX);
+        
+        character.characterSoundFXManager.PlaySoundFX(damageSFX);
+        character.characterSoundFXManager.PlayDamageGrunt();
     }
 }

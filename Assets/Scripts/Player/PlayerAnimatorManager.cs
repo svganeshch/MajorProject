@@ -8,6 +8,9 @@ public class PlayerAnimatorManager : CharacterAnimatorManager
     Transform playerTransform;
 
     private static readonly int jumpHash = Animator.StringToHash("jump");
+    
+    private static readonly int climbHash = Animator.StringToHash("Climb");
+    private static readonly int vaultHash = Animator.StringToHash("Vault");
 
     protected override void Awake()
     {
@@ -31,5 +34,29 @@ public class PlayerAnimatorManager : CharacterAnimatorManager
     public void PlayJumpAction()
     {
         PlayCharacterActionAnimation(jumpHash, true, false, false, false);
+    }
+    
+    public void PlayParkourAction(ParkourActionType parkourAction)
+    {
+        int parkourActionHash;
+        
+        switch (parkourAction)
+        {
+            case ParkourActionType.Climb:
+                parkourActionHash = climbHash;
+                player.playerSoundFXManager.PlayClimbSound();
+                break;
+            
+            case ParkourActionType.Vault:
+                parkourActionHash = vaultHash;
+                player.playerSoundFXManager.PlayVaultSound();
+                break;
+            
+            default:
+                parkourActionHash = 0;
+                break;
+        }
+
+        PlayCharacterActionAnimation(parkourActionHash, true);
     }
 }

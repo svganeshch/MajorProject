@@ -8,7 +8,7 @@ namespace Actions
     {
         [FormerlySerializedAs("parkourAction")]
         [Header("Parkour Action")]
-        [SerializeField] private ParkourActionAnimation parkourActionAnimation;
+        [SerializeField] private ParkourActionType parkourActionAnimation;
         
         [Header("Height Information")]
         [SerializeField] private float minHeight;
@@ -25,7 +25,7 @@ namespace Actions
         [SerializeField] private float matchStartTime;
         [SerializeField] private float matchEndTime;
 
-        public ParkourActionAnimation ParkourActionAnimation => parkourActionAnimation;
+        public ParkourActionType ParkourActionAnimation => parkourActionAnimation;
         public Quaternion TargetRotation { get; private set; }
         public Vector3 MatchPos { get; private set; }
         public bool RotateTowardsObstacle => rotateTowardsObstacle;

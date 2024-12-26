@@ -19,7 +19,9 @@ MonoBehaviour:
   lightingDamage: 100
   liteAttackAction: {fileID: 11400000, guid: 63e84d9b82582b94eb33b4d2759e03db, type: 2}
   heavyAttackAction: {fileID: 0}
-  slashSfx: {fileID: 0}
+  slashSfx:
+  - {fileID: 8300000, guid: d1a2ffc4c0d2a4142b041888eaf6b8e7, type: 3}
+  - {fileID: 8300000, guid: 9fa2a5a4c14ea054c88c3a093b925fa1, type: 3}
   blockSfx: {fileID: 0}
   slashVfx: {fileID: 1583014335702183150, guid: e9f00484b2cdb044192d01a1727b6710,
     type: 3}

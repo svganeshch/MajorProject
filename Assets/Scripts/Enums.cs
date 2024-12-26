@@ -12,7 +12,7 @@ public enum CameraState
     FixedTrackingCamera,
 }
 
-public enum ParkourActionAnimation
+public enum ParkourActionType
 {
     Vault,
     Climb

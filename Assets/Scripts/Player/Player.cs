@@ -10,6 +10,7 @@ public class Player : Character
     [HideInInspector] public PlayerEquipmentManager playerEquipmentManager;
     [HideInInspector] public PlayerInventoryManager playerInventoryManager;
     [HideInInspector] public PlayerParkourManager playerParkourManager;
+    [HideInInspector] public PlayerSoundFXManager playerSoundFXManager;
     [HideInInspector] public InputManager inputManager;
 
     [Header("Jump Controls")]
@@ -27,6 +28,7 @@ public class Player : Character
         playerEquipmentManager = GetComponent<PlayerEquipmentManager>();
         playerInventoryManager = GetComponent<PlayerInventoryManager>();
         playerParkourManager = GetComponent<PlayerParkourManager>();
+        playerSoundFXManager = GetComponent<PlayerSoundFXManager>();
         inputManager = GetComponent<InputManager>();
     }
 }
