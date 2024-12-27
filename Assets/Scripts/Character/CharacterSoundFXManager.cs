@@ -9,8 +9,11 @@ public class CharacterSoundFXManager : MonoBehaviour
     
     [Header("Damage Grunts")]
     public AudioClip[] damageGrunts;
+    
+    [Header("Death Grunts")]
+    public AudioClip[] deathGrunts;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         audioSource = GetComponent<AudioSource>();
     }
@@ -29,11 +32,18 @@ public class CharacterSoundFXManager : MonoBehaviour
 
     public void PlayAttackGrunt()
     {
-        PlaySoundFX(WorldSoundFXManager.instance.ChooseRandomSFXFromArray(attackGrunts));
+        PlaySoundFX(WorldSoundFXManager.instance.ChooseRandomSFXFromArray(attackGrunts), 0.25f);
     }
 
     public void PlayDamageGrunt()
     {
-        PlaySoundFX(WorldSoundFXManager.instance.ChooseRandomSFXFromArray(damageGrunts));
+        PlaySoundFX(WorldSoundFXManager.instance.ChooseRandomSFXFromArray(damageGrunts), 1.5f);
     }
+
+    public void PlayDeathGrunt()
+    {
+        PlaySoundFX(WorldSoundFXManager.instance.ChooseRandomSFXFromArray(deathGrunts), 1.5f);
+    }
+    
+    public virtual void PlayFootStepSound() {}
 }

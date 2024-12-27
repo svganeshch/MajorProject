@@ -23,3 +23,10 @@ public enum WeaponModelSlot
     RightHand,
     LeftHand,
 }
+
+public enum PlayerMovementState
+{
+    Walking,
+    Running,
+    Sprinting,
+}

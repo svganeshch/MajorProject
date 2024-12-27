@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfddcfab7b859f9459f584d46ff54e49, type: 3}
+  m_Name: Tile
+  m_EditorClassIdentifier: 
+  walkingFootstepSounds:
+  - {fileID: 8300000, guid: fbeff973cbf19ee4bb7ff1da59e83589, type: 3}
+  - {fileID: 8300000, guid: c7cad38fa93d47f47a3bb7052f9473a6, type: 3}
+  - {fileID: 8300000, guid: 8be2469e08566a949a5dce16f36b755e, type: 3}
+  - {fileID: 8300000, guid: d364a851a6720484585a65c69712cb1c, type: 3}
+  - {fileID: 8300000, guid: 660c9628fdb80b2409e927efcae42539, type: 3}
+  - {fileID: 8300000, guid: b62933a4bc50cc248945c86e1bc41040, type: 3}
+  - {fileID: 8300000, guid: c853ace5b5ab1ee47982bed5a317a7c2, type: 3}
+  - {fileID: 8300000, guid: 664048039dac82a4db1c1ae969cc8857, type: 3}
+  runningFootstepSounds:
+  - {fileID: 8300000, guid: d327ef36e43c60944929e2d2659525e7, type: 3}
+  - {fileID: 8300000, guid: ebc3faa2f530b9640b06a0eafd0dd9b1, type: 3}
+  - {fileID: 8300000, guid: 99a8e2d3502f7c046887c27aaac797e3, type: 3}
+  - {fileID: 8300000, guid: 3cb48b89b1540e64da3613f737be794d, type: 3}
+  - {fileID: 8300000, guid: 125e95e0a5992634bb555ea756ca4c64, type: 3}
+  - {fileID: 8300000, guid: dcda0a299b7ef1c4cb951d5f4686082f, type: 3}
+  jumpSounds:
+  - {fileID: 8300000, guid: dc09dc107a7e4a94c9e3b0c627518e0d, type: 3}
+  - {fileID: 8300000, guid: 77d9a30a1ac6878428cd51e55eaec97f, type: 3}
+  - {fileID: 8300000, guid: 4261437bfd5862245960bd361e093a96, type: 3}
+  landingSounds:
+  - {fileID: 8300000, guid: db9ae01179218a04c9f4fd1413cd90e8, type: 3}
+  - {fileID: 8300000, guid: cc8fcc1630f08ec429b1b9839a41e7cb, type: 3}
+  - {fileID: 8300000, guid: a36f59b3ece9b224ba99a0dd8b2f40e4, type: 3}
+  materialNames:
+  - Concrete

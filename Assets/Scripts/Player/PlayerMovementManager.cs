@@ -10,6 +10,8 @@ public class PlayerMovementManager : CharacterMovementManager
     protected float verticalInput;
     protected float moveAmount;
     protected Vector3 moveDirection;
+    protected float currentSpeed;
+    [HideInInspector] public PlayerMovementState currentMovementState;
     
     [Header("Rotation Settings")]
     protected Vector3 targetRotationDirection;
@@ -23,6 +25,7 @@ public class PlayerMovementManager : CharacterMovementManager
         base.Awake();
         
         player = GetComponent<Player>();
+        
         mainCamTransform = Camera.main.transform;
     }
 
@@ -54,19 +57,24 @@ public class PlayerMovementManager : CharacterMovementManager
 
         if (player.isSprinting)
         {
-            player.controller.Move(player.sprintingSpeed * Time.deltaTime * moveDirection);
+            currentSpeed = player.sprintingSpeed;
+            currentMovementState = PlayerMovementState.Sprinting;
         }
         else
         {
             if (moveAmount > 0.5f)
             {
-                player.controller.Move(player.runningSpeed * Time.deltaTime * moveDirection);
+                currentSpeed = player.runningSpeed;
+                currentMovementState = PlayerMovementState.Running;
             }
             else if (moveAmount <= 0.5f)
             {
-                player.controller.Move(player.walkingSpeed * Time.deltaTime * moveDirection);
+                currentSpeed = player.walkingSpeed;
+                currentMovementState = PlayerMovementState.Walking;
             }
         }
+        
+        player.controller.Move(currentSpeed * Time.deltaTime * moveDirection);
     }
 
     protected override void HandleCharacterAnimation()

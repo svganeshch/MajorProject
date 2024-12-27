@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 8046256189390157516}
   - component: {fileID: 985930748228598467}
   - component: {fileID: 6937409410618085678}
+  - component: {fileID: 4262705257872143613}
   - component: {fileID: 9068837366852858249}
   - component: {fileID: 6690240015069118456}
   - component: {fileID: 4652285731866896798}
@@ -236,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
+  currentMovementState: 0
 --- !u!114 &8046256189390157516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +291,13 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dd409138f31b66b4db903826fb74fc33, type: 3}
   - {fileID: 8300000, guid: df0c5dbffad059c4ab6d30bacbd25bcd, type: 3}
   - {fileID: 8300000, guid: 6ec84ec15b3f22040a313bc6561b0d78, type: 3}
-  jumpSounds:
+  deathGrunts:
+  - {fileID: 8300000, guid: 06dc0c7e8e6a7e44ca68ae0d4525e678, type: 3}
+  - {fileID: 8300000, guid: adc3fdfe997152d409f330e4248e2305, type: 3}
+  - {fileID: 8300000, guid: 805a7d3d683883d498f51801fbeaab9e, type: 3}
+  - {fileID: 8300000, guid: ef2ebfd3712e81547b8dac71bdf10bd6, type: 3}
+  - {fileID: 8300000, guid: a67451d274903aa449969febd4095f5c, type: 3}
+  jumpEffortSounds:
   - {fileID: 8300000, guid: 2edbee6130c442743ba86736655636c7, type: 3}
   - {fileID: 8300000, guid: dcb71e72d728ed74ba0806af3486fd3a, type: 3}
   - {fileID: 8300000, guid: 7ca718b66dc211b4794dc40a9b038e79, type: 3}
@@ -298,7 +306,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0475431d8a6fdd1408ef0c006624ad64, type: 3}
   - {fileID: 8300000, guid: 7799a0bf78debe242a90f3e38cc567b7, type: 3}
   - {fileID: 8300000, guid: 1046f79f086972344a27975fde15824b, type: 3}
-  landingSounds:
+  landingEffortSounds:
   - {fileID: 8300000, guid: 44e6903d64951304a9a385f027dffbda, type: 3}
   - {fileID: 8300000, guid: b0d0f8e47b47d344bb6436633e47d9ec, type: 3}
   - {fileID: 8300000, guid: 274b6fc95fb110b4b8c6fb5926ae8915, type: 3}
@@ -320,6 +328,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d65914ce2a550434aad7a80f388b6c03, type: 3}
   - {fileID: 8300000, guid: 192c63de14115ed4bb659378110a8686, type: 3}
   - {fileID: 8300000, guid: 16b0168219434dd459d7131de1b01243, type: 3}
+  surfaceFootStepsData:
+  - {fileID: 11400000, guid: 985fa2dc505064c49afd781329fd36b3, type: 2}
 --- !u!114 &6937409410618085678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +342,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b82abf4440b144ca287711c09d9005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4262705257872143613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031679782782730652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8c30a8a36164e43a2d95030f5d6d4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stepInterval: 1
+  walkingStepInterval: 1
+  runningStepInterval: 1
+  combatStepInterval: 1
+  sprintStepInterval: 1
 --- !u!114 &9068837366852858249
 MonoBehaviour:
   m_ObjectHideFlags: 0

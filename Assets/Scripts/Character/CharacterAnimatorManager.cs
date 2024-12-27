@@ -148,6 +148,8 @@ public class CharacterAnimatorManager : MonoBehaviour
     public void PlayDeathAction()
     {
         PlayCharacterActionAnimation(deathHash, true);
+        
+        character.characterSoundFXManager.PlayDeathGrunt();
     }
     
     // Animation Events
@@ -173,7 +175,7 @@ public class CharacterAnimatorManager : MonoBehaviour
         WorldCharacterEffectsManager.Instance.PlayWeaponSlashEffect(character.CharacterInventoryManager.currentRightHandWeapon.slashVfx, true);
         
         // SFX
-        character.characterSoundFXManager.PlaySoundFX(WorldSoundFXManager.instance.ChooseRandomSFXFromArray(character.CharacterInventoryManager.currentRightHandWeapon.slashSfx));
+        character.characterSoundFXManager.PlaySoundFX(WorldSoundFXManager.instance.ChooseRandomSFXFromArray(character.CharacterInventoryManager.currentRightHandWeapon.slashSfx), 0.25f);
         character.characterSoundFXManager.PlayAttackGrunt();
     }
 

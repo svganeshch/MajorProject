@@ -320,6 +320,26 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 97269400cc6b6cf47a1cff95d240c330, type: 3}
   - {fileID: 8300000, guid: a76d8081b37cff1468d2dedc38140b58, type: 3}
   - {fileID: 8300000, guid: 3e44f87a2554edb459a632a085a9e71d, type: 3}
+  deathGrunts:
+  - {fileID: 8300000, guid: e7a58036adfe5ed4aa921f8f2f5376db, type: 3}
+  - {fileID: 8300000, guid: b5cef076da86e1a40bd2a8b7f6d7f882, type: 3}
+  - {fileID: 8300000, guid: 1c29fe7d75a3b7c40a68f8e3c759759e, type: 3}
+  - {fileID: 8300000, guid: 617d99f5b0742714a8d9029c56f66e4e, type: 3}
+  - {fileID: 8300000, guid: af681e12c80a7724eab20a45593cb48f, type: 3}
+  - {fileID: 8300000, guid: 421bc4a50dfb13949a44a6ff958f0398, type: 3}
+  - {fileID: 8300000, guid: 41587bdce9405d3428f6f9501b3abec7, type: 3}
+  - {fileID: 8300000, guid: ce5f2ecf569d65048939905fb8119a8f, type: 3}
+  - {fileID: 8300000, guid: af3e631fb6cf757459e4651b396e2d66, type: 3}
+  - {fileID: 8300000, guid: 9f043ff3f112b504eb33628537309fe2, type: 3}
+  - {fileID: 8300000, guid: f9a824fa6077ea847879cc066bcbe455, type: 3}
+  - {fileID: 8300000, guid: 9de964e45120dc94f9293e35d3d354a1, type: 3}
+  - {fileID: 8300000, guid: 66158853f2c9602418adaa3c34f41100, type: 3}
+  - {fileID: 8300000, guid: eacafb1817775f442989ea0e2c026a4b, type: 3}
+  - {fileID: 8300000, guid: ee0873db15bb9b7478fa811205426583, type: 3}
+  - {fileID: 8300000, guid: da566d8f9affdab46b461495d7c09c57, type: 3}
+  - {fileID: 8300000, guid: 199d9ea68bc206f45aebd5f787f518aa, type: 3}
+  - {fileID: 8300000, guid: 0daf2eaa215f8b94d860919768080ddb, type: 3}
+  - {fileID: 8300000, guid: 4c79de70ab2a5894289f9a4e943311c1, type: 3}
 --- !u!95 &5856583053533868239
 Animator:
   serializedVersion: 7
