@@ -64,6 +64,7 @@ public class SplineEventReorderableList : ReorderableList
         
         ++EditorGUI.indentLevel;
         EditorGUI.BeginChangeCheck();
+        var previousEventName = eventName.stringValue;
         
         EditorGUIUtility.labelWidth = 0;
         var titleRect = ReserveSpace(lineHeight, ref position);
@@ -87,18 +88,35 @@ public class SplineEventReorderableList : ReorderableList
             
             EditorGUI.PropertyField(cameraFieldRect, camera, cameraLabel);
             
-            var isCameraSet = camera.objectReferenceValue == null;
-            EditorGUI.BeginDisabledGroup(!isCameraSet);
-            if (GUI.Button(buttonRect, "Set Cam"))
+            var isCameraSet = camera.objectReferenceValue != null;
+            if (isCameraSet)
             {
-                manager.InstantiateCamera(listIndex);
+                if (GUI.Button(buttonRect, "Set Pos"))
+                {
+                    manager.ResetCameraPosition(listIndex);
+                }
             }
-            EditorGUI.EndDisabledGroup();
+            else
+            {
+                if (GUI.Button(buttonRect, "Set Cam"))
+                {
+                    manager.InstantiateCamera(listIndex);
+                }
+            }
             
             EditorGUI.EndDisabledGroup();
         }
 
-        EditorGUI.EndChangeCheck();
+        if (EditorGUI.EndChangeCheck())
+        {
+            if (eventName.stringValue != previousEventName && camera.objectReferenceValue != null)
+            {
+                serializedProperty.serializedObject.ApplyModifiedProperties();
+                serializedProperty.serializedObject.Update();
+                
+                manager.RenameCamera(listIndex);
+            }
+        }
         --EditorGUI.indentLevel;
     }
     
@@ -107,7 +125,6 @@ public class SplineEventReorderableList : ReorderableList
         if (reorderableList.index >= 0 && reorderableList.index < serializedProperty.arraySize)
         {
             manager.SetSelectedSplineEvent(reorderableList.index);
-            Debug.Log("selected index : " + reorderableList.index);
         }
     }
     
@@ -136,9 +153,10 @@ public class SplineEventReorderableList : ReorderableList
 
     private void OnReorder(ReorderableList reorderableList, int oldIndex, int newIndex)
     {
-        manager.SplineEventIndexChanged(oldIndex, newIndex);
         serializedProperty.serializedObject.ApplyModifiedProperties();
         serializedProperty.serializedObject.Update();
+        
+        manager.SplineEventIndexChanged(oldIndex, newIndex);
     }
     
     public Rect ReserveSpace(float height, ref Rect total)

@@ -80,7 +80,7 @@ public class SplineEventManager : MonoBehaviour
             ExitTriggerPosition = Mathf.Clamp01(calculatedExitTriggerPosition),
         };
 
-        splineEventsCollection.Add(newEvent);
+        splineEventsCollection.Insert(selectedIndex + 1, newEvent);
     }
 
     public bool RemoveSplineEvent(int index)
@@ -99,24 +99,27 @@ public class SplineEventManager : MonoBehaviour
         if (oldIndex < 0 || oldIndex >= splineEventsCollection.Count ||
             newIndex < 0 || newIndex >= splineEventsCollection.Count)
             return false;
+        
+        var splineEvents = new List<SplineEvent>(splineEventsCollection);
 
-        var splineEvent = splineEventsCollection[oldIndex];
-    
-        splineEventsCollection.RemoveAt(oldIndex);
-        splineEventsCollection.Insert(newIndex, splineEvent);
+        var splineEvent = splineEvents[newIndex];
         
         if (newIndex > 0)
         {
-            var previousEvent = splineEventsCollection[newIndex - 1];
+            var previousEvent = splineEvents[newIndex - 1];
             splineEvent.EnterTriggerPosition = Mathf.Clamp01(previousEvent.ExitTriggerPosition + 0.1f);
             splineEvent.ExitTriggerPosition = Mathf.Clamp01(splineEvent.EnterTriggerPosition + 0.1f);
         }
-        else if (newIndex < splineEventsCollection.Count - 1)
+        else if (newIndex < splineEvents.Count - 1)
         {
-            var nextEvent = splineEventsCollection[newIndex + 1];
+            var nextEvent = splineEvents[newIndex + 1];
             splineEvent.ExitTriggerPosition = Mathf.Clamp01(nextEvent.EnterTriggerPosition - 0.1f);
             splineEvent.EnterTriggerPosition = Mathf.Clamp01(splineEvent.ExitTriggerPosition - 0.1f);
         }
+        
+        // splineEvents.RemoveAt(oldIndex);
+        // splineEvents.Insert(newIndex, splineEvent);
+        splineEventsCollection = splineEvents;
 
         return true;
     }
@@ -129,16 +132,30 @@ public class SplineEventManager : MonoBehaviour
         GameObject cameraGameObject = new GameObject(splineEvent.eventName + " Cam");
 
         var cameraCinemachine = cameraGameObject.AddComponent<CinemachineCamera>();
+        cameraGameObject.AddComponent<CinemachineHardLookAt>();
         cameraGameObject.transform.position = SceneView.lastActiveSceneView.camera.transform.position;
         cameraGameObject.transform.rotation = SceneView.lastActiveSceneView.camera.transform.rotation;
-
-        cameraGameObject.transform.parent = fixedCamerasParent.transform;
+        
         splineEvent.camera = cameraCinemachine;
 
-        if (splineEvent.switchCameraTo == CameraState.FixedTrackingCamera)
-        {
-            cameraGameObject.AddComponent<CinemachineHardLookAt>();
-        }
+        if (fixedCamerasParent != null)
+            cameraGameObject.transform.parent = fixedCamerasParent.transform;
+    }
+
+    public void ResetCameraPosition(int index)
+    {
+        SplineEvent splineEvent = splineEventsCollection[index];
+        
+        var cameraGameObj = splineEvent.camera.gameObject;
+        cameraGameObj.transform.position = SceneView.lastActiveSceneView.camera.transform.position;
+        cameraGameObj.transform.rotation = SceneView.lastActiveSceneView.camera.transform.rotation;
+    }
+
+    public void RenameCamera(int index)
+    {
+        var splineEvent = splineEventsCollection[index];
+        
+        splineEvent.camera.gameObject.name = splineEvent.eventName + " Cam";
     }
 
     private void UpdateSplineLength()
