@@ -1,9 +1,6 @@
-using System;
-using System.Linq;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
-using UnityEngine.Splines;
 
 public class SplineEventReorderableList : ReorderableList
 {
@@ -93,14 +90,14 @@ public class SplineEventReorderableList : ReorderableList
             {
                 if (GUI.Button(buttonRect, "Set Pos"))
                 {
-                    manager.ResetCameraPosition(listIndex);
+                    manager.ResetCameraPosition(listIndex, SplineEventEditorUtility.GetSceneViewCameraTransform().transform);
                 }
             }
             else
             {
                 if (GUI.Button(buttonRect, "Set Cam"))
                 {
-                    manager.InstantiateCamera(listIndex);
+                    manager.InstantiateCamera(listIndex, SplineEventEditorUtility.GetSceneViewCameraTransform().transform);
                 }
             }
             

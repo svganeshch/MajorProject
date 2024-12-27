@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Cinemachine;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Splines;
 

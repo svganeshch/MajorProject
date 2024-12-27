@@ -1,9 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Unity.Cinemachine;
-using Unity.Mathematics;
-using UnityEditor;
-using UnityEditor.Splines;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -23,22 +20,9 @@ public class SplineEventManager : MonoBehaviour
     public GameObject fixedCamerasParent;
     public SplineContainer splineContainer;
     public List<SplineEvent> splineEventsCollection = new List<SplineEvent>();
-    
-    private float previousSplineLength;
 
     public event Action<int> splineEventRemoved;
     public event Action<int> splineEventSelected;
-
-    private void OnEnable()
-    {
-        EditorSplineUtility.AfterSplineWasModified += OnSplineModified;
-        UpdateSplineLength();
-    }
-
-    private void OnDisable()
-    {
-        EditorSplineUtility.AfterSplineWasModified -= OnSplineModified;
-    }
 
     private void Reset()
     {
@@ -48,7 +32,6 @@ public class SplineEventManager : MonoBehaviour
     public void SetSplineContainer()
     {
         splineContainer = GetComponent<SplineContainer>();
-        UpdateSplineLength();
     }
 
     public void SetSelectedSplineEvent(int index)
@@ -124,7 +107,7 @@ public class SplineEventManager : MonoBehaviour
         return true;
     }
 
-    public void InstantiateCamera(int splineIndex)
+    public void InstantiateCamera(int splineIndex, Transform sceneViewTransform)
     {
         if (splineIndex < 0 || splineIndex >= splineEventsCollection.Count) return;
 
@@ -133,8 +116,8 @@ public class SplineEventManager : MonoBehaviour
 
         var cameraCinemachine = cameraGameObject.AddComponent<CinemachineCamera>();
         cameraGameObject.AddComponent<CinemachineHardLookAt>();
-        cameraGameObject.transform.position = SceneView.lastActiveSceneView.camera.transform.position;
-        cameraGameObject.transform.rotation = SceneView.lastActiveSceneView.camera.transform.rotation;
+        cameraGameObject.transform.position = sceneViewTransform.position;
+        cameraGameObject.transform.rotation = sceneViewTransform.rotation;
         
         splineEvent.camera = cameraCinemachine;
 
@@ -142,13 +125,13 @@ public class SplineEventManager : MonoBehaviour
             cameraGameObject.transform.parent = fixedCamerasParent.transform;
     }
 
-    public void ResetCameraPosition(int index)
+    public void ResetCameraPosition(int index, Transform sceneViewTransform)
     {
         SplineEvent splineEvent = splineEventsCollection[index];
         
         var cameraGameObj = splineEvent.camera.gameObject;
-        cameraGameObj.transform.position = SceneView.lastActiveSceneView.camera.transform.position;
-        cameraGameObj.transform.rotation = SceneView.lastActiveSceneView.camera.transform.rotation;
+        cameraGameObj.transform.position = sceneViewTransform.position;
+        cameraGameObj.transform.rotation = sceneViewTransform.rotation;
     }
 
     public void RenameCamera(int index)
@@ -156,37 +139,5 @@ public class SplineEventManager : MonoBehaviour
         var splineEvent = splineEventsCollection[index];
         
         splineEvent.camera.gameObject.name = splineEvent.eventName + " Cam";
-    }
-
-    private void UpdateSplineLength()
-    {
-        if (splineContainer == null || splineContainer.Splines.Count == 0)
-        {
-            previousSplineLength = 0;
-            return;
-        }
-
-        previousSplineLength = splineContainer.Splines[0].CalculateLength(float4x4.identity);
-    }
-
-    private void OnSplineModified(Spline spline)
-    {
-        float currentSplineLength = spline.CalculateLength(float4x4.identity);
-
-        if (Math.Abs(currentSplineLength - previousSplineLength) > Mathf.Epsilon && currentSplineLength > Mathf.Epsilon)
-        {
-            float inverseCurrentLength = 1 / currentSplineLength;
-
-            foreach (var splineEvent in splineEventsCollection)
-            {
-                splineEvent.EnterTriggerPosition = 
-                    Mathf.Clamp01((splineEvent.EnterTriggerPosition * previousSplineLength) * inverseCurrentLength);
-                
-                splineEvent.ExitTriggerPosition = 
-                    Mathf.Clamp01((splineEvent.ExitTriggerPosition * previousSplineLength) * inverseCurrentLength);
-            }
-
-            previousSplineLength = currentSplineLength;
-        }
     }
 }

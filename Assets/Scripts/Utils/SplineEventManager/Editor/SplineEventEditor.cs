@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEditor;
 using UnityEditor.Splines;
-using UnityEditorInternal;
 using UnityEngine.Splines;
 
 [CustomEditor(typeof(SplineEventManager))]
@@ -17,6 +17,7 @@ public class SplineEventManagerEditor : Editor
     private SerializedProperty splineEventsCollection;
     
     private int selectedSplineEventIndex = 0;
+    private float previousSplineLength;
 
     private void Awake()
     {
@@ -33,12 +34,15 @@ public class SplineEventManagerEditor : Editor
         manager.splineEventSelected += OnSplineEventSelected;
         manager.splineEventRemoved += OnSplineEventRemoved;
         EditorSplineUtility.AfterSplineWasModified += OnSplineModified;
+        
+        SetSplineLength();
     }
 
     private void OnDisable()
     {
         manager.splineEventSelected -= OnSplineEventSelected;
         manager.splineEventRemoved -= OnSplineEventRemoved;
+        EditorSplineUtility.AfterSplineWasModified -= OnSplineModified;
     }
 
     public override void OnInspectorGUI()
@@ -66,9 +70,38 @@ public class SplineEventManagerEditor : Editor
         selectedSplineEventIndex = Mathf.Clamp(removedIndex, 0, manager.splineEventsCollection.Count - 1);
     }
     
-    private void OnSplineModified(Spline obj)
+    private void OnSplineModified(Spline spline)
     {
+        float currentSplineLength = spline.CalculateLength(float4x4.identity);
+
+        if (Math.Abs(currentSplineLength - previousSplineLength) > Mathf.Epsilon && currentSplineLength > Mathf.Epsilon)
+        {
+            float inverseCurrentLength = 1 / currentSplineLength;
+
+            foreach (SplineEvent splineEvent in splineEventsCollection)
+            {
+                splineEvent.EnterTriggerPosition = 
+                    Mathf.Clamp01((splineEvent.EnterTriggerPosition * previousSplineLength) * inverseCurrentLength);
+                
+                splineEvent.ExitTriggerPosition = 
+                    Mathf.Clamp01((splineEvent.ExitTriggerPosition * previousSplineLength) * inverseCurrentLength);
+            }
+
+            previousSplineLength = currentSplineLength;
+        }
+        
         SceneView.RepaintAll();
+    }
+    
+    private void SetSplineLength()
+    {
+        if (manager.splineContainer == null || manager.splineContainer.Splines.Count == 0)
+        {
+            previousSplineLength = 0;
+            return;
+        }
+
+        previousSplineLength = manager.splineContainer.Splines[0].CalculateLength(float4x4.identity);
     }
 
     private void OnSceneGUI()
