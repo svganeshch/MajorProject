@@ -7,7 +7,7 @@ public class DamageCollider : MonoBehaviour
     protected Collider damageCollider;
     protected List<Character> damagedCharacters = new List<Character>();
 
-    public Character characterCausingDamage;
+    [HideInInspector] public Character characterCausingDamage;
     public int physicalDamage = 0;
     public int lightingDamage = 0;
 
