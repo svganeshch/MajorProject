@@ -113,6 +113,8 @@ public class SplineEventReorderableList : ReorderableList
                 
                 manager.RenameCamera(listIndex);
             }
+            
+            EditorUtility.SetDirty(manager);
         }
         --EditorGUI.indentLevel;
     }
