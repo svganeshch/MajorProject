@@ -18,15 +18,14 @@ public class SplineEventHandler : MonoBehaviour
     
     private SplineEvent previousSplineEvent;
 
-    private readonly int highCameraPriority = 2;
-    private readonly int lowCameraPriority = 1;
-
     private void Awake()
     {
         defaultCameraType = CameraState.DollyCamera;
         currentCameraState = defaultCameraType;
         
         splineEventManager = GetComponent<SplineEventManager>();
+
+        DisableAllFixedCameras();
     }
 
     private void Start()
@@ -91,26 +90,38 @@ public class SplineEventHandler : MonoBehaviour
 
     private void SetCamera(SplineEvent splineEvent)
     {
-        if (previousSplineEvent != null)
-            previousSplineEvent.camera.Priority = lowCameraPriority;
+        DisablePreviousCamera();
 
         if (splineEvent.switchCameraTo == CameraState.FixedTrackingCamera)
         {
             splineEvent.camera.Follow = FindFirstObjectByType<Player>().playerCombatManager.lockOnTransform;
         }
         
-        splineEvent.camera.Priority = highCameraPriority;
+        splineEvent.camera.gameObject.SetActive(true);
         currentCameraState = splineEvent.switchCameraTo;
     }
 
     private void ResetCamera()
     {
-        if (previousSplineEvent != null)
-            previousSplineEvent.camera.Priority = lowCameraPriority;
-        
-        dollyCamera.Priority = highCameraPriority;
+        DisablePreviousCamera();
 
         currentCameraState = CameraState.DollyCamera;
+    }
+
+    private void DisablePreviousCamera()
+    {
+        if (previousSplineEvent != null)
+        {
+            previousSplineEvent.camera.gameObject.SetActive(false);
+        }
+    }
+
+    private void DisableAllFixedCameras()
+    {
+        foreach (var splineEvent in splineEventManager.splineEventsCollection.Where(splineEvent => splineEvent.camera))
+        {
+            splineEvent.camera.gameObject.SetActive(false);
+        }
     }
     
     private void GroupEventsByKnots()
