@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
 
@@ -9,9 +10,9 @@ public abstract class CharacterMovementManager : MonoBehaviour
     [HideInInspector] public Character character;
     
     [Header("Gravity Settings")]
+    public float groundCheckSphereRadius = 0.3f;
     protected Vector3 yVelocity;
     protected float gravityForce = -40;
-    protected float groundCheckSphereRadius = 0.3f;
     protected float groundedYVelocity = -20;
     protected float fallStartYVelocity = -5;
     protected float inAirTime = 0;
@@ -66,11 +67,12 @@ public abstract class CharacterMovementManager : MonoBehaviour
 
             inAirTime += Time.deltaTime;
             character.characterAnimatorManager.InAirTime = inAirTime;
-
-            yVelocity.y += gravityForce * Time.deltaTime;
         }
 
         if (character.performingParkour) return;
+        yVelocity.y += gravityForce * Time.deltaTime;
         character.controller.Move(yVelocity * Time.deltaTime);
     }
+
+    protected virtual void OnDrawGizmos() {}
 }

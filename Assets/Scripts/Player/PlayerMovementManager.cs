@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovementManager : CharacterMovementManager
@@ -225,5 +226,11 @@ public class PlayerMovementManager : CharacterMovementManager
         yVelocity.y = Mathf.Sqrt(player.jumpHeight * -2 * gravityForce);
         
         player.playerSoundFXManager.PlayJumpSound();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, groundCheckSphereRadius);
     }
 }

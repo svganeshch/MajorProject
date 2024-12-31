@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 8472787880271934279}
   - component: {fileID: 8046256189390157516}
   - component: {fileID: 985930748228598467}
+  - component: {fileID: 5676823289300224068}
   - component: {fileID: 6937409410618085678}
   - component: {fileID: 4262705257872143613}
   - component: {fileID: 9068837366852858249}
@@ -237,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
+  groundCheckSphereRadius: 0.25
   currentMovementState: 0
 --- !u!114 &8046256189390157516
 MonoBehaviour:
@@ -330,6 +332,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 16b0168219434dd459d7131de1b01243, type: 3}
   surfaceFootStepsData:
   - {fileID: 11400000, guid: 985fa2dc505064c49afd781329fd36b3, type: 2}
+--- !u!114 &5676823289300224068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031679782782730652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65340d9ec65c60540b6920d30f82f087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoneRadius: 10
 --- !u!114 &6937409410618085678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,11 +369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8c30a8a36164e43a2d95030f5d6d4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepInterval: 1
-  walkingStepInterval: 1
-  runningStepInterval: 1
-  combatStepInterval: 1
-  sprintStepInterval: 1
 --- !u!114 &9068837366852858249
 MonoBehaviour:
   m_ObjectHideFlags: 0
