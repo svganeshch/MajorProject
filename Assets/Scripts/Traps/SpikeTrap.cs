@@ -5,8 +5,8 @@ public class SpikeTrap : MonoBehaviour, IZoneItem
     private static readonly int TrapSpeedHash = Animator.StringToHash("trapSpeed");
     public float trapSpeed = 1f;
     
-    Animator animator;
-    DamageCollider[] spikeDamageColliders;
+    private Animator animator;
+    private DamageCollider[] spikeDamageColliders;
     
     private void Awake()
     {
@@ -21,12 +21,12 @@ public class SpikeTrap : MonoBehaviour, IZoneItem
 
     public void EnableZoneItem()
     {
-        gameObject.SetActive(true);
+        animator.enabled = true;
     }
 
     public void DisableZoneItem()
     {
-        gameObject.SetActive(false);
+        animator.enabled = false;
     }
 
     public void EnableDamageCollider()
