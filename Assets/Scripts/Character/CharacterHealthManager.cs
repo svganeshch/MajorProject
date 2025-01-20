@@ -3,35 +3,35 @@ using UnityEngine;
 public class CharacterHealthManager : MonoBehaviour
 {
     Character character;
-    
-    SwapVanishMaterial swapVanishMaterial;
 
-    int currentHealth;
+    protected int currentHealth;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         character = GetComponent<Character>();
-        swapVanishMaterial = GetComponentInChildren<SwapVanishMaterial>();
 
         currentHealth = character.health;
     }
 
-    public void TakeDamage(int damage)
+    protected virtual void Start() { }
+
+    public virtual void TakeDamage(int damage)
     {
         if (character.isDead) return;
 
         currentHealth -= damage;
         character.health = currentHealth;
 
-        if (currentHealth < 0)
-        {
-            character.isDead = true;
-            character.characterMovementManager.enabled = false;
-            character.characterAnimatorManager.PlayDeathAction();
-            
-            swapVanishMaterial.SwapMaterial();
+        if (currentHealth <= 0)
+            OnDeath();
+    }
 
-            Destroy(character.gameObject, 5f);
-        }
+    protected virtual void OnDeath()
+    {
+        character.isDead = true;
+        character.characterMovementManager.enabled = false;
+        character.characterAnimatorManager.PlayDeathAction();
+
+        Destroy(character.gameObject, 5f);
     }
 }

@@ -99,9 +99,9 @@ GameObject:
   - component: {fileID: 7083199628220748235}
   - component: {fileID: 6896294453066549848}
   - component: {fileID: 6010472294332643227}
+  - component: {fileID: 2793967186647838244}
   - component: {fileID: 1095299331630110404}
   - component: {fileID: 5310358951574122426}
-  - component: {fileID: 8655156237662556362}
   - component: {fileID: 7585173503067864801}
   - component: {fileID: 5856583053533868239}
   - component: {fileID: 3993637648402056083}
@@ -243,6 +243,18 @@ MonoBehaviour:
   leftWeaponManager: {fileID: 0}
   rightHandWeaponModel: {fileID: 0}
   leftHandWeaponModel: {fileID: 0}
+--- !u!114 &2793967186647838244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543695975219230509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8aaa447247140afaf955e6b16d1c291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1095299331630110404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,18 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
---- !u!114 &8655156237662556362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3543695975219230509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b82abf4440b144ca287711c09d9005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  groundCheckSphereRadius: 0.3
 --- !u!114 &7585173503067864801
 MonoBehaviour:
   m_ObjectHideFlags: 0

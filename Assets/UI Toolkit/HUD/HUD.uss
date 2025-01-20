@@ -1,0 +1,10 @@
+.panel_HUD {
+}
+
+.health-bar .unity-progress-bar__background {
+    background-color: rgb(80, 80, 80);
+}
+
+.health-bar .unity-progress-bar__progress {
+    background-color: rgb(185, 0, 0);
+}

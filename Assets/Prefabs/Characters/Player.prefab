@@ -46,12 +46,12 @@ GameObject:
   - component: {fileID: 4556019022563280054}
   - component: {fileID: 2633029145050005787}
   - component: {fileID: 2968882062455022919}
+  - component: {fileID: 2324860260990570228}
   - component: {fileID: 9215658182178206388}
   - component: {fileID: 8472787880271934279}
   - component: {fileID: 8046256189390157516}
   - component: {fileID: 985930748228598467}
   - component: {fileID: 5676823289300224068}
-  - component: {fileID: 6937409410618085678}
   - component: {fileID: 4262705257872143613}
   - component: {fileID: 9068837366852858249}
   - component: {fileID: 6690240015069118456}
@@ -210,6 +210,18 @@ MonoBehaviour:
   leftWeaponManager: {fileID: 0}
   rightHandWeaponModel: {fileID: 0}
   leftHandWeaponModel: {fileID: 0}
+--- !u!114 &2324860260990570228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031679782782730652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9334a0ec88fd40d2af0d5da4cfd23104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &9215658182178206388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,18 +357,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneRadius: 10
---- !u!114 &6937409410618085678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6031679782782730652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b82abf4440b144ca287711c09d9005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4262705257872143613
 MonoBehaviour:
   m_ObjectHideFlags: 0
