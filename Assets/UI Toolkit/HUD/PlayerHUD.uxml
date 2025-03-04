@@ -1,10 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/HUD/HUD.uss?fileID=7433441132597879392&amp;guid=b50f794e95156934badd8075b9e4b1a1&amp;type=3#HUD" />
-    <Style src="project://database/Assets/UI%20Toolkit/Radial-Progress/RadialProgress.uss?fileID=7433441132597879392&amp;guid=12a43f3b7d8f47f1a62293bfb56fb92b&amp;type=3#RadialProgress" />
-    <ui:VisualElement name="Panel_HUD" class="panel_HUD" style="flex-grow: 1;">
-        <ui:VisualElement name="PlayerStatsContainer" style="flex-grow: 1; flex-direction: row; align-items: flex-end;">
-            <MyUILibrary.RadialProgress name="UltimateProgress" progress="8.48" style="background-image: url(&quot;project://database/Assets/Store%20Assets/Matthew%20Guz/Slash%20Effects%20FREE/Textures/5-Shockwave%202.png?fileID=2800000&amp;guid=8f9bd699c0d8ae241b87aad4b42f5512&amp;type=3#5-Shockwave 2&quot;); -unity-background-image-tint-color: rgb(255, 139, 0); left: 15px; bottom: 30px;" />
-            <ui:ProgressBar value="22" name="HealthBar" class="health-bar" style="height: 22px; width: 400px; align-content: auto; bottom: 70px; left: 30px; justify-content: space-around;" />
+    <ui:VisualElement name="Panel_HUD" style="height: 100%; width: 100%;">
+        <ui:VisualElement name="PlayerStatsContainer" style="flex-direction: column-reverse; width: 100%; height: 30%; top: 70%;">
+            <ui:VisualElement name="HealthBarContainer" style="width: 500px; height: 100px;">
+                <ui:VisualElement name="Background" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/HealthBar.psb?fileID=-6091876929298245128&amp;guid=fc4165a2b6ac9144b9cc0db002833378&amp;type=3#Outline&quot;);" />
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

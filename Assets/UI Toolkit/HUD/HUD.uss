@@ -1,10 +1,10 @@
-.panel_HUD {
-}
-
 .health-bar .unity-progress-bar__background {
-    background-color: rgb(80, 80, 80);
+    background-image: url("project://database/Assets/Sprites/HealthBar.psb?fileID=-6091876929298245128&guid=fc4165a2b6ac9144b9cc0db002833378&type=3#Outline");
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .health-bar .unity-progress-bar__progress {
-    background-color: rgb(185, 0, 0);
+    background-image: url("project://database/Assets/Sprites/HealthBar.psb?fileID=-4539249470183995517&guid=fc4165a2b6ac9144b9cc0db002833378&type=3#Health 100");
+    background-color: rgba(0, 0, 0, 0);
+    width: auto;
 }

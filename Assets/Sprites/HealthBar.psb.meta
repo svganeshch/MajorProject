@@ -1,0 +1,558 @@
+fileFormatVersion: 2
+guid: fc4165a2b6ac9144b9cc0db002833378
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 563847bfdbb3d6e45930000e8d8744cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: Outline
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1024
+      height: 256
+    spriteID: 86801dd5843cdbf4e920fae65c78dbe8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  - name: Ult
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 268
+      width: 1019
+      height: 256
+    spriteID: 5674e775a729821448363d7732adbba0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 268}
+    spritePosition: {x: 0, y: 0}
+  - name: Health 0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1031
+      y: 268
+      width: 916
+      height: 240
+    spriteID: 2302d885e7b066d4f8d45bcf9ccc38ae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1031, y: 268}
+    spritePosition: {x: 0, y: 5}
+  - name: Health 10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 532
+      width: 916
+      height: 240
+    spriteID: 78b6aee6d527c4a489fa64657e4d477e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 532}
+    spritePosition: {x: 0, y: 5}
+  - name: Health 20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 928
+      y: 532
+      width: 916
+      height: 240
+    spriteID: 77e49ead40b59d34485e2503ab8b06a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 928, y: 532}
+    spritePosition: {x: 0, y: 5}
+  - name: Health 30
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 780
+      width: 916
+      height: 240
+    spriteID: bca0ed41f54c4184faa48f7e905bbf97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 780}
+    spritePosition: {x: 0, y: 5}
+  - name: Health 40
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 928
+      y: 780
+      width: 916
+      height: 240
+    spriteID: 1b458d92f15735040b9487f0dde77e40
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 928, y: 780}
+    spritePosition: {x: 0, y: 5}
+  - name: Health 50
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1028
+      width: 916
+      height: 240
+    spriteID: b2ea17ab96510594c9836f3feb9d5997
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1028}
+    spritePosition: {x: 0, y: 5}
+  - name: Health 60
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 928
+      y: 1028
+      width: 916
+      height: 240
+    spriteID: 0d9662d905b03044c8f244bafe90a550
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 928, y: 1028}
+    spritePosition: {x: 0, y: 5}
+  - name: Health 70
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1276
+      width: 916
+      height: 240
+    spriteID: 31def2bd70d339245876da5c9b5cf3e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1276}
+    spritePosition: {x: 0, y: 5}
+  - name: Health 80
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 928
+      y: 1276
+      width: 916
+      height: 240
+    spriteID: 699ebc6d6942b044f8d13dc9c758a419
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 928, y: 1276}
+    spritePosition: {x: 0, y: 5}
+  - name: Health 90
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1524
+      width: 916
+      height: 240
+    spriteID: 3a60e53b3144280408f3f5eb704d89be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1524}
+    spritePosition: {x: 0, y: 5}
+  - name: Health 100
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1036
+      y: 4
+      width: 991
+      height: 245
+    spriteID: ac6c8777a36a74641aec0324ca53b30b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1036, y: 4}
+    spritePosition: {x: 0, y: 0}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: Outline
+    spriteName: Outline
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 86801dd5843cdbf4e920fae65c78dbe8
+    layerID: 5
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Ult
+    spriteName: Ult
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5674e775a729821448363d7732adbba0
+    layerID: 4
+    mosaicPosition: {x: 4, y: 268}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Health 0
+    spriteName: Health 0
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2302d885e7b066d4f8d45bcf9ccc38ae
+    layerID: 22
+    mosaicPosition: {x: 1031, y: 268}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Health 10
+    spriteName: Health 10
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 78b6aee6d527c4a489fa64657e4d477e
+    layerID: 21
+    mosaicPosition: {x: 4, y: 532}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Health 20
+    spriteName: Health 20
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 77e49ead40b59d34485e2503ab8b06a5
+    layerID: 20
+    mosaicPosition: {x: 928, y: 532}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Health 30
+    spriteName: Health 30
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bca0ed41f54c4184faa48f7e905bbf97
+    layerID: 19
+    mosaicPosition: {x: 4, y: 780}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Health 40
+    spriteName: Health 40
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1b458d92f15735040b9487f0dde77e40
+    layerID: 18
+    mosaicPosition: {x: 928, y: 780}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Health 50
+    spriteName: Health 50
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b2ea17ab96510594c9836f3feb9d5997
+    layerID: 17
+    mosaicPosition: {x: 4, y: 1028}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Health 60
+    spriteName: Health 60
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0d9662d905b03044c8f244bafe90a550
+    layerID: 16
+    mosaicPosition: {x: 928, y: 1028}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Health 70
+    spriteName: Health 70
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 31def2bd70d339245876da5c9b5cf3e0
+    layerID: 15
+    mosaicPosition: {x: 4, y: 1276}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Health 80
+    spriteName: Health 80
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 699ebc6d6942b044f8d13dc9c758a419
+    layerID: 14
+    mosaicPosition: {x: 928, y: 1276}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Health 90
+    spriteName: Health 90
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 3a60e53b3144280408f3f5eb704d89be
+    layerID: 10
+    mosaicPosition: {x: 4, y: 1524}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Health 100
+    spriteName: Health 100
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ac6c8777a36a74641aec0324ca53b30b
+    layerID: 3
+    mosaicPosition: {x: 1036, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Background
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c2681c02f6184be43ad5f85b09e74c3f
+    layerID: 1
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
