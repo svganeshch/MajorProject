@@ -566,7 +566,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1158
+  m_VersionIndex: 1149
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -585,10 +585,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628246
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1149
   m_Size: {x: -0.68475246, y: 0.8344307, z: 0.5738287}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1149
+  m_ShapeBox:
+    m_Center: {x: -0.34237623, y: 0.41721535, z: 0.28691435}
+    m_Extent: {x: -0.34237623, y: 0.41721535, z: 0.28691435}
   references:
     version: 2
     RefIds:
@@ -615,9 +619,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1459,7 +1460,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1805
+  m_VersionIndex: 1796
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1478,10 +1479,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628261
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1796
   m_Size: {x: -0.6513958, y: 2.2478514, z: 0.44818687}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1796
+  m_ShapeBox:
+    m_Center: {x: -0.3256979, y: 1.1239257, z: 0.22409344}
+    m_Extent: {x: -0.3256979, y: 1.1239257, z: 0.22409344}
   references:
     version: 2
     RefIds:
@@ -1509,9 +1514,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1581,7 +1583,7 @@ GameObject:
   - component: {fileID: 6313181300579333255}
   - component: {fileID: 1699523755238344909}
   - component: {fileID: 7357278233055265434}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2133,7 +2135,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 355
+  m_VersionIndex: 346
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2152,10 +2154,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075600
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 346
   m_Size: {x: -0.92245007, y: 1.2830244, z: 0.76042557}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 346
+  m_ShapeBox:
+    m_Center: {x: -0.46122456, y: 0.6415122, z: 0.38021278}
+    m_Extent: {x: -0.46122503, y: 0.6415122, z: 0.38021278}
   references:
     version: 2
     RefIds:
@@ -2182,9 +2188,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2254,7 +2257,7 @@ GameObject:
   - component: {fileID: 2533898432787997703}
   - component: {fileID: 8170751469839543062}
   - component: {fileID: 3001733761915357853}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2806,7 +2809,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 361
+  m_VersionIndex: 352
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2825,10 +2828,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075600
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 346
   m_Size: {x: -0.92245007, y: 1.2830244, z: 0.76042557}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 346
+  m_ShapeBox:
+    m_Center: {x: -0.46122456, y: 0.6415122, z: 0.38021278}
+    m_Extent: {x: -0.46122503, y: 0.6415122, z: 0.38021278}
   references:
     version: 2
     RefIds:
@@ -2855,9 +2862,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3161,7 +3165,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2156
+  m_VersionIndex: 2147
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3180,10 +3184,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628270
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 2147
   m_Size: {x: -5.740717, y: 0.21668085, z: 0.42177773}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 2147
+  m_ShapeBox:
+    m_Center: {x: -2.8703585, y: 0.10833995, z: 0.21088886}
+    m_Extent: {x: 2.8703585, y: 0.10834043, z: 0.21088886}
   references:
     version: 2
     RefIds:
@@ -3207,9 +3215,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4051,7 +4056,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1561
+  m_VersionIndex: 1552
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4070,10 +4075,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628274
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1552
   m_Size: {x: -0.3999958, y: 0.6082268, z: 0.38280892}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1552
+  m_ShapeBox:
+    m_Center: {x: -0.19999886, y: 0.3041134, z: 0.19140446}
+    m_Extent: {x: -0.1999979, y: 0.3041134, z: 0.19140446}
   references:
     version: 2
     RefIds:
@@ -4101,9 +4110,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4173,7 +4179,7 @@ GameObject:
   - component: {fileID: 8217691172196018008}
   - component: {fileID: 5212479064891074736}
   - component: {fileID: 2236981840374746687}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4407,7 +4413,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 487
+  m_VersionIndex: 478
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4426,10 +4432,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075596
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 478
   m_Size: {x: -5.2451725, y: 2.1706781, z: 2.2744713}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 478
+  m_ShapeBox:
+    m_Center: {x: -2.6225863, y: 1.0853391, z: 1.1372356}
+    m_Extent: {x: 2.6225863, y: 1.0853391, z: 1.1372356}
   references:
     version: 2
     RefIds:
@@ -4453,9 +4463,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5297,7 +5304,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1775
+  m_VersionIndex: 1766
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5316,10 +5323,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628227
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1766
   m_Size: {x: -1.8227386, y: 0.4522718, z: -1.1983547}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1766
+  m_ShapeBox:
+    m_Center: {x: -0.9113697, y: 0.22613597, z: -0.59917736}
+    m_Extent: {x: -0.9113693, y: 0.2261359, z: -0.59917736}
   references:
     version: 2
     RefIds:
@@ -5347,9 +5358,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5419,7 +5427,7 @@ GameObject:
   - component: {fileID: 6343075859855297235}
   - component: {fileID: 414470636372120153}
   - component: {fileID: 7756151673449245743}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5653,7 +5661,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1625
+  m_VersionIndex: 1616
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -5672,10 +5680,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075593
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 978
   m_Size: {x: -1.0951009, y: -1.1095645, z: 0.52333355}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 978
+  m_ShapeBox:
+    m_Center: {x: -0.54755044, y: -0.5547823, z: 0.26166677}
+    m_Extent: {x: 0.54755044, y: 0.5547823, z: 0.26166677}
   references:
     version: 2
     RefIds:
@@ -5699,9 +5711,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6543,7 +6552,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2752
+  m_VersionIndex: 2743
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6562,10 +6571,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628258
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 2743
   m_Size: {x: -1.1642461, y: 6.371695, z: -0.75500834}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 2743
+  m_ShapeBox:
+    m_Center: {x: -0.5821238, y: 3.1858487, z: -0.37750423}
+    m_Extent: {x: -0.58212304, y: 3.1858475, z: -0.37750417}
   references:
     version: 2
     RefIds:
@@ -6593,9 +6606,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6665,7 +6675,7 @@ GameObject:
   - component: {fileID: 1773545373154483119}
   - component: {fileID: 4855225622633002890}
   - component: {fileID: 3619086708332742052}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6899,7 +6909,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1365
+  m_VersionIndex: 1356
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -6918,10 +6928,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075592
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1353
   m_Size: {x: -8.574964, y: 2.228583, z: 2.2559648}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1353
+  m_ShapeBox:
+    m_Center: {x: -4.287482, y: 1.1142915, z: 1.1279826}
+    m_Extent: {x: 4.287482, y: 1.1142915, z: 1.1279824}
   references:
     version: 2
     RefIds:
@@ -6945,9 +6959,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7017,7 +7028,7 @@ GameObject:
   - component: {fileID: 7037690232403787096}
   - component: {fileID: 2669942725129540587}
   - component: {fileID: 238591394336660375}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7251,7 +7262,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1365
+  m_VersionIndex: 1356
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -7270,10 +7281,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075592
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1353
   m_Size: {x: -8.574964, y: 2.228583, z: 2.2559648}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1353
+  m_ShapeBox:
+    m_Center: {x: -4.287482, y: 1.1142915, z: 1.1279826}
+    m_Extent: {x: 4.287482, y: 1.1142915, z: 1.1279824}
   references:
     version: 2
     RefIds:
@@ -7297,9 +7312,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8083,7 +8095,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3106
+  m_VersionIndex: 3097
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8102,10 +8114,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628268
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 3097
   m_Size: {x: -2.0119734, y: 1.6888463, z: -1.2561989}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 3097
+  m_ShapeBox:
+    m_Center: {x: -1.0059867, y: 0.8444232, z: -0.62809944}
+    m_Extent: {x: 1.0059867, y: 0.80309427, z: 0.62809944}
   references:
     version: 2
     RefIds:
@@ -8134,9 +8150,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8206,7 +8219,7 @@ GameObject:
   - component: {fileID: 3116194921855892642}
   - component: {fileID: 5105765014569049675}
   - component: {fileID: 7851245658943354564}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8440,7 +8453,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1695
+  m_VersionIndex: 1686
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8459,10 +8472,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628233
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1686
   m_Size: {x: -1.0485458, y: 1.0917559, z: 0.82008266}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1686
+  m_ShapeBox:
+    m_Center: {x: -0.5242729, y: 0.54587793, z: 0.41004133}
+    m_Extent: {x: 0.5242729, y: 0.54587793, z: 0.41004133}
   references:
     version: 2
     RefIds:
@@ -8486,9 +8503,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8558,7 +8572,7 @@ GameObject:
   - component: {fileID: 2933682027196503745}
   - component: {fileID: 7415278182876476272}
   - component: {fileID: 3307359063053077032}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8792,7 +8806,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1368
+  m_VersionIndex: 1359
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -8811,10 +8825,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075592
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1353
   m_Size: {x: -8.574964, y: 2.228583, z: 2.2559648}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1353
+  m_ShapeBox:
+    m_Center: {x: -4.287482, y: 1.1142915, z: 1.1279826}
+    m_Extent: {x: 4.287482, y: 1.1142915, z: 1.1279824}
   references:
     version: 2
     RefIds:
@@ -8838,9 +8856,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8910,7 +8925,7 @@ GameObject:
   - component: {fileID: 807644352372505496}
   - component: {fileID: 6882794843297547634}
   - component: {fileID: 2419214066850375281}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9144,7 +9159,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1153
+  m_VersionIndex: 1144
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9163,10 +9178,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628232
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1144
   m_Size: {x: -0.9475107, y: 0.88013124, z: 0.52350235}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1144
+  m_ShapeBox:
+    m_Center: {x: -0.47375488, y: 0.44006586, z: 0.26175117}
+    m_Extent: {x: 0.47375536, y: 0.44006562, z: 0.26175117}
   references:
     version: 2
     RefIds:
@@ -9190,9 +9209,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9496,7 +9512,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2156
+  m_VersionIndex: 2147
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9515,10 +9531,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628270
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 2147
   m_Size: {x: -5.740717, y: 0.21668085, z: 0.42177773}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 2147
+  m_ShapeBox:
+    m_Center: {x: -2.8703585, y: 0.10833995, z: 0.21088886}
+    m_Extent: {x: 2.8703585, y: 0.10834043, z: 0.21088886}
   references:
     version: 2
     RefIds:
@@ -9542,9 +9562,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10417,7 +10434,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3273
+  m_VersionIndex: 3264
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -10436,10 +10453,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628252
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 3264
   m_Size: {x: -0.44783688, y: 9.850135, z: -0.5012481}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 3264
+  m_ShapeBox:
+    m_Center: {x: -0.22391942, y: 4.9250684, z: -0.25062406}
+    m_Extent: {x: -0.22391844, y: 4.9250674, z: -0.25062406}
   references:
     version: 2
     RefIds:
@@ -10467,9 +10488,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10736,7 +10754,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1826
+  m_VersionIndex: 1817
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -10755,10 +10773,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628272
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1817
   m_Size: {x: -0.775486, y: 0.8706188, z: 0.70880985}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1817
+  m_ShapeBox:
+    m_Center: {x: -0.387743, y: 0.43531036, z: 0.35440493}
+    m_Extent: {x: 0.387743, y: 0.4353094, z: 0.35440493}
   references:
     version: 2
     RefIds:
@@ -10782,9 +10804,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -10854,7 +10873,7 @@ GameObject:
   - component: {fileID: 4044607058040920527}
   - component: {fileID: 2754045747580615580}
   - component: {fileID: 4432080856641749776}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11088,7 +11107,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2183
+  m_VersionIndex: 2174
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11107,10 +11126,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628236
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 2174
   m_Size: {x: -0.76246643, y: 0.8823571, z: 0.46042085}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 2174
+  m_ShapeBox:
+    m_Center: {x: -0.38123322, y: 0.4411788, z: 0.23021042}
+    m_Extent: {x: 0.38123322, y: 0.44117856, z: 0.23021042}
   references:
     version: 2
     RefIds:
@@ -11134,9 +11157,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11206,7 +11226,7 @@ GameObject:
   - component: {fileID: 1160520253952460699}
   - component: {fileID: 2091961691612362343}
   - component: {fileID: 8062154429266826117}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11440,7 +11460,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3728
+  m_VersionIndex: 3719
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11459,10 +11479,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628244
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 3719
   m_Size: {x: -0.95805264, y: 0.7072382, z: 0.7814717}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 3719
+  m_ShapeBox:
+    m_Center: {x: -0.47902632, y: 0.35361958, z: 0.39073586}
+    m_Extent: {x: 0.47902632, y: 0.3536191, z: 0.39073586}
   references:
     version: 2
     RefIds:
@@ -11486,9 +11510,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11558,7 +11579,7 @@ GameObject:
   - component: {fileID: 3881929087971397810}
   - component: {fileID: 4555412868144084360}
   - component: {fileID: 8963995895298704120}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11792,7 +11813,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1365
+  m_VersionIndex: 1356
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11811,10 +11832,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075592
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1353
   m_Size: {x: -8.574964, y: 2.228583, z: 2.2559648}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1353
+  m_ShapeBox:
+    m_Center: {x: -4.287482, y: 1.1142915, z: 1.1279826}
+    m_Extent: {x: 4.287482, y: 1.1142915, z: 1.1279824}
   references:
     version: 2
     RefIds:
@@ -11838,9 +11863,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -11910,7 +11932,7 @@ GameObject:
   - component: {fileID: 2279454014596819821}
   - component: {fileID: 4175849775368445723}
   - component: {fileID: 1075710168425027777}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12144,7 +12166,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1365
+  m_VersionIndex: 1356
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -12163,10 +12185,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075592
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1353
   m_Size: {x: -8.574964, y: 2.228583, z: 2.2559648}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1353
+  m_ShapeBox:
+    m_Center: {x: -4.287482, y: 1.1142915, z: 1.1279826}
+    m_Extent: {x: 4.287482, y: 1.1142915, z: 1.1279824}
   references:
     version: 2
     RefIds:
@@ -12190,9 +12216,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12814,7 +12837,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1236
+  m_VersionIndex: 1227
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -12833,10 +12856,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628249
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1227
   m_Size: {x: -0.50193787, y: 0.65369034, z: 0.43266344}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1227
+  m_ShapeBox:
+    m_Center: {x: -0.25096893, y: 0.32684517, z: 0.21633172}
+    m_Extent: {x: -0.25096893, y: 0.32684517, z: 0.21633172}
   references:
     version: 2
     RefIds:
@@ -12863,9 +12890,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -12935,7 +12959,7 @@ GameObject:
   - component: {fileID: 4000414938753328869}
   - component: {fileID: 106212513338086921}
   - component: {fileID: 5586492008720714361}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13169,7 +13193,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1467
+  m_VersionIndex: 1458
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -13188,10 +13212,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075593
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 978
   m_Size: {x: -1.0951009, y: -1.1095645, z: 0.52333355}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 978
+  m_ShapeBox:
+    m_Center: {x: -0.54755044, y: -0.5547823, z: 0.26166677}
+    m_Extent: {x: 0.54755044, y: 0.5547823, z: 0.26166677}
   references:
     version: 2
     RefIds:
@@ -13215,9 +13243,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -13839,7 +13864,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1692
+  m_VersionIndex: 1683
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -13858,10 +13883,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628247
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1683
   m_Size: {x: -0.52909565, y: 0.6291027, z: 0.35621357}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1683
+  m_ShapeBox:
+    m_Center: {x: -0.26454782, y: 0.3145523, z: 0.17810678}
+    m_Extent: {x: -0.26454782, y: 0.31455135, z: 0.17810678}
   references:
     version: 2
     RefIds:
@@ -13888,9 +13917,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14512,7 +14538,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1065
+  m_VersionIndex: 1056
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -14531,10 +14557,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628248
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1056
   m_Size: {x: -0.7816372, y: 0.96600723, z: 0.6596236}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1056
+  m_ShapeBox:
+    m_Center: {x: -0.39081955, y: 0.48300362, z: 0.3298118}
+    m_Extent: {x: -0.3908186, y: 0.48300362, z: 0.3298118}
   references:
     version: 2
     RefIds:
@@ -14561,9 +14591,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14633,7 +14660,7 @@ GameObject:
   - component: {fileID: 9125693594850533196}
   - component: {fileID: 6940572890211453673}
   - component: {fileID: 283968091502920116}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15185,7 +15212,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 355
+  m_VersionIndex: 346
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -15204,10 +15231,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075600
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 346
   m_Size: {x: -0.92245007, y: 1.2830244, z: 0.76042557}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 346
+  m_ShapeBox:
+    m_Center: {x: -0.46122456, y: 0.6415122, z: 0.38021278}
+    m_Extent: {x: -0.46122503, y: 0.6415122, z: 0.38021278}
   references:
     version: 2
     RefIds:
@@ -15234,9 +15265,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15540,7 +15568,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 5398
+  m_VersionIndex: 5389
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -15559,10 +15587,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628225
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 5389
   m_Size: {x: -14.615158, y: 20.06991, z: -9.065266}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 5389
+  m_ShapeBox:
+    m_Center: {x: -7.307579, y: 10.034955, z: -4.532633}
+    m_Extent: {x: 7.307579, y: 10.034955, z: 4.532633}
   references:
     version: 2
     RefIds:
@@ -15586,9 +15618,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -15658,7 +15687,7 @@ GameObject:
   - component: {fileID: 1235675598720873098}
   - component: {fileID: 8893466513029373307}
   - component: {fileID: 3167975631388175003}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15892,7 +15921,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1851
+  m_VersionIndex: 1842
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -15911,10 +15940,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628234
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1842
   m_Size: {x: -0.77027607, y: 0.74202085, z: 0.4982133}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1842
+  m_ShapeBox:
+    m_Center: {x: -0.38513756, y: 0.37101042, z: 0.24910665}
+    m_Extent: {x: 0.38513803, y: 0.37101042, z: 0.24910665}
   references:
     version: 2
     RefIds:
@@ -15938,9 +15971,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16724,7 +16754,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3106
+  m_VersionIndex: 3097
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -16743,10 +16773,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628268
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 3097
   m_Size: {x: -2.0119734, y: 1.6888463, z: -1.2561989}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 3097
+  m_ShapeBox:
+    m_Center: {x: -1.0059867, y: 0.8444232, z: -0.62809944}
+    m_Extent: {x: 1.0059867, y: 0.80309427, z: 0.62809944}
   references:
     version: 2
     RefIds:
@@ -16775,9 +16809,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -16847,7 +16878,7 @@ GameObject:
   - component: {fileID: 8008337671430210100}
   - component: {fileID: 2606480717955872058}
   - component: {fileID: 5681731583845908616}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17321,7 +17352,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1700
+  m_VersionIndex: 1691
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -17340,10 +17371,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075595
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1100
   m_Size: {x: -3.0750923, y: 2.8076506, z: 2.9560995}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1100
+  m_ShapeBox:
+    m_Center: {x: -1.5375462, y: 1.4038253, z: 1.4780502}
+    m_Extent: {x: 1.5375462, y: 1.4038253, z: 1.4780498}
   references:
     version: 2
     RefIds:
@@ -17367,9 +17402,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -17439,7 +17471,7 @@ GameObject:
   - component: {fileID: 711716083401128812}
   - component: {fileID: 8235589602171203243}
   - component: {fileID: 8975091377455448040}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18128,10 +18160,10 @@ MonoBehaviour:
   - {x: -12.503731, y: 0.348136, z: 2.109631}
   - {x: -12.916435, y: -0.00000011920929, z: 2.109631}
   - {x: -13.793983, y: 0.34813595, z: 2.109631}
-  - {x: -12.503731, y: 3.3450089, z: 2.1096315}
-  - {x: -12.503731, y: 3.3450089, z: 0}
-  - {x: -13.793983, y: 3.3450089, z: 2.1096315}
-  - {x: -13.793983, y: 3.3450089, z: 0}
+  - {x: -12.503731, y: 4.116706, z: 2.109631}
+  - {x: -12.503731, y: 4.116706, z: 0}
+  - {x: -13.793983, y: 4.116706, z: 2.109631}
+  - {x: -13.793983, y: 4.116706, z: 0}
   - {x: -12.503731, y: 0.348136, z: 2.109631}
   - {x: -12.503731, y: 0.348136, z: 0}
   - {x: -12.503731, y: 2.866671, z: 2.109631}
@@ -18150,20 +18182,20 @@ MonoBehaviour:
   - {x: -18.39602, y: 2.866671, z: 2.109631}
   - {x: -12.503731, y: 2.866671, z: 2.109631}
   - {x: -12.503731, y: 2.866671, z: 0}
-  - {x: -12.503731, y: 3.3450089, z: 2.1096315}
-  - {x: -12.503731, y: 3.3450089, z: 0}
+  - {x: -12.503731, y: 4.116706, z: 2.109631}
+  - {x: -12.503731, y: 4.116706, z: 0}
   - {x: -13.793983, y: 3.2394059, z: 2.109631}
   - {x: -12.503731, y: 2.866671, z: 2.109631}
-  - {x: -13.793983, y: 3.3450089, z: 2.1096315}
-  - {x: -12.503731, y: 3.3450089, z: 2.1096315}
+  - {x: -13.793983, y: 4.116706, z: 2.109631}
+  - {x: -12.503731, y: 4.116706, z: 2.109631}
   - {x: -12.503731, y: 2.866671, z: 0}
   - {x: -13.793983, y: 3.2394059, z: 0}
-  - {x: -12.503731, y: 3.3450089, z: 0}
-  - {x: -13.793983, y: 3.3450089, z: 0}
+  - {x: -12.503731, y: 4.116706, z: 0}
+  - {x: -13.793983, y: 4.116706, z: 0}
   - {x: -13.793983, y: 3.2394059, z: 0}
   - {x: -13.793983, y: 3.2394059, z: 2.109631}
-  - {x: -13.793983, y: 3.3450089, z: 0}
-  - {x: -13.793983, y: 3.3450089, z: 2.1096315}
+  - {x: -13.793983, y: 4.116706, z: 0}
+  - {x: -13.793983, y: 4.116706, z: 2.109631}
   - {x: -13.793983, y: 3.2394059, z: 0}
   - {x: -13.793983, y: 0.34813595, z: 0}
   - {x: -15.392504, y: 3.2394059, z: 0}
@@ -18265,9 +18297,9 @@ MonoBehaviour:
   - {x: 12.503731, y: 0.348136}
   - {x: 12.916435, y: -0.00000011920929}
   - {x: 13.793983, y: 0.34813595}
-  - {x: -12.503731, y: 2.1096315}
+  - {x: -12.503731, y: 2.109631}
   - {x: -12.503731, y: 0}
-  - {x: -13.793983, y: 2.1096315}
+  - {x: -13.793983, y: 2.109631}
   - {x: -13.793983, y: 0}
   - {x: 2.109631, y: 0.348136}
   - {x: 0, y: 0.348136}
@@ -18287,20 +18319,20 @@ MonoBehaviour:
   - {x: -2.109631, y: 2.866671}
   - {x: 2.109631, y: 2.866671}
   - {x: 0, y: 2.866671}
-  - {x: 2.1096315, y: 3.3450089}
-  - {x: 0, y: 3.3450089}
-  - {x: 13.793981, y: 3.2394154}
-  - {x: 12.503728, y: 2.8666806}
-  - {x: 13.793981, y: 3.3450184}
-  - {x: 12.503728, y: 3.3450184}
+  - {x: 2.109631, y: 4.116706}
+  - {x: 0, y: 4.116706}
+  - {x: 13.793983, y: 3.2394059}
+  - {x: 12.503731, y: 2.866671}
+  - {x: 13.793983, y: 4.116706}
+  - {x: 12.503731, y: 4.116706}
   - {x: -12.503731, y: 2.866671}
   - {x: -13.793983, y: 3.2394059}
-  - {x: -12.503731, y: 3.3450089}
-  - {x: -13.793983, y: 3.3450089}
+  - {x: -12.503731, y: 4.116706}
+  - {x: -13.793983, y: 4.116706}
   - {x: 0, y: 3.2394059}
   - {x: -2.109631, y: 3.2394059}
-  - {x: 0, y: 3.3450089}
-  - {x: -2.1096315, y: 3.3450089}
+  - {x: 0, y: 4.116706}
+  - {x: -2.109631, y: 4.116706}
   - {x: -13.793983, y: 3.2394059}
   - {x: -13.793983, y: 0.34813595}
   - {x: -15.392504, y: 3.2394059}
@@ -18428,9 +18460,9 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 1, w: -1}
   - {x: 0, y: 0, z: 1, w: -1}
   - {x: 0, y: 0, z: 1, w: -1}
-  - {x: -1, y: -5.133388e-19, z: -0.0000013044248, w: -1}
-  - {x: -1, y: -1.5666723e-19, z: -0.0000006522124, w: -1}
-  - {x: -1, y: -1.5666723e-19, z: -0.0000006522124, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
   - {x: -1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
@@ -18513,7 +18545,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 9213
+  m_VersionIndex: 9104
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -18532,10 +18564,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075588
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 6865
   m_Size: {x: -11.0212555, y: 0.34813613, z: 2.109631}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 6865
+  m_ShapeBox:
+    m_Center: {x: -5.5106277, y: 0.17406794, z: 1.0548155}
+    m_Extent: {x: 5.5106277, y: 0.17406806, z: 1.0548155}
   references:
     version: 2
     RefIds:
@@ -18559,9 +18595,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18631,7 +18664,7 @@ GameObject:
   - component: {fileID: 9068361130099005393}
   - component: {fileID: 3983271917761002602}
   - component: {fileID: 4815195497930651935}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18865,7 +18898,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1489
+  m_VersionIndex: 1480
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -18884,10 +18917,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075593
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 978
   m_Size: {x: -1.0951009, y: -1.1095645, z: 0.52333355}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 978
+  m_ShapeBox:
+    m_Center: {x: -0.54755044, y: -0.5547823, z: 0.26166677}
+    m_Extent: {x: 0.54755044, y: 0.5547823, z: 0.26166677}
   references:
     version: 2
     RefIds:
@@ -18911,9 +18948,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -18983,7 +19017,7 @@ GameObject:
   - component: {fileID: 4012911239791785814}
   - component: {fileID: 5304030910400655491}
   - component: {fileID: 7408913054308399136}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19457,7 +19491,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2406
+  m_VersionIndex: 2397
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -19476,10 +19510,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075589
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1833
   m_Size: {x: 3.4176884, y: 3.6334302, z: 3.2123756}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1833
+  m_ShapeBox:
+    m_Center: {x: 1.7088432, y: 1.8167151, z: 1.6061878}
+    m_Extent: {x: 1.7088442, y: 1.8167151, z: 1.6061878}
   references:
     version: 2
     RefIds:
@@ -19503,9 +19541,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20347,7 +20382,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3273
+  m_VersionIndex: 3264
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -20366,10 +20401,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628252
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 3264
   m_Size: {x: -0.44783688, y: 9.850135, z: -0.5012481}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 3264
+  m_ShapeBox:
+    m_Center: {x: -0.22391942, y: 4.9250684, z: -0.25062406}
+    m_Extent: {x: -0.22391844, y: 4.9250674, z: -0.25062406}
   references:
     version: 2
     RefIds:
@@ -20397,9 +20436,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -20469,7 +20505,7 @@ GameObject:
   - component: {fileID: 7578632812906071374}
   - component: {fileID: 4581834502196116794}
   - component: {fileID: 5734213274301558942}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21021,7 +21057,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 358
+  m_VersionIndex: 349
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -21040,10 +21076,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075600
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 346
   m_Size: {x: -0.92245007, y: 1.2830244, z: 0.76042557}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 346
+  m_ShapeBox:
+    m_Center: {x: -0.46122456, y: 0.6415122, z: 0.38021278}
+    m_Extent: {x: -0.46122503, y: 0.6415122, z: 0.38021278}
   references:
     version: 2
     RefIds:
@@ -21070,9 +21110,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -21137,7 +21174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7337953195183460199}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: 'cubes '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21915,7 +21952,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3106
+  m_VersionIndex: 3097
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -21934,10 +21971,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628268
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 3097
   m_Size: {x: -2.0119734, y: 1.6888463, z: -1.2561989}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 3097
+  m_ShapeBox:
+    m_Center: {x: -1.0059867, y: 0.8444232, z: -0.62809944}
+    m_Extent: {x: 1.0059867, y: 0.80309427, z: 0.62809944}
   references:
     version: 2
     RefIds:
@@ -21966,9 +22007,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -22038,7 +22076,7 @@ GameObject:
   - component: {fileID: 8091716160382025668}
   - component: {fileID: 6555797960744579634}
   - component: {fileID: 8208163411468744004}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22272,7 +22310,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2374
+  m_VersionIndex: 2365
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -22291,10 +22329,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628235
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 2365
   m_Size: {x: -1.4274216, y: 0.55832624, z: 0.5820098}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 2365
+  m_ShapeBox:
+    m_Center: {x: -0.7137108, y: 0.27916336, z: 0.2910049}
+    m_Extent: {x: 0.7137108, y: 0.27916312, z: 0.2910049}
   references:
     version: 2
     RefIds:
@@ -22318,9 +22360,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -22390,7 +22429,7 @@ GameObject:
   - component: {fileID: 3957131726342677779}
   - component: {fileID: 6376781871871576291}
   - component: {fileID: 5329161244693504570}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22624,7 +22663,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 487
+  m_VersionIndex: 478
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -22643,10 +22682,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075596
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 478
   m_Size: {x: -5.2451725, y: 2.1706781, z: 2.2744713}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 478
+  m_ShapeBox:
+    m_Center: {x: -2.6225863, y: 1.0853391, z: 1.1372356}
+    m_Extent: {x: 2.6225863, y: 1.0853391, z: 1.1372356}
   references:
     version: 2
     RefIds:
@@ -22670,9 +22713,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -22976,7 +23016,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2156
+  m_VersionIndex: 2147
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -22995,10 +23035,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628270
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 2147
   m_Size: {x: -5.740717, y: 0.21668085, z: 0.42177773}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 2147
+  m_ShapeBox:
+    m_Center: {x: -2.8703585, y: 0.10833995, z: 0.21088886}
+    m_Extent: {x: 2.8703585, y: 0.10834043, z: 0.21088886}
   references:
     version: 2
     RefIds:
@@ -23022,9 +23066,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -23094,7 +23135,7 @@ GameObject:
   - component: {fileID: 2208577927531319112}
   - component: {fileID: 3153139694460534264}
   - component: {fileID: 4216732602586394722}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23328,7 +23369,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2734
+  m_VersionIndex: 2725
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -23347,10 +23388,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628242
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 2725
   m_Size: {x: -1.2320223, y: 1.07798, z: 0.74781775}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 2725
+  m_ShapeBox:
+    m_Center: {x: -0.61601114, y: 0.53899, z: 0.37390888}
+    m_Extent: {x: 0.61601114, y: 0.53899, z: 0.37390888}
   references:
     version: 2
     RefIds:
@@ -23374,9 +23419,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -23680,7 +23722,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3221
+  m_VersionIndex: 3212
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -23699,10 +23741,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628255
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 3212
   m_Size: {x: -31.248035, y: 1.1682688, z: 4.064906}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 3212
+  m_ShapeBox:
+    m_Center: {x: -15.624018, y: 0.5841339, z: 2.032453}
+    m_Extent: {x: 15.624018, y: 0.5841344, z: 2.032453}
   references:
     version: 2
     RefIds:
@@ -23726,9 +23772,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -23798,7 +23841,7 @@ GameObject:
   - component: {fileID: 1775481887942851371}
   - component: {fileID: 6855796407676427222}
   - component: {fileID: 6767923711044888116}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24032,7 +24075,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1368
+  m_VersionIndex: 1359
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -24051,10 +24094,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075592
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1353
   m_Size: {x: -8.574964, y: 2.228583, z: 2.2559648}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1353
+  m_ShapeBox:
+    m_Center: {x: -4.287482, y: 1.1142915, z: 1.1279826}
+    m_Extent: {x: 4.287482, y: 1.1142915, z: 1.1279824}
   references:
     version: 2
     RefIds:
@@ -24078,9 +24125,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -24150,7 +24194,7 @@ GameObject:
   - component: {fileID: 6607530812348779662}
   - component: {fileID: 46306024106728284}
   - component: {fileID: 3168842162432954341}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24384,7 +24428,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2535
+  m_VersionIndex: 2526
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -24403,10 +24447,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628239
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 2526
   m_Size: {x: -0.8481748, y: 0.8027506, z: 0.5838871}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 2526
+  m_ShapeBox:
+    m_Center: {x: -0.4240874, y: 0.40137577, z: 0.29194355}
+    m_Extent: {x: 0.4240874, y: 0.4013753, z: 0.29194355}
   references:
     version: 2
     RefIds:
@@ -24430,9 +24478,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -24502,7 +24547,7 @@ GameObject:
   - component: {fileID: 1705246037584562616}
   - component: {fileID: 8449113906789629994}
   - component: {fileID: 8965625167708277162}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24736,7 +24781,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 487
+  m_VersionIndex: 478
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -24755,10 +24800,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075596
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 478
   m_Size: {x: -5.2451725, y: 2.1706781, z: 2.2744713}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 478
+  m_ShapeBox:
+    m_Center: {x: -2.6225863, y: 1.0853391, z: 1.1372356}
+    m_Extent: {x: 2.6225863, y: 1.0853391, z: 1.1372356}
   references:
     version: 2
     RefIds:
@@ -24782,9 +24831,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -36426,7 +36472,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2026
+  m_VersionIndex: 2017
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -36445,10 +36491,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396654696628229
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 2017
   m_Size: {x: -1.6230292, y: 0.85665107, z: -1.679697}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 2017
+  m_ShapeBox:
+    m_Center: {x: -0.8115146, y: 0.42832565, z: -0.8398485}
+    m_Extent: {x: 0.8115146, y: 0.10000001, z: 0.8398485}
   references:
     version: 2
     RefIds:
@@ -36478,9 +36528,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -36550,7 +36597,7 @@ GameObject:
   - component: {fileID: 7656268354703376508}
   - component: {fileID: 1976643354895581152}
   - component: {fileID: 8520001167241185904}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36784,7 +36831,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1365
+  m_VersionIndex: 1356
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -36803,10 +36850,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Shape:
     rid: 5087396416523075592
-  m_ShapeRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_UnmodifiedMeshVersion: 1353
   m_Size: {x: -8.574964, y: 2.228583, z: 2.2559648}
-  m_LocalCenter: {x: 0, y: 0, z: 0}
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+  m_PivotLocation: 1
+  m_PivotPosition: {x: 0, y: 0, z: 0}
+  m_UnmodifiedMeshVersion: 1353
+  m_ShapeBox:
+    m_Center: {x: -4.287482, y: 1.1142915, z: 1.1279826}
+    m_Extent: {x: 4.287482, y: 1.1142915, z: 1.1279824}
   references:
     version: 2
     RefIds:
@@ -36830,9 +36881,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
