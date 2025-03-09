@@ -1,15 +1,12 @@
 using System;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class PlayerHUDManager : MonoBehaviour
 {
     public static PlayerHUDManager instance;
     
-    private UIDocument document;
-    
-    private ProgressBar healthBar;
-    private const string healthProgressBarName = "HealthBar";
+    public Image healthBarFill;
 
     private void Awake()
     {
@@ -17,14 +14,10 @@ public class PlayerHUDManager : MonoBehaviour
         {
             instance = this;
         }
-        
-        document = GetComponent<UIDocument>();
-        
-        healthBar = document.rootVisualElement.Q<ProgressBar>(healthProgressBarName);
     }
 
     public void SetHealthBar(float value)
     {
-        healthBar.value = value;
+        healthBarFill.fillAmount = value;
     }
 }
