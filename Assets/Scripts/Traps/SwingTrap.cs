@@ -6,7 +6,8 @@ public class SwingTrap : MonoBehaviour, IZoneItem
     [Header("Swing Settings")]
     public float swingAngle = 45f;
     public float swingSpeed = 2f;
-
+    
+    private AudioSource audioSource;
     private DamageCollider damageCollider;
     private Rigidbody rb;
     private Quaternion initialRotation;
@@ -50,6 +51,8 @@ public class SwingTrap : MonoBehaviour, IZoneItem
         if (Math.Abs(Mathf.Sign(angle) - Mathf.Sign(previousSwingAngle)) > 0.1f)
         {
             damageCollider.DisableDamageCollider();
+            
+            WorldSoundFXManager.instance.PlaySoundFX(WorldSoundFXManager.instance.axeSwingSFX, audioSource, 0.5f, true);
         }
 
         previousSwingAngle = angle;
