@@ -10595,16 +10595,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Najma_Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7905678016468553622, guid: eccf724f009726749ab4360b520ceefe,
-        type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: fd4d252a2a7b2a049b4b3d1613bbcffe, type: 2}
-    - target: {fileID: 8132306056928393190, guid: eccf724f009726749ab4360b520ceefe,
-        type: 3}
-      propertyPath: zoneRadius
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 8474026726387403101, guid: eccf724f009726749ab4360b520ceefe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10657,11 +10647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 8474026726387403101, guid: eccf724f009726749ab4360b520ceefe,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1574405270}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eccf724f009726749ab4360b520ceefe, type: 3}
 --- !u!4 &351690635 stripped
@@ -20275,12 +20261,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!4 &529674598 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8474026726387403101, guid: eccf724f009726749ab4360b520ceefe,
-    type: 3}
-  m_PrefabInstance: {fileID: 351690634}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &529981606
 Mesh:
   m_ObjectHideFlags: 0
@@ -57241,37 +57221,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1574405269
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1574405270}
-  m_Layer: 6
-  m_Name: Target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1574405270
+--- !u!4 &1574405270 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6981994791326908065, guid: eccf724f009726749ab4360b520ceefe,
+    type: 3}
+  m_PrefabInstance: {fileID: 351690634}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574405269}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 529674598}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1574635120
 GameObject:
   m_ObjectHideFlags: 0
