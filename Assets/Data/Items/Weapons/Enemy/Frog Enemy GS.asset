@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7084a5c8d0a585479727fabb6cc6ac0, type: 3}
+  m_Name: Frog Enemy GS
+  m_EditorClassIdentifier: 
+  overrideController: {fileID: 0}
+  weaponModel: {fileID: 1556002183057879799, guid: 17210219b7c5b82408c399efcb326cf2,
+    type: 3}
+  physicalDamage: 100
+  lightingDamage: 0
+  liteAttackAction: {fileID: 11400000, guid: 947a6aeeeb6aa2840a2d404d66d977a5, type: 2}
+  heavyAttackAction: {fileID: 0}
+  slashSfx:
+  - {fileID: 8300000, guid: d1a2ffc4c0d2a4142b041888eaf6b8e7, type: 3}
+  - {fileID: 8300000, guid: 9fa2a5a4c14ea054c88c3a093b925fa1, type: 3}
+  blockSfx: {fileID: 0}
+  slashVfx: {fileID: 33866264968057073, guid: beaf86e8eb287f24cb38bd9acc57a501, type: 3}
