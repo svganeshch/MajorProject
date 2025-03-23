@@ -1,5 +1,76 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8710572287408441818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8622319426156267158}
+  - component: {fileID: 1720026021153480618}
+  - component: {fileID: 1552739009845338123}
+  m_Layer: 14
+  m_Name: DamageCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8622319426156267158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8710572287408441818}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2209103376370765766}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1720026021153480618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8710572287408441818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19a3307de52bf94b940ee1919ee5ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterCausingDamage: {fileID: 0}
+  physicalDamage: 0
+  lightingDamage: 0
+--- !u!136 &1552739009845338123
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8710572287408441818}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.049517065
+  m_Height: 0.8306666
+  m_Direction: 1
+  m_Center: {x: -0.0007494241, y: 0.41539994, z: 0}
 --- !u!1001 &1811281220798998573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58,13 +129,56 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8427701789206478638, guid: 5c097c8168dd08f4a8b2818d6d0dd4fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5c097c8168dd08f4a8b2818d6d0dd4fd,
         type: 3}
       propertyPath: m_Name
       value: Baseball Bat
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c097c8168dd08f4a8b2818d6d0dd4fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c097c8168dd08f4a8b2818d6d0dd4fd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8622319426156267158}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5c097c8168dd08f4a8b2818d6d0dd4fd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4933738636231108579}
   m_SourcePrefab: {fileID: 100100000, guid: 5c097c8168dd08f4a8b2818d6d0dd4fd, type: 3}
+--- !u!1 &1577279656380487036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5c097c8168dd08f4a8b2818d6d0dd4fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1811281220798998573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4933738636231108579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577279656380487036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0649fae144922fe4ebcfc68683dbfef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swordDamageCollider: {fileID: 0}
+--- !u!4 &2209103376370765766 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c097c8168dd08f4a8b2818d6d0dd4fd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1811281220798998573}
+  m_PrefabAsset: {fileID: 0}

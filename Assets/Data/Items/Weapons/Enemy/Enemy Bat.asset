@@ -10,17 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7084a5c8d0a585479727fabb6cc6ac0, type: 3}
-  m_Name: Enemy Sword
+  m_Name: Enemy Bat
   m_EditorClassIdentifier: 
   overrideController: {fileID: 0}
-  weaponModel: {fileID: 1395127381445192785, guid: 2a0734c844aa82449a7940d4fe2b0bd8,
+  weaponModel: {fileID: 1577279656380487036, guid: 07c47d45565d8fe4ba137a71fc0509c0,
     type: 3}
   physicalDamage: 50
   lightingDamage: 0
   liteAttackAction: {fileID: 11400000, guid: 947a6aeeeb6aa2840a2d404d66d977a5, type: 2}
   heavyAttackAction: {fileID: 0}
   slashSfx:
-  - {fileID: 8300000, guid: d1a2ffc4c0d2a4142b041888eaf6b8e7, type: 3}
-  - {fileID: 8300000, guid: 9fa2a5a4c14ea054c88c3a093b925fa1, type: 3}
+  - {fileID: 8300000, guid: 1f53a5fc6bd934e46a5d8cfa8fd27b64, type: 3}
+  - {fileID: 8300000, guid: e82879725b40ce444bca27d19a75f42c, type: 3}
+  - {fileID: 8300000, guid: 2b019c6187fca1e48b47e28c891dc66c, type: 3}
+  - {fileID: 8300000, guid: b883c27c88428884fb3a10dcc42b8b47, type: 3}
+  - {fileID: 8300000, guid: 1cd9fbc4bb2c19749aa2e61afd72aaaa, type: 3}
+  - {fileID: 8300000, guid: faf53b5b59d41a14e97c8858f4664122, type: 3}
+  - {fileID: 8300000, guid: a715ddf00ff7f24469c72404e8df85e9, type: 3}
+  - {fileID: 8300000, guid: e968c6ef8536cba4e98d5c8f4fdb9ccf, type: 3}
   blockSfx: {fileID: 0}
   slashVfx: {fileID: 33866264968057073, guid: beaf86e8eb287f24cb38bd9acc57a501, type: 3}

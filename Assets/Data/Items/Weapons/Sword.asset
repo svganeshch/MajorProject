@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   overrideController: {fileID: 0}
-  weaponModel: {fileID: 1395127381445192785, guid: 2a0734c844aa82449a7940d4fe2b0bd8,
+  weaponModel: {fileID: 7469696412994525709, guid: 4d93ceac5149b48469f190edbf10157b,
     type: 3}
   physicalDamage: 50
   lightingDamage: 100
