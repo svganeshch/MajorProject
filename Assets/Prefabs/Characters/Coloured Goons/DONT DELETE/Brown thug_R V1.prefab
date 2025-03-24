@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3491321292968856011
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 293377935446645530, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: acba7c1f73d0dcd44834707bed6e3f2a, type: 2}
+    - target: {fileID: 685671085719750038, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ad88fadb6a4e32e478675fea6625cfe6, type: 2}
+    - target: {fileID: 2813616696694248670, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 59.452877
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813616696694248670, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -20.069191
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813616696694248670, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 66.55878
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813616696694248670, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710653
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813616696694248670, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813616696694248670, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70710707
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813616696694248670, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813616696694248670, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813616696694248670, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813616696694248670, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188594539139026532, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: m_Name
+      value: Brown thug_R V Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540226470743722063, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b1acda4f39499e408e412e6c926fdca, type: 2}
+    - target: {fileID: 4241816285512756306, guid: 62a175e6fa43d7e46948f3932aa5352e,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 143aa18c8282ac448a217969d63cb569, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 62a175e6fa43d7e46948f3932aa5352e, type: 3}

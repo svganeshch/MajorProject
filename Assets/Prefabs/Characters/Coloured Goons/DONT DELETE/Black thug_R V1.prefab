@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3460392286651061294
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5078513325556623344, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 788bcf7c91afbfd49845ef0aa02b52cd, type: 2}
+    - target: {fileID: 5586183937514456045, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ad88fadb6a4e32e478675fea6625cfe6, type: 2}
+    - target: {fileID: 5787143919828417377, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 60.94646
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787143919828417377, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -20.069187
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787143919828417377, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 66.17533
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787143919828417377, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787143919828417377, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787143919828417377, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787143919828417377, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787143919828417377, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787143919828417377, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787143919828417377, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6565052088447885787, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: m_Name
+      value: Black thug_R V Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8307347374230123685, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b1acda4f39499e408e412e6c926fdca, type: 2}
+    - target: {fileID: 9140081804125645353, guid: 1948ced7ee8ddb04081e21a1b464f7f4,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: acba7c1f73d0dcd44834707bed6e3f2a, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1948ced7ee8ddb04081e21a1b464f7f4, type: 3}
