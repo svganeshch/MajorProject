@@ -106,7 +106,7 @@ public class Enemy : Character
     {
         base.OnGUI();
 
-        GUI.color = Color.red;
-        GUI.Label(new Rect(0, 50, 200, 20), this.GetType().Name + " : " + enemyStateMachine.currentState.ToString());
+        //GUI.color = Color.red;
+        //GUI.Label(new Rect(0, 50, 200, 20), this.GetType().Name + " : " + enemyStateMachine.currentState.ToString());
     }
 }

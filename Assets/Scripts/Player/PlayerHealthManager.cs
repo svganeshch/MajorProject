@@ -4,7 +4,7 @@ public class PlayerHealthManager : CharacterHealthManager
     {
         base.Start();
 
-        PlayerHUDManager.instance.SetHealthBar(currentHealth);
+        //PlayerHUDManager.instance.SetHealthBar(currentHealth);
     }
 
     public override void TakeDamage(int damage)
@@ -12,5 +12,12 @@ public class PlayerHealthManager : CharacterHealthManager
         base.TakeDamage(damage);
         
         PlayerHUDManager.instance.SetHealthBar(currentHealth);
+    }
+
+    protected override void OnDeath()
+    {
+        base.OnDeath();
+        
+        MenuHandler.Instance.deathMenuPanel.SetActive(true);
     }
 }
