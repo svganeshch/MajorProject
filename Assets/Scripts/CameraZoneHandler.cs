@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 
 public class CameraZoneHandler : MonoBehaviour
 {
@@ -9,13 +10,13 @@ public class CameraZoneHandler : MonoBehaviour
         public string zoneName;
         public TriggerZone triggerZone1;
         public TriggerZone triggerZone2;
-        public Camera assignedCamera;
+        public CinemachineCamera assignedCamera;
     }
 
     public List<CameraZone> cameraZones;
-    public Camera defaultCamera;
+    public CinemachineCamera defaultCamera;
 
-    private Camera currentCamera;
+    private CinemachineCamera currentCamera;
     private CameraZone activeZone = null;
 
     private void Start()
@@ -28,8 +29,18 @@ public class CameraZoneHandler : MonoBehaviour
     {
         foreach (var zone in cameraZones)
         {
-            if (trigger.zone == zone)
+            if (trigger.gameObject == zone.triggerZone1.gameObject
+                || trigger.gameObject == zone.triggerZone2.gameObject)
             {
+                if (activeZone != null && activeZone == zone)
+                {
+                    activeZone = null;
+                    ActivateCamera(defaultCamera);
+                    
+                    Debug.LogWarning("Trigger zone: " + zone.zoneName + " is already active so exiting");
+                    return;
+                }
+                
                 activeZone = zone;
                 ActivateCamera(zone.assignedCamera);
                 return;
@@ -37,20 +48,12 @@ public class CameraZoneHandler : MonoBehaviour
         }
     }
 
-    // Called when a trigger is exited
-    public void OnZoneExited(TriggerZone trigger)
-    {
-        if (activeZone != null && trigger.zone == activeZone)
-        {
-            activeZone = null;
-            ActivateCamera(defaultCamera);
-        }
-    }
-
-    private void ActivateCamera(Camera newCamera)
+    private void ActivateCamera(CinemachineCamera newCamera)
     {
         if (currentCamera != null) currentCamera.gameObject.SetActive(false);
         if (newCamera != null) newCamera.gameObject.SetActive(true);
         currentCamera = newCamera;
+        
+        newCamera.Follow = FindFirstObjectByType<Player>().playerCombatManager.lockOnTransform;
     }
 }
