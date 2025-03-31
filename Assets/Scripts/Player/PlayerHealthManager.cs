@@ -11,7 +11,9 @@ public class PlayerHealthManager : CharacterHealthManager
     {
         base.TakeDamage(damage);
         
-        PlayerHUDManager.instance.SetHealthBar(currentHealth);
+        // calculate health percentage
+        var healthPercentage = (float) currentHealth / character.health;
+        PlayerHUDManager.instance.SetHealthBar(healthPercentage);
     }
 
     protected override void OnDeath()

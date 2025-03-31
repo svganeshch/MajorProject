@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CharacterHealthManager : MonoBehaviour
 {
-    Character character;
+    protected Character character;
 
     protected int currentHealth;
 
@@ -20,7 +20,7 @@ public class CharacterHealthManager : MonoBehaviour
         if (character.isDead) return;
 
         currentHealth -= damage;
-        character.health = currentHealth;
+        //character.health = currentHealth;
 
         if (currentHealth <= 0)
             OnDeath();

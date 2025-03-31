@@ -15,7 +15,7 @@ MonoBehaviour:
   overrideController: {fileID: 0}
   weaponModel: {fileID: 1577279656380487036, guid: 07c47d45565d8fe4ba137a71fc0509c0,
     type: 3}
-  physicalDamage: 50
+  physicalDamage: 20
   lightingDamage: 0
   liteAttackAction: {fileID: 11400000, guid: 947a6aeeeb6aa2840a2d404d66d977a5, type: 2}
   heavyAttackAction: {fileID: 0}

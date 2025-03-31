@@ -351,7 +351,7 @@ Animator:
   m_GameObject: {fileID: 4613762779277780954}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: fb3a0c9fad19aaa48804c1a884938f11, type: 3}
-  m_Controller: {fileID: 9100000, guid: b2f2c067bfd134b4f90bebd73213235a, type: 2}
+  m_Controller: {fileID: 22100000, guid: a8bc0c6edd1d880449a5213900fb8b79, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -694,7 +694,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4345432956828779412}
     - target: {fileID: 2288003218718523154, guid: 461ca5ead8c8119408ed682014b513c9,
         type: 3}
       propertyPath: m_Layer
@@ -1048,6 +1048,12 @@ PrefabInstance:
 --- !u!4 &149053081658388037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2991516166243429089, guid: 461ca5ead8c8119408ed682014b513c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 3140569037959578788}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4345432956828779412 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1719142121914877744, guid: 461ca5ead8c8119408ed682014b513c9,
     type: 3}
   m_PrefabInstance: {fileID: 3140569037959578788}
   m_PrefabAsset: {fileID: 0}

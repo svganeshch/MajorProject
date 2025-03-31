@@ -94,13 +94,13 @@ VisualEffect:
         m_Overridden: 1
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 0, y: 0, z: 0}
+      - m_Value: {x: 0.0000004702983, y: 0, z: -0.0000017073286}
         m_Name: Transform_position
         m_Overridden: 1
       - m_Value: {x: -0, y: 0, z: 0}
         m_Name: Transform_angles
         m_Overridden: 1
-      - m_Value: {x: 1, y: 1, z: 1}
+      - m_Value: {x: 1.0000001, y: 1, z: 1.0000001}
         m_Name: Transform_scale
         m_Overridden: 1
       - m_Value: {x: -7, y: 4, z: -5}
@@ -241,7 +241,7 @@ MonoBehaviour:
   Space: 0
   m_Property:
     m_Name: Transform
-  Target: {fileID: 0}
+  Target: {fileID: 3285451682552412515}
 --- !u!1 &2671843927281365019
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ffac7635cb70447bce38955fe513c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 500
   walkingSpeed: 5
   runningSpeed: 7.5
   sprintingSpeed: 10
@@ -508,7 +508,7 @@ Animator:
   m_GameObject: {fileID: 2671843927281365019}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 9e02b898ae1bd7d47b8744f75bed2ee8, type: 3}
-  m_Controller: {fileID: 9100000, guid: b2f2c067bfd134b4f90bebd73213235a, type: 2}
+  m_Controller: {fileID: 22100000, guid: 441060aa5abcbea41b372d474f9a976a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -541,7 +541,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.20874405
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -635,13 +635,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 1.8
+  m_Height: 2.2
   m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.1, z: 0}
 --- !u!54 &3745048785955517724
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -694,13 +694,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2786786497627878075}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0.376, y: 0.15, z: 0.047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1006783139924315281}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
 --- !u!114 &7387474668961583187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,7 +725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6190121397584827953}
   - component: {fileID: 3656337613330582289}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: DamageCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -766,7 +766,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.5
   m_Height: 2.2
   m_Direction: 1
   m_Center: {x: 0, y: 1.1, z: 0}
@@ -1442,3 +1442,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vanishMaterial: {fileID: 2100000, guid: c7cc590885a9901429031c5f505d114e, type: 2}
   meshRenderer: {fileID: 210785480526507531}
+--- !u!4 &3285451682552412515 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4167280743394806330, guid: 9e02b898ae1bd7d47b8744f75bed2ee8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1462934461114053465}
+  m_PrefabAsset: {fileID: 0}
