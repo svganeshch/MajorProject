@@ -7,6 +7,8 @@ using UnityEngine.Serialization;
 
 public class InputManager : MonoBehaviour
 {
+    public static InputManager Instance;
+    
     Player player;
 
     public Vector2 moveInput;
@@ -36,6 +38,8 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance == null) Instance = this;
+        
         player = GetComponent<Player>();
         playerInput = GetComponent<PlayerInput>();
     }
@@ -59,7 +63,9 @@ public class InputManager : MonoBehaviour
         sprintAction.canceled += i => sprintInput = false;
 
         chainAttackAction = playerInput.actions["ChainAttack"];
-        chainAttackAction.performed += i => chainAttackInput = true; 
+        chainAttackAction.performed += i => chainAttackInput = true;
+        
+        chainAttackAction.Disable();
     }
 
     private void Update()
